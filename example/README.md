@@ -14,4 +14,8 @@ defaultConfig {
 }
 ```
 
+Check:
+* lib/main.dart
+* lib/chat.dart
+
 
