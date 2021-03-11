@@ -18,7 +18,7 @@ Check:
 * lib/main.dart
 * lib/chat.dart
 
-![Screenshot](https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png =350x)
+<img src="https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png" alt="screenshot" width="350"/>
 
 https://www.leeboonstra.dev
 
