@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82c22aba-cff8-42d3-b30b-ac4f21f003c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialogflow_auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialogflow_auth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialogflow_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialogflow_v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,5 +80,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1085" y="517" width="670" height="676" key="search.everywhere.popup" timestamp="1615475407525">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="1085" y="517" width="670" height="676" key="search.everywhere.popup/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1615475407525" />
   </component>
 </project>

@@ -8,10 +8,10 @@ import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pbgrpc.dart';
 import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:grpc/grpc.dart';
-
-import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 import 'dart:async';
 
+import 'package:meta/meta.dart';
 import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
 
 /// An interface to Google Cloud's Dialogflow API via gRPC
@@ -24,12 +24,21 @@ class DialogflowGrpc {
   /// [ClientChannel] which is used for Dialogflow
   final ClientChannel _channel = ClientChannel('dialogflow.googleapis.com');
 
+  SessionsClient client;
+
   // Private constructor to prevent direct initialization of the class.
-  DialogflowGrpc._(this._options);
+  DialogflowGrpc._(this._options) {
+    client = SessionsClient(_channel, options: _options);
+  }
 
   /// Creates a DialogflowStream interface using a service account.
-  factory DialogflowGrpc.viaServiceAccount(ServiceAccount account) =>
-      DialogflowGrpc._(account.callOptions);
+  factory DialogflowGrpc.viaServiceAccount(ServiceAccount account) {
+    var projectId = account.projectId;
+    var uuid = Uuid().v4();
+    DialogflowAuth.session = 'projects/$projectId/agent/sessions/$uuid';
+
+    return DialogflowGrpc._(account.callOptions);
+  }
 
 
   /// Listen to audio stream.
@@ -37,11 +46,6 @@ class DialogflowGrpc {
   StreamSubscription<List<int>> _audioStreamSubscription;
 
   Future<DetectIntentResponse> detectIntent(String text, String lang){
-
-    final client = SessionsClient(_channel, options: _options);
-
-    //var session = "$sessionPath:streamingDetectIntent";
-    var session = 'projects/dialogflowcookbook/agent/sessions/123'; //# TODO
 
     final inputText = TextInput()
       ..text = text
@@ -52,7 +56,7 @@ class DialogflowGrpc {
 
     final request = DetectIntentRequest()
       ..queryInput = queryInput
-      ..session = session;
+      ..session = DialogflowAuth.session;
 
     return client.detectIntent(request);
   }
@@ -61,11 +65,6 @@ class DialogflowGrpc {
   /// Requires a [InputAudioConfig] and an audioStream.
   Stream<StreamingDetectIntentResponse> streamingDetectIntent(
       InputConfig config, Stream<List<int>> audioStream)   {
-
-    final client = SessionsClient(_channel, options: _options);
-
-    //var session = "$sessionPath:streamingDetectIntent";
-    var session = 'projects/dialogflowcookbook/agent/sessions/123'; //# TODO
 
     // Create the stream, which later transmits the necessary
     // data to the Google Api.
@@ -76,7 +75,7 @@ class DialogflowGrpc {
     request
         .add(StreamingDetectIntentRequest()
       ..queryInput = queryInput
-      ..session = session
+      ..session = DialogflowAuth.session
     );
 
     // Send the request first

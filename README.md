@@ -80,6 +80,7 @@ Developer Website: https://www.leeboonstra.dev
 - [x] Support DetectIntent TextInput
 - [x] Add streamingDetectIntent support
 - [x] Working app example audio streaming / chat app
+- [ ] Get the session from the service account
 - [ ] Share demo Dialogflow Agent
 - [ ] Codelab working audio streaming app
 - [ ] Support DetectIntent with Events

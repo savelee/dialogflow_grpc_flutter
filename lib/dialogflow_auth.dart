@@ -14,6 +14,8 @@ abstract class DialogflowAuth {
     'https://www.googleapis.com/auth/dialogflow'
   ];
 
+  static String session;
+
   /// Returns the [CallOptions] of the created service account.
   /// These can then be used to initialize a new [SessionClient].
   CallOptions get callOptions;
