@@ -121,6 +121,7 @@ class _ChatState extends State<Chat> {
     // Get the transcript and detectedIntent and show on screen
     responseStream.listen((data) {
       print('----');
+      print(data);
       setState(() {
         //print(data);
         String transcript = data.recognitionResult.transcript;
