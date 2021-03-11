@@ -1,4 +1,4 @@
-Flutter Dialogflow plugin for detecting intents using GRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming. Built by Google Developer Advocate for Dialogflow, Lee Boonstra
+Flutter Dialogflow plugin for detecting intents using gRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming. Built by Google Developer Advocate for Dialogflow, Lee Boonstra
 
 gRPC protos have been generated from:
 git clone https://github.com/googleapis/googleapis
@@ -30,7 +30,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/credential
+    - assets/credentials.json
 ```
 
 Import this package in your code. Load your service account,
@@ -38,8 +38,10 @@ and create a DialogflowGrpc instance:
 
 ```dart
 import 'package:dialogflow_grpc/dialogflow_grpc.dart';
+
 final serviceAccount = ServiceAccount.fromString(
     '${(await rootBundle.loadString('assets/credentials.json'))}');
+
 DialogflowGrpc dialogflow = DialogflowGrpc.viaServiceAccount(serviceAccount);
 ```
 
@@ -65,26 +67,28 @@ Detecting an intent based on an audio stream:
 
   // Make the streamingDetectIntent call, with the InputConfig and the audioStream
   final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
-
-  final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
   responseStream.listen((data) {
     print(data);
   });
 ```
 
 Official API documentation: https://cloud.google.com/dialogflow/es/docs/reference/rpc
+Developer Website: https://www.leeboonstra.dev
 
 ### TODO
 
 - [x] Support DetectIntent TextInput
 - [x] Add streamingDetectIntent support
-- [x] Working app example
+- [x] Working app example audio streaming / chat app
+- [ ] Share demo Dialogflow Agent
+- [ ] Codelab working audio streaming app
 - [ ] Support DetectIntent with Events
 - [ ] Support for V2Beta
 - [ ] Support for CX
 - [ ] Other Dialogflow use cases other than intent detection
+- [ ] Tests
 
 
-**Disclaimer: This package is made by Lee Boonstra. This is not an official Google package.
+**Disclaimer: This package is made by [Lee Boonstra](https://twitter.com/ladysign) t. This is not an official Google package.
 This package is provided as-is, without warranty or representation for any use or purpose.
 Feel free to improve this package, and contribute.**

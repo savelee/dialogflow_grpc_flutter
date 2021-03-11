@@ -1,16 +1,17 @@
-# dialogflow_grpc_example
+# Dialogflow Mobile Chat App
 
-Demonstrates how to use the dialogflow_grpc plugin.
+An example app which integrates streaming audio through a device microphone with the *sound_stream* package.
+Make sure you enable the Microphone on your virtual device.
 
-## Getting Started
+build.gradle needs minSdkVersion 21:
+```
+defaultConfig {
+   applicationId "com.myname.flutter_dialogflow_agent"
+   minSdkVersion 21
+   targetSdkVersion 30
+   versionCode flutterVersionCode.toInteger()
+   versionName flutterVersionName
+}
+```
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

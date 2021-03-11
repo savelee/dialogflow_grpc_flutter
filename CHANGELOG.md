@@ -1,3 +1,6 @@
-## 0.0.1
+## 0.2.0
 
-* TODO: Describe initial release.
+* detectIntent Text Input with Dialogflow V2
+* streamingDetectIntent with Dialogflow V2
+* Dialogflow auth with Service Account
+* Full working chat / streaming app example
