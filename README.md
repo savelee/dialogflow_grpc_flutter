@@ -72,7 +72,16 @@ Detecting an intent based on an audio stream:
   });
 ```
 
+## Example: Making use of generated code
+
+Use imports such as:
+
+```dart
+import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
+```
 Official API documentation: https://cloud.google.com/dialogflow/es/docs/reference/rpc
+
+
 Developer Website: https://www.leeboonstra.dev
 
 ### TODO
@@ -86,11 +95,10 @@ Developer Website: https://www.leeboonstra.dev
 - [ ] Support DetectIntent with Events
 - [ ] Support for V2Beta
 - [ ] Support for CX
-- [ ] Other Dialogflow use cases other than intent detection
-- [ ] Tests
+- [ ] Test Cases
 
 
-<img src="https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png" alt="screenshot" width="300"/>
+<img src="https://raw.githubusercontent.com/savelee/dialogflow_grpc_flutter/main/example/assets/screenshot.png" alt="screenshot" width="300"/>
 
 https://www.leeboonstra.dev
 
