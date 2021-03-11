@@ -89,7 +89,7 @@ Developer Website: https://www.leeboonstra.dev
 - [ ] Tests
 
 
-![alt text](https://github.com/savelee/dialogflow_grpc_flutter/tree/master/example/assets/screenshot.png "Screenshot")
+![Screenshot](https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png "Screenshot")
 
 
 **Disclaimer: This package is made by [Lee Boonstra](https://twitter.com/ladysign) t. This is not an official Google package.
