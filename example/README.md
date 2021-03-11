@@ -18,7 +18,7 @@ Check:
 * lib/main.dart
 * lib/chat.dart
 
-<img src="https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png" alt="screenshot" width="350"/>
+<img src="https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png" alt="screenshot" width="300"/>
 
 https://www.leeboonstra.dev
 

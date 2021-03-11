@@ -89,8 +89,7 @@ Developer Website: https://www.leeboonstra.dev
 - [ ] Tests
 
 
-![Screenshot](https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png =350x)
-
+<img src="https://github.com/savelee/dialogflow_grpc_flutter/blob/main/example/assets/screenshot.png" alt="screenshot" width="300"/>
 
 https://www.leeboonstra.dev
 
