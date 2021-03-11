@@ -12,6 +12,7 @@ import 'package:grpc/grpc.dart';
 import 'package:meta/meta.dart';
 import 'dart:async';
 
+import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
 
 /// An interface to Google Cloud's Dialogflow API via gRPC
 ///
@@ -34,6 +35,27 @@ class DialogflowGrpc {
   /// Listen to audio stream.
   /// Cancelled as soon as dispose is called.
   StreamSubscription<List<int>> _audioStreamSubscription;
+
+  Future<DetectIntentResponse> detectIntent(String text, String lang){
+
+    final client = SessionsClient(_channel, options: _options);
+
+    //var session = "$sessionPath:streamingDetectIntent";
+    var session = 'projects/dialogflowcookbook/agent/sessions/123'; //# TODO
+
+    final inputText = TextInput()
+      ..text = text
+      ..languageCode = lang;
+
+    final queryInput = QueryInput()
+    ..text = inputText;
+
+    final request = DetectIntentRequest()
+      ..queryInput = queryInput
+      ..session = session;
+
+    return client.detectIntent(request);
+  }
 
   /// Sends a [StreamingDetectIntentResponse] to the Dialogflow API
   /// Requires a [InputAudioConfig] and an audioStream.

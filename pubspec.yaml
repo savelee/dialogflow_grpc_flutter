@@ -1,6 +1,6 @@
 name: dialogflow_grpc
 description: Flutter Dialogflow plugin for Dialogflow CX and V2, using GRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming. Built by Google Developer Advocate for Dialogflow, Lee Boonstra
-version: 0.9.0
+version: 0.2.0
 author: Lee Boonstra
 homepage: https://www.leeboonstra.dev
 

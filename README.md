@@ -1,18 +1,90 @@
-# dialogflow_grpc
+Flutter Dialogflow plugin for detecting intents using GRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming. Built by Google Developer Advocate for Dialogflow, Lee Boonstra
 
-A new flutter plugin project.
+gRPC protos have been generated from:
+git clone https://github.com/googleapis/googleapis
+git clone https://github.com/protocolbuffers/protobuf
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Before making use of this package, **enable the Dialogflow API** in the Google Cloud console.
+Afterwards, download a service account JSON file which has Dialogflow Integration access rights,
+and store this in your project. (e.g. assets/credentials.json)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` under the same
-directory. You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+## Example
+
+Edit the `pubspec.yaml` file with the `dialogflow_grpc` dependency.
+And point to your service account (e.g. assets/credentials.json)
+
+```yaml
+...
+dependencies:
+  dialogflow_grpc: any
+
+...
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - assets/credential
+```
+
+Import this package in your code. Load your service account,
+and create a DialogflowGrpc instance:
+
+```dart
+import 'package:dialogflow_grpc/dialogflow_grpc.dart';
+final serviceAccount = ServiceAccount.fromString(
+    '${(await rootBundle.loadString('assets/credentials.json'))}');
+DialogflowGrpc dialogflow = DialogflowGrpc.viaServiceAccount(serviceAccount);
+```
+
+## Example: DetectIntent
+
+Detecting an intent based on a text input:
+
+```dart
+    var data = await dialogflow.detectIntent(text, 'en-US');
+    print(data.queryResult.fulfillmentText);
+```
+
+## Example: StreamingDetectIntent
+
+Detecting an intent based on an audio stream:
+
+```dart
+  var config = InputConfig(
+    encoding: 'AUDIO_ENCODING_LINEAR_16',
+    languageCode: 'en-US',
+    sampleRateHertz: 8000
+  );
+
+  // Make the streamingDetectIntent call, with the InputConfig and the audioStream
+  final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
+
+  final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
+  responseStream.listen((data) {
+    print(data);
+  });
+```
+
+Official API documentation: https://cloud.google.com/dialogflow/es/docs/reference/rpc
+
+### TODO
+
+- [x] Support DetectIntent TextInput
+- [x] Add streamingDetectIntent support
+- [x] Working app example
+- [ ] Support DetectIntent with Events
+- [ ] Support for V2Beta
+- [ ] Support for CX
+- [ ] Other Dialogflow use cases other than intent detection
+
+
+**Disclaimer: This package is made by Lee Boonstra. This is not an official Google package.
+This package is provided as-is, without warranty or representation for any use or purpose.
+Feel free to improve this package, and contribute.**
