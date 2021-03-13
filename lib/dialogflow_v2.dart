@@ -13,6 +13,7 @@ import 'dart:async';
 
 import 'package:meta/meta.dart';
 import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
+import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
 
 /// An interface to Google Cloud's Dialogflow API via gRPC
 ///

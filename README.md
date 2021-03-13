@@ -1,12 +1,23 @@
-Flutter Dialogflow plugin for detecting intents using gRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming. Built by Google Developer Advocate for Dialogflow, Lee Boonstra
+Auto-generated Flutter Dialogflow library for detecting intents using gRPC.
+A faster integration with the Dialogflow API and also the possibility to do audio streaming.
+Built by Google Developer Advocate for Dialogflow, Lee Boonstra
+
+**Disclaimer: This package is made by [Lee Boonstra](https://twitter.com/ladysign). This is not an official Google package.
+This package is provided as-is, without warranty or representation for any use or purpose.
+Feel free to improve this package, and contribute.**
 
 gRPC protos have been generated from:
-git clone https://github.com/googleapis/googleapis
-git clone https://github.com/protocolbuffers/protobuf
+* git clone https://github.com/googleapis/googleapis
+* git clone https://github.com/protocolbuffers/protobuf
 
 ## Usage
 
 Before making use of this package, **enable the Dialogflow API** in the Google Cloud console.
+
+```
+gcloud services enable dialogflow.googleapis.com
+```
+
 Afterwards, download a service account JSON file which has Dialogflow Integration access rights,
 and store this in your project. (e.g. assets/credentials.json)
 
@@ -89,7 +100,7 @@ Developer Website: https://www.leeboonstra.dev
 - [x] Support DetectIntent TextInput
 - [x] Add streamingDetectIntent support
 - [x] Working app example audio streaming / chat app
-- [ ] Get the session from the service account
+- [x] Get the session from the service account
 - [ ] Share demo Dialogflow Agent
 - [ ] Codelab working audio streaming app
 - [ ] Support DetectIntent with Events
@@ -100,8 +111,3 @@ Developer Website: https://www.leeboonstra.dev
 
 <img src="https://raw.githubusercontent.com/savelee/dialogflow_grpc_flutter/main/example/assets/screenshot.png" alt="screenshot" width="300"/>
 
-https://www.leeboonstra.dev
-
-**Disclaimer: This package is made by [Lee Boonstra](https://twitter.com/ladysign). This is not an official Google package.
-This package is provided as-is, without warranty or representation for any use or purpose.
-Feel free to improve this package, and contribute.**

@@ -1,3 +1,12 @@
+
+## 0.2.2
+
+* Fixes in Documentation
+
+## 0.2.2
+
+* Fixes in Documentation
+
 ## 0.2.0
 
 * detectIntent Text Input with Dialogflow V2
