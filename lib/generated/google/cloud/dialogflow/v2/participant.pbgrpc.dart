@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/participant.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -61,79 +61,59 @@ class ParticipantsClient extends $grpc.Client {
       ($core.List<$core.int> value) =>
           $9.SuggestFaqAnswersResponse.fromBuffer(value));
 
-  ParticipantsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  ParticipantsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$9.Participant> createParticipant(
       $9.CreateParticipantRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createParticipant, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createParticipant, request, options: options);
   }
 
   $grpc.ResponseFuture<$9.Participant> getParticipant(
       $9.GetParticipantRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getParticipant, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getParticipant, request, options: options);
   }
 
   $grpc.ResponseFuture<$9.ListParticipantsResponse> listParticipants(
       $9.ListParticipantsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listParticipants, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listParticipants, request, options: options);
   }
 
   $grpc.ResponseFuture<$9.Participant> updateParticipant(
       $9.UpdateParticipantRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateParticipant, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateParticipant, request, options: options);
   }
 
   $grpc.ResponseFuture<$9.AnalyzeContentResponse> analyzeContent(
       $9.AnalyzeContentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$analyzeContent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$analyzeContent, request, options: options);
   }
 
   $grpc.ResponseStream<$9.StreamingAnalyzeContentResponse>
       streamingAnalyzeContent(
           $async.Stream<$9.StreamingAnalyzeContentRequest> request,
-          {$grpc.CallOptions options}) {
-    final call =
-        $createCall(_$streamingAnalyzeContent, request, options: options);
-    return $grpc.ResponseStream(call);
+          {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$streamingAnalyzeContent, request,
+        options: options);
   }
 
   $grpc.ResponseFuture<$9.SuggestArticlesResponse> suggestArticles(
       $9.SuggestArticlesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$suggestArticles, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$suggestArticles, request, options: options);
   }
 
   $grpc.ResponseFuture<$9.SuggestFaqAnswersResponse> suggestFaqAnswers(
       $9.SuggestFaqAnswersRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$suggestFaqAnswers, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$suggestFaqAnswers, request, options: options);
   }
 }
 

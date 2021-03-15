@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/intent.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -52,65 +52,47 @@ class IntentsClient extends $grpc.Client {
           ($6.BatchDeleteIntentsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
 
-  IntentsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  IntentsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$6.ListIntentsResponse> listIntents(
       $6.ListIntentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listIntents, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listIntents, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.Intent> getIntent($6.GetIntentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$getIntent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getIntent, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.Intent> createIntent($6.CreateIntentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createIntent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createIntent, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.Intent> updateIntent($6.UpdateIntentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateIntent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateIntent, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Empty> deleteIntent($6.DeleteIntentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteIntent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteIntent, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> batchUpdateIntents(
       $6.BatchUpdateIntentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchUpdateIntents, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchUpdateIntents, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> batchDeleteIntents(
       $6.BatchDeleteIntentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchDeleteIntents, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchDeleteIntents, request, options: options);
   }
 }
 

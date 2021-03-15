@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/agent.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -63,80 +63,57 @@ class AgentsClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $3.ValidationResult.fromBuffer(value));
 
-  AgentsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  AgentsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$2.Agent> getAgent($2.GetAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$getAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Agent> setAgent($2.SetAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$setAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$setAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteAgent($2.DeleteAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.SearchAgentsResponse> searchAgents(
       $2.SearchAgentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$searchAgents, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$searchAgents, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> trainAgent($2.TrainAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$trainAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$trainAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> exportAgent($2.ExportAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$exportAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$exportAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> importAgent($2.ImportAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$importAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$importAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> restoreAgent(
       $2.RestoreAgentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$restoreAgent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$restoreAgent, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.ValidationResult> getValidationResult(
       $2.GetValidationResultRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getValidationResult, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getValidationResult, request, options: options);
   }
 }
 

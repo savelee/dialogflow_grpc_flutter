@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/conversation_profile.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -47,52 +47,43 @@ class ConversationProfilesClient extends $grpc.Client {
       ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
 
   ConversationProfilesClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions options})
-      : super(channel, options: options);
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$14.ListConversationProfilesResponse>
       listConversationProfiles($14.ListConversationProfilesRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listConversationProfiles, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listConversationProfiles, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$14.ConversationProfile> getConversationProfile(
       $14.GetConversationProfileRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getConversationProfile, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getConversationProfile, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$14.ConversationProfile> createConversationProfile(
       $14.CreateConversationProfileRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createConversationProfile, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createConversationProfile, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$14.ConversationProfile> updateConversationProfile(
       $14.UpdateConversationProfileRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateConversationProfile, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateConversationProfile, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$2.Empty> deleteConversationProfile(
       $14.DeleteConversationProfileRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteConversationProfile, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteConversationProfile, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 

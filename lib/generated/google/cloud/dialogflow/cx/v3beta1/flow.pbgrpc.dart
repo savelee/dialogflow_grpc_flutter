@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/cx/v3beta1/flow.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -57,71 +57,53 @@ class FlowsClient extends $grpc.Client {
       ($core.List<$core.int> value) =>
           $3.FlowValidationResult.fromBuffer(value));
 
-  FlowsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  FlowsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$3.Flow> createFlow($3.CreateFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteFlow($3.DeleteFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.ListFlowsResponse> listFlows(
       $3.ListFlowsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$listFlows, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listFlows, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Flow> getFlow($3.GetFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$getFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Flow> updateFlow($3.UpdateFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> trainFlow($3.TrainFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$trainFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$trainFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.FlowValidationResult> validateFlow(
       $3.ValidateFlowRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$validateFlow, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$validateFlow, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.FlowValidationResult> getFlowValidationResult(
       $3.GetFlowValidationResultRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getFlowValidationResult, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFlowValidationResult, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 

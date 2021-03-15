@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/session_entity_type.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -44,52 +44,42 @@ class SessionEntityTypesClient extends $grpc.Client {
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   SessionEntityTypesClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions options})
-      : super(channel, options: options);
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$7.ListSessionEntityTypesResponse>
       listSessionEntityTypes($7.ListSessionEntityTypesRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listSessionEntityTypes, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listSessionEntityTypes, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$7.SessionEntityType> getSessionEntityType(
       $7.GetSessionEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getSessionEntityType, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSessionEntityType, request, options: options);
   }
 
   $grpc.ResponseFuture<$7.SessionEntityType> createSessionEntityType(
       $7.CreateSessionEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createSessionEntityType, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSessionEntityType, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$7.SessionEntityType> updateSessionEntityType(
       $7.UpdateSessionEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateSessionEntityType, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSessionEntityType, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteSessionEntityType(
       $7.DeleteSessionEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteSessionEntityType, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSessionEntityType, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 

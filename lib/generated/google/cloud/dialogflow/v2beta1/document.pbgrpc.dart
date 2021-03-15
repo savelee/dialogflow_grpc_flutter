@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/document.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -52,69 +52,50 @@ class DocumentsClient extends $grpc.Client {
           ($13.ReloadDocumentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
 
-  DocumentsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  DocumentsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$13.ListDocumentsResponse> listDocuments(
       $13.ListDocumentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listDocuments, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listDocuments, request, options: options);
   }
 
   $grpc.ResponseFuture<$13.Document> getDocument($13.GetDocumentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getDocument, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDocument, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> createDocument(
       $13.CreateDocumentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createDocument, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createDocument, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> importDocuments(
       $13.ImportDocumentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$importDocuments, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$importDocuments, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> deleteDocument(
       $13.DeleteDocumentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteDocument, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteDocument, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> updateDocument(
       $13.UpdateDocumentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateDocument, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateDocument, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Operation> reloadDocument(
       $13.ReloadDocumentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$reloadDocument, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$reloadDocument, request, options: options);
   }
 }
 

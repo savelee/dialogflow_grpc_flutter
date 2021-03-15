@@ -22,7 +22,7 @@ environment:
 
 dependencies:
   sound_stream: ^0.2.0
-  rxdart: ^0.24.1
+  rxdart: ^0.26.0
   dialogflow_grpc: any
   flutter:
     sdk: flutter
@@ -31,10 +31,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-
-dev_dependencies:
-  flutter:
-    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

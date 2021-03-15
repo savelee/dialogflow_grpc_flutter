@@ -2,109 +2,94 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/cx/v3beta1/environment.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'environment.pb.dart' as $7;
+import 'environment.pb.dart' as $12;
 import '../../../../longrunning/operations.pb.dart' as $2;
 import '../../../../protobuf/empty.pb.dart' as $1;
 export 'environment.pb.dart';
 
 class EnvironmentsClient extends $grpc.Client {
   static final _$listEnvironments = $grpc.ClientMethod<
-          $7.ListEnvironmentsRequest, $7.ListEnvironmentsResponse>(
+          $12.ListEnvironmentsRequest, $12.ListEnvironmentsResponse>(
       '/google.cloud.dialogflow.cx.v3beta1.Environments/ListEnvironments',
-      ($7.ListEnvironmentsRequest value) => value.writeToBuffer(),
+      ($12.ListEnvironmentsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $7.ListEnvironmentsResponse.fromBuffer(value));
+          $12.ListEnvironmentsResponse.fromBuffer(value));
   static final _$getEnvironment =
-      $grpc.ClientMethod<$7.GetEnvironmentRequest, $7.Environment>(
+      $grpc.ClientMethod<$12.GetEnvironmentRequest, $12.Environment>(
           '/google.cloud.dialogflow.cx.v3beta1.Environments/GetEnvironment',
-          ($7.GetEnvironmentRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $7.Environment.fromBuffer(value));
+          ($12.GetEnvironmentRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $12.Environment.fromBuffer(value));
   static final _$createEnvironment =
-      $grpc.ClientMethod<$7.CreateEnvironmentRequest, $2.Operation>(
+      $grpc.ClientMethod<$12.CreateEnvironmentRequest, $2.Operation>(
           '/google.cloud.dialogflow.cx.v3beta1.Environments/CreateEnvironment',
-          ($7.CreateEnvironmentRequest value) => value.writeToBuffer(),
+          ($12.CreateEnvironmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$updateEnvironment =
-      $grpc.ClientMethod<$7.UpdateEnvironmentRequest, $2.Operation>(
+      $grpc.ClientMethod<$12.UpdateEnvironmentRequest, $2.Operation>(
           '/google.cloud.dialogflow.cx.v3beta1.Environments/UpdateEnvironment',
-          ($7.UpdateEnvironmentRequest value) => value.writeToBuffer(),
+          ($12.UpdateEnvironmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
   static final _$deleteEnvironment =
-      $grpc.ClientMethod<$7.DeleteEnvironmentRequest, $1.Empty>(
+      $grpc.ClientMethod<$12.DeleteEnvironmentRequest, $1.Empty>(
           '/google.cloud.dialogflow.cx.v3beta1.Environments/DeleteEnvironment',
-          ($7.DeleteEnvironmentRequest value) => value.writeToBuffer(),
+          ($12.DeleteEnvironmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$lookupEnvironmentHistory = $grpc.ClientMethod<
-          $7.LookupEnvironmentHistoryRequest,
-          $7.LookupEnvironmentHistoryResponse>(
+          $12.LookupEnvironmentHistoryRequest,
+          $12.LookupEnvironmentHistoryResponse>(
       '/google.cloud.dialogflow.cx.v3beta1.Environments/LookupEnvironmentHistory',
-      ($7.LookupEnvironmentHistoryRequest value) => value.writeToBuffer(),
+      ($12.LookupEnvironmentHistoryRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $7.LookupEnvironmentHistoryResponse.fromBuffer(value));
+          $12.LookupEnvironmentHistoryResponse.fromBuffer(value));
 
-  EnvironmentsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  EnvironmentsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$7.ListEnvironmentsResponse> listEnvironments(
-      $7.ListEnvironmentsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listEnvironments, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+  $grpc.ResponseFuture<$12.ListEnvironmentsResponse> listEnvironments(
+      $12.ListEnvironmentsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listEnvironments, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.Environment> getEnvironment(
-      $7.GetEnvironmentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getEnvironment, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+  $grpc.ResponseFuture<$12.Environment> getEnvironment(
+      $12.GetEnvironmentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getEnvironment, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> createEnvironment(
-      $7.CreateEnvironmentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createEnvironment, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      $12.CreateEnvironmentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createEnvironment, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> updateEnvironment(
-      $7.UpdateEnvironmentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateEnvironment, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      $12.UpdateEnvironmentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateEnvironment, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteEnvironment(
-      $7.DeleteEnvironmentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteEnvironment, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      $12.DeleteEnvironmentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEnvironment, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.LookupEnvironmentHistoryResponse>
-      lookupEnvironmentHistory($7.LookupEnvironmentHistoryRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$lookupEnvironmentHistory, $async.Stream.fromIterable([request]),
+  $grpc.ResponseFuture<$12.LookupEnvironmentHistoryResponse>
+      lookupEnvironmentHistory($12.LookupEnvironmentHistoryRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$lookupEnvironmentHistory, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 
@@ -112,100 +97,100 @@ abstract class EnvironmentsServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.dialogflow.cx.v3beta1.Environments';
 
   EnvironmentsServiceBase() {
-    $addMethod($grpc.ServiceMethod<$7.ListEnvironmentsRequest,
-            $7.ListEnvironmentsResponse>(
+    $addMethod($grpc.ServiceMethod<$12.ListEnvironmentsRequest,
+            $12.ListEnvironmentsResponse>(
         'ListEnvironments',
         listEnvironments_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.ListEnvironmentsRequest.fromBuffer(value),
-        ($7.ListEnvironmentsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.GetEnvironmentRequest, $7.Environment>(
+            $12.ListEnvironmentsRequest.fromBuffer(value),
+        ($12.ListEnvironmentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$12.GetEnvironmentRequest, $12.Environment>(
         'GetEnvironment',
         getEnvironment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.GetEnvironmentRequest.fromBuffer(value),
-        ($7.Environment value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.CreateEnvironmentRequest, $2.Operation>(
+            $12.GetEnvironmentRequest.fromBuffer(value),
+        ($12.Environment value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$12.CreateEnvironmentRequest, $2.Operation>(
         'CreateEnvironment',
         createEnvironment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.CreateEnvironmentRequest.fromBuffer(value),
+            $12.CreateEnvironmentRequest.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.UpdateEnvironmentRequest, $2.Operation>(
+    $addMethod($grpc.ServiceMethod<$12.UpdateEnvironmentRequest, $2.Operation>(
         'UpdateEnvironment',
         updateEnvironment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.UpdateEnvironmentRequest.fromBuffer(value),
+            $12.UpdateEnvironmentRequest.fromBuffer(value),
         ($2.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.DeleteEnvironmentRequest, $1.Empty>(
+    $addMethod($grpc.ServiceMethod<$12.DeleteEnvironmentRequest, $1.Empty>(
         'DeleteEnvironment',
         deleteEnvironment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.DeleteEnvironmentRequest.fromBuffer(value),
+            $12.DeleteEnvironmentRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.LookupEnvironmentHistoryRequest,
-            $7.LookupEnvironmentHistoryResponse>(
+    $addMethod($grpc.ServiceMethod<$12.LookupEnvironmentHistoryRequest,
+            $12.LookupEnvironmentHistoryResponse>(
         'LookupEnvironmentHistory',
         lookupEnvironmentHistory_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $7.LookupEnvironmentHistoryRequest.fromBuffer(value),
-        ($7.LookupEnvironmentHistoryResponse value) => value.writeToBuffer()));
+            $12.LookupEnvironmentHistoryRequest.fromBuffer(value),
+        ($12.LookupEnvironmentHistoryResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$7.ListEnvironmentsResponse> listEnvironments_Pre(
+  $async.Future<$12.ListEnvironmentsResponse> listEnvironments_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$7.ListEnvironmentsRequest> request) async {
+      $async.Future<$12.ListEnvironmentsRequest> request) async {
     return listEnvironments(call, await request);
   }
 
-  $async.Future<$7.Environment> getEnvironment_Pre($grpc.ServiceCall call,
-      $async.Future<$7.GetEnvironmentRequest> request) async {
+  $async.Future<$12.Environment> getEnvironment_Pre($grpc.ServiceCall call,
+      $async.Future<$12.GetEnvironmentRequest> request) async {
     return getEnvironment(call, await request);
   }
 
   $async.Future<$2.Operation> createEnvironment_Pre($grpc.ServiceCall call,
-      $async.Future<$7.CreateEnvironmentRequest> request) async {
+      $async.Future<$12.CreateEnvironmentRequest> request) async {
     return createEnvironment(call, await request);
   }
 
   $async.Future<$2.Operation> updateEnvironment_Pre($grpc.ServiceCall call,
-      $async.Future<$7.UpdateEnvironmentRequest> request) async {
+      $async.Future<$12.UpdateEnvironmentRequest> request) async {
     return updateEnvironment(call, await request);
   }
 
   $async.Future<$1.Empty> deleteEnvironment_Pre($grpc.ServiceCall call,
-      $async.Future<$7.DeleteEnvironmentRequest> request) async {
+      $async.Future<$12.DeleteEnvironmentRequest> request) async {
     return deleteEnvironment(call, await request);
   }
 
-  $async.Future<$7.LookupEnvironmentHistoryResponse>
+  $async.Future<$12.LookupEnvironmentHistoryResponse>
       lookupEnvironmentHistory_Pre($grpc.ServiceCall call,
-          $async.Future<$7.LookupEnvironmentHistoryRequest> request) async {
+          $async.Future<$12.LookupEnvironmentHistoryRequest> request) async {
     return lookupEnvironmentHistory(call, await request);
   }
 
-  $async.Future<$7.ListEnvironmentsResponse> listEnvironments(
-      $grpc.ServiceCall call, $7.ListEnvironmentsRequest request);
-  $async.Future<$7.Environment> getEnvironment(
-      $grpc.ServiceCall call, $7.GetEnvironmentRequest request);
+  $async.Future<$12.ListEnvironmentsResponse> listEnvironments(
+      $grpc.ServiceCall call, $12.ListEnvironmentsRequest request);
+  $async.Future<$12.Environment> getEnvironment(
+      $grpc.ServiceCall call, $12.GetEnvironmentRequest request);
   $async.Future<$2.Operation> createEnvironment(
-      $grpc.ServiceCall call, $7.CreateEnvironmentRequest request);
+      $grpc.ServiceCall call, $12.CreateEnvironmentRequest request);
   $async.Future<$2.Operation> updateEnvironment(
-      $grpc.ServiceCall call, $7.UpdateEnvironmentRequest request);
+      $grpc.ServiceCall call, $12.UpdateEnvironmentRequest request);
   $async.Future<$1.Empty> deleteEnvironment(
-      $grpc.ServiceCall call, $7.DeleteEnvironmentRequest request);
-  $async.Future<$7.LookupEnvironmentHistoryResponse> lookupEnvironmentHistory(
-      $grpc.ServiceCall call, $7.LookupEnvironmentHistoryRequest request);
+      $grpc.ServiceCall call, $12.DeleteEnvironmentRequest request);
+  $async.Future<$12.LookupEnvironmentHistoryResponse> lookupEnvironmentHistory(
+      $grpc.ServiceCall call, $12.LookupEnvironmentHistoryRequest request);
 }

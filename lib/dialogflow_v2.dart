@@ -3,17 +3,16 @@
 // To add platforms, run `flutter create -t plugin --platforms <platforms> .` under the same
 // directory. You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
 
+import 'dart:async';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/audio_config.pb.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pbgrpc.dart';
+
 import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:grpc/grpc.dart';
 import 'package:uuid/uuid.dart';
-import 'dart:async';
-
 import 'package:meta/meta.dart';
-import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
-import 'generated/google/cloud/dialogflow/v2/session.pb.dart';
+
 
 /// An interface to Google Cloud's Dialogflow API via gRPC
 ///
@@ -71,6 +70,8 @@ class DialogflowGrpc {
     // data to the Google Api.
     final request = StreamController<StreamingDetectIntentRequest>();
     // add the session to the request
+
+    print(DialogflowAuth.session);
 
     QueryInput queryInput = QueryInput()..audioConfig = config.cast();
     request

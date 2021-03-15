@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/cx/v3/webhook.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -42,50 +42,37 @@ class WebhooksClient extends $grpc.Client {
           ($15.DeleteWebhookRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  WebhooksClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  WebhooksClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$15.ListWebhooksResponse> listWebhooks(
       $15.ListWebhooksRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listWebhooks, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listWebhooks, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.Webhook> getWebhook($15.GetWebhookRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getWebhook, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getWebhook, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.Webhook> createWebhook(
       $15.CreateWebhookRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createWebhook, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createWebhook, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.Webhook> updateWebhook(
       $15.UpdateWebhookRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateWebhook, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateWebhook, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteWebhook($15.DeleteWebhookRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteWebhook, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteWebhook, request, options: options);
   }
 }
 

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/participant.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -21,32 +21,84 @@ import 'participant.pbenum.dart';
 export 'participant.pbenum.dart';
 
 class Participant extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Participant', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..e<Participant_Role>(2, 'role', $pb.PbFieldType.OE, defaultOrMaker: Participant_Role.ROLE_UNSPECIFIED, valueOf: Participant_Role.valueOf, enumValues: Participant_Role.values)
-    ..aOS(6, 'sipRecordingMediaLabel')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Participant',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..e<Participant_Role>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'role',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Participant_Role.ROLE_UNSPECIFIED,
+        valueOf: Participant_Role.valueOf,
+        enumValues: Participant_Role.values)
+    ..aOS(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sipRecordingMediaLabel')
+    ..hasRequiredFields = false;
 
   Participant._() : super();
-  factory Participant() => create();
-  factory Participant.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Participant.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Participant({
+    $core.String? name,
+    Participant_Role? role,
+    $core.String? sipRecordingMediaLabel,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (role != null) {
+      _result.role = role;
+    }
+    if (sipRecordingMediaLabel != null) {
+      _result.sipRecordingMediaLabel = sipRecordingMediaLabel;
+    }
+    return _result;
+  }
+  factory Participant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Participant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Participant clone() => Participant()..mergeFromMessage(this);
-  Participant copyWith(void Function(Participant) updates) => super.copyWith((message) => updates(message as Participant));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Participant copyWith(void Function(Participant) updates) =>
+      super.copyWith((message) => updates(message as Participant))
+          as Participant; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Participant create() => Participant._();
   Participant createEmptyInstance() => create();
   static $pb.PbList<Participant> createRepeated() => $pb.PbList<Participant>();
   @$core.pragma('dart2js:noInline')
-  static Participant getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Participant>(create);
-  static Participant _defaultInstance;
+  static Participant getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Participant>(create);
+  static Participant? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -55,7 +107,10 @@ class Participant extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Participant_Role get role => $_getN(1);
   @$pb.TagNumber(2)
-  set role(Participant_Role v) { setField(2, v); }
+  set role(Participant_Role v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasRole() => $_has(1);
   @$pb.TagNumber(2)
@@ -64,7 +119,10 @@ class Participant extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get sipRecordingMediaLabel => $_getSZ(2);
   @$pb.TagNumber(6)
-  set sipRecordingMediaLabel($core.String v) { $_setString(2, v); }
+  set sipRecordingMediaLabel($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasSipRecordingMediaLabel() => $_has(2);
   @$pb.TagNumber(6)
@@ -72,36 +130,107 @@ class Participant extends $pb.GeneratedMessage {
 }
 
 class Message extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Message', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..aOS(2, 'content')
-    ..aOS(3, 'languageCode')
-    ..aOS(4, 'participant')
-    ..e<Participant_Role>(5, 'participantRole', $pb.PbFieldType.OE, defaultOrMaker: Participant_Role.ROLE_UNSPECIFIED, valueOf: Participant_Role.valueOf, enumValues: Participant_Role.values)
-    ..aOM<$22.Timestamp>(6, 'createTime', subBuilder: $22.Timestamp.create)
-    ..aOM<MessageAnnotation>(7, 'messageAnnotation', subBuilder: MessageAnnotation.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Message',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'content')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'languageCode')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participant')
+    ..e<Participant_Role>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'participantRole', $pb.PbFieldType.OE,
+        defaultOrMaker: Participant_Role.ROLE_UNSPECIFIED,
+        valueOf: Participant_Role.valueOf,
+        enumValues: Participant_Role.values)
+    ..aOM<$22.Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createTime', subBuilder: $22.Timestamp.create)
+    ..aOM<MessageAnnotation>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'messageAnnotation', subBuilder: MessageAnnotation.create)
+    ..hasRequiredFields = false;
 
   Message._() : super();
-  factory Message() => create();
-  factory Message.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Message.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Message({
+    $core.String? name,
+    $core.String? content,
+    $core.String? languageCode,
+    $core.String? participant,
+    Participant_Role? participantRole,
+    $22.Timestamp? createTime,
+    MessageAnnotation? messageAnnotation,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (content != null) {
+      _result.content = content;
+    }
+    if (languageCode != null) {
+      _result.languageCode = languageCode;
+    }
+    if (participant != null) {
+      _result.participant = participant;
+    }
+    if (participantRole != null) {
+      _result.participantRole = participantRole;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (messageAnnotation != null) {
+      _result.messageAnnotation = messageAnnotation;
+    }
+    return _result;
+  }
+  factory Message.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Message.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Message clone() => Message()..mergeFromMessage(this);
-  Message copyWith(void Function(Message) updates) => super.copyWith((message) => updates(message as Message));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Message copyWith(void Function(Message) updates) =>
+      super.copyWith((message) => updates(message as Message))
+          as Message; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message create() => Message._();
   Message createEmptyInstance() => create();
   static $pb.PbList<Message> createRepeated() => $pb.PbList<Message>();
   @$core.pragma('dart2js:noInline')
-  static Message getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message>(create);
-  static Message _defaultInstance;
+  static Message getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message>(create);
+  static Message? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -110,7 +239,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get content => $_getSZ(1);
   @$pb.TagNumber(2)
-  set content($core.String v) { $_setString(1, v); }
+  set content($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasContent() => $_has(1);
   @$pb.TagNumber(2)
@@ -119,7 +251,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get languageCode => $_getSZ(2);
   @$pb.TagNumber(3)
-  set languageCode($core.String v) { $_setString(2, v); }
+  set languageCode($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
   @$pb.TagNumber(3)
@@ -128,7 +263,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get participant => $_getSZ(3);
   @$pb.TagNumber(4)
-  set participant($core.String v) { $_setString(3, v); }
+  set participant($core.String v) {
+    $_setString(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasParticipant() => $_has(3);
   @$pb.TagNumber(4)
@@ -137,7 +275,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Participant_Role get participantRole => $_getN(4);
   @$pb.TagNumber(5)
-  set participantRole(Participant_Role v) { setField(5, v); }
+  set participantRole(Participant_Role v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasParticipantRole() => $_has(4);
   @$pb.TagNumber(5)
@@ -146,7 +287,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $22.Timestamp get createTime => $_getN(5);
   @$pb.TagNumber(6)
-  set createTime($22.Timestamp v) { setField(6, v); }
+  set createTime($22.Timestamp v) {
+    setField(6, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(5);
   @$pb.TagNumber(6)
@@ -157,7 +301,10 @@ class Message extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   MessageAnnotation get messageAnnotation => $_getN(6);
   @$pb.TagNumber(7)
-  set messageAnnotation(MessageAnnotation v) { setField(7, v); }
+  set messageAnnotation(MessageAnnotation v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasMessageAnnotation() => $_has(6);
   @$pb.TagNumber(7)
@@ -167,31 +314,78 @@ class Message extends $pb.GeneratedMessage {
 }
 
 class CreateParticipantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateParticipantRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..aOM<Participant>(2, 'participant', subBuilder: Participant.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateParticipantRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<Participant>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participant',
+        subBuilder: Participant.create)
+    ..hasRequiredFields = false;
 
   CreateParticipantRequest._() : super();
-  factory CreateParticipantRequest() => create();
-  factory CreateParticipantRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreateParticipantRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  CreateParticipantRequest clone() => CreateParticipantRequest()..mergeFromMessage(this);
-  CreateParticipantRequest copyWith(void Function(CreateParticipantRequest) updates) => super.copyWith((message) => updates(message as CreateParticipantRequest));
+  factory CreateParticipantRequest({
+    $core.String? parent,
+    Participant? participant,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (participant != null) {
+      _result.participant = participant;
+    }
+    return _result;
+  }
+  factory CreateParticipantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateParticipantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateParticipantRequest clone() =>
+      CreateParticipantRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateParticipantRequest copyWith(
+          void Function(CreateParticipantRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateParticipantRequest))
+          as CreateParticipantRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateParticipantRequest create() => CreateParticipantRequest._();
   CreateParticipantRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateParticipantRequest> createRepeated() => $pb.PbList<CreateParticipantRequest>();
+  static $pb.PbList<CreateParticipantRequest> createRepeated() =>
+      $pb.PbList<CreateParticipantRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateParticipantRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateParticipantRequest>(create);
-  static CreateParticipantRequest _defaultInstance;
+  static CreateParticipantRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateParticipantRequest>(create);
+  static CreateParticipantRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -200,7 +394,10 @@ class CreateParticipantRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Participant get participant => $_getN(1);
   @$pb.TagNumber(2)
-  set participant(Participant v) { setField(2, v); }
+  set participant(Participant v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasParticipant() => $_has(1);
   @$pb.TagNumber(2)
@@ -210,30 +407,68 @@ class CreateParticipantRequest extends $pb.GeneratedMessage {
 }
 
 class GetParticipantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetParticipantRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetParticipantRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
 
   GetParticipantRequest._() : super();
-  factory GetParticipantRequest() => create();
-  factory GetParticipantRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetParticipantRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  GetParticipantRequest clone() => GetParticipantRequest()..mergeFromMessage(this);
-  GetParticipantRequest copyWith(void Function(GetParticipantRequest) updates) => super.copyWith((message) => updates(message as GetParticipantRequest));
+  factory GetParticipantRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetParticipantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetParticipantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetParticipantRequest clone() =>
+      GetParticipantRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetParticipantRequest copyWith(
+          void Function(GetParticipantRequest) updates) =>
+      super.copyWith((message) => updates(message as GetParticipantRequest))
+          as GetParticipantRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetParticipantRequest create() => GetParticipantRequest._();
   GetParticipantRequest createEmptyInstance() => create();
-  static $pb.PbList<GetParticipantRequest> createRepeated() => $pb.PbList<GetParticipantRequest>();
+  static $pb.PbList<GetParticipantRequest> createRepeated() =>
+      $pb.PbList<GetParticipantRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetParticipantRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetParticipantRequest>(create);
-  static GetParticipantRequest _defaultInstance;
+  static GetParticipantRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetParticipantRequest>(create);
+  static GetParticipantRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -241,32 +476,87 @@ class GetParticipantRequest extends $pb.GeneratedMessage {
 }
 
 class ListParticipantsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListParticipantsRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
-    ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListParticipantsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
 
   ListParticipantsRequest._() : super();
-  factory ListParticipantsRequest() => create();
-  factory ListParticipantsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListParticipantsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ListParticipantsRequest clone() => ListParticipantsRequest()..mergeFromMessage(this);
-  ListParticipantsRequest copyWith(void Function(ListParticipantsRequest) updates) => super.copyWith((message) => updates(message as ListParticipantsRequest));
+  factory ListParticipantsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListParticipantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListParticipantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListParticipantsRequest clone() =>
+      ListParticipantsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListParticipantsRequest copyWith(
+          void Function(ListParticipantsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListParticipantsRequest))
+          as ListParticipantsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ListParticipantsRequest create() => ListParticipantsRequest._();
   ListParticipantsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantsRequest> createRepeated() => $pb.PbList<ListParticipantsRequest>();
+  static $pb.PbList<ListParticipantsRequest> createRepeated() =>
+      $pb.PbList<ListParticipantsRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListParticipantsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListParticipantsRequest>(create);
-  static ListParticipantsRequest _defaultInstance;
+  static ListParticipantsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListParticipantsRequest>(create);
+  static ListParticipantsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -275,7 +565,10 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
@@ -284,7 +577,10 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) { $_setString(2, v); }
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
@@ -292,26 +588,68 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
 }
 
 class ListParticipantsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListParticipantsResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..pc<Participant>(1, 'participants', $pb.PbFieldType.PM, subBuilder: Participant.create)
-    ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListParticipantsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<Participant>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participants',
+        $pb.PbFieldType.PM,
+        subBuilder: Participant.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListParticipantsResponse._() : super();
-  factory ListParticipantsResponse() => create();
-  factory ListParticipantsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListParticipantsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ListParticipantsResponse clone() => ListParticipantsResponse()..mergeFromMessage(this);
-  ListParticipantsResponse copyWith(void Function(ListParticipantsResponse) updates) => super.copyWith((message) => updates(message as ListParticipantsResponse));
+  factory ListParticipantsResponse({
+    $core.Iterable<Participant>? participants,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (participants != null) {
+      _result.participants.addAll(participants);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListParticipantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListParticipantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListParticipantsResponse clone() =>
+      ListParticipantsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListParticipantsResponse copyWith(
+          void Function(ListParticipantsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListParticipantsResponse))
+          as ListParticipantsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ListParticipantsResponse create() => ListParticipantsResponse._();
   ListParticipantsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantsResponse> createRepeated() => $pb.PbList<ListParticipantsResponse>();
+  static $pb.PbList<ListParticipantsResponse> createRepeated() =>
+      $pb.PbList<ListParticipantsResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListParticipantsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListParticipantsResponse>(create);
-  static ListParticipantsResponse _defaultInstance;
+  static ListParticipantsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListParticipantsResponse>(create);
+  static ListParticipantsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Participant> get participants => $_getList(0);
@@ -319,7 +657,10 @@ class ListParticipantsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) { $_setString(1, v); }
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
@@ -327,31 +668,76 @@ class ListParticipantsResponse extends $pb.GeneratedMessage {
 }
 
 class UpdateParticipantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateParticipantRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOM<Participant>(1, 'participant', subBuilder: Participant.create)
-    ..aOM<$16.FieldMask>(2, 'updateMask', subBuilder: $16.FieldMask.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateParticipantRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<Participant>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participant',
+        subBuilder: Participant.create)
+    ..aOM<$16.FieldMask>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
+        subBuilder: $16.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateParticipantRequest._() : super();
-  factory UpdateParticipantRequest() => create();
-  factory UpdateParticipantRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UpdateParticipantRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UpdateParticipantRequest clone() => UpdateParticipantRequest()..mergeFromMessage(this);
-  UpdateParticipantRequest copyWith(void Function(UpdateParticipantRequest) updates) => super.copyWith((message) => updates(message as UpdateParticipantRequest));
+  factory UpdateParticipantRequest({
+    Participant? participant,
+    $16.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (participant != null) {
+      _result.participant = participant;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateParticipantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateParticipantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateParticipantRequest clone() =>
+      UpdateParticipantRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateParticipantRequest copyWith(
+          void Function(UpdateParticipantRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateParticipantRequest))
+          as UpdateParticipantRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UpdateParticipantRequest create() => UpdateParticipantRequest._();
   UpdateParticipantRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateParticipantRequest> createRepeated() => $pb.PbList<UpdateParticipantRequest>();
+  static $pb.PbList<UpdateParticipantRequest> createRepeated() =>
+      $pb.PbList<UpdateParticipantRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateParticipantRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateParticipantRequest>(create);
-  static UpdateParticipantRequest _defaultInstance;
+  static UpdateParticipantRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateParticipantRequest>(create);
+  static UpdateParticipantRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   Participant get participant => $_getN(0);
   @$pb.TagNumber(1)
-  set participant(Participant v) { setField(1, v); }
+  set participant(Participant v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParticipant() => $_has(0);
   @$pb.TagNumber(1)
@@ -362,7 +748,10 @@ class UpdateParticipantRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $16.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($16.FieldMask v) { setField(2, v); }
+  set updateMask($16.FieldMask v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
@@ -371,54 +760,117 @@ class UpdateParticipantRequest extends $pb.GeneratedMessage {
   $16.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
-enum AnalyzeContentRequest_Input {
-  textInput, 
-  audioInput, 
-  eventInput, 
-  notSet
-}
+enum AnalyzeContentRequest_Input { textInput, audioInput, eventInput, notSet }
 
 class AnalyzeContentRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, AnalyzeContentRequest_Input> _AnalyzeContentRequest_InputByTag = {
-    6 : AnalyzeContentRequest_Input.textInput,
-    7 : AnalyzeContentRequest_Input.audioInput,
-    8 : AnalyzeContentRequest_Input.eventInput,
-    0 : AnalyzeContentRequest_Input.notSet
+  static const $core.Map<$core.int, AnalyzeContentRequest_Input>
+      _AnalyzeContentRequest_InputByTag = {
+    6: AnalyzeContentRequest_Input.textInput,
+    7: AnalyzeContentRequest_Input.audioInput,
+    8: AnalyzeContentRequest_Input.eventInput,
+    0: AnalyzeContentRequest_Input.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeContentRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AnalyzeContentRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [6, 7, 8])
-    ..aOS(1, 'participant')
-    ..aOM<$19.OutputAudioConfig>(5, 'replyAudioConfig', subBuilder: $19.OutputAudioConfig.create)
-    ..aOM<$8.TextInput>(6, 'textInput', subBuilder: $8.TextInput.create)
-    ..aOM<AudioInput>(7, 'audioInput', subBuilder: AudioInput.create)
-    ..aOM<$8.EventInput>(8, 'eventInput', subBuilder: $8.EventInput.create)
-    ..aOM<$8.QueryParameters>(9, 'queryParams', subBuilder: $8.QueryParameters.create)
-    ..aOS(11, 'requestId')
-    ..hasRequiredFields = false
-  ;
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participant')
+    ..aOM<$19.OutputAudioConfig>(
+        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'replyAudioConfig',
+        subBuilder: $19.OutputAudioConfig.create)
+    ..aOM<$8.TextInput>(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'textInput',
+        subBuilder: $8.TextInput.create)
+    ..aOM<AudioInput>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'audioInput', subBuilder: AudioInput.create)
+    ..aOM<$8.EventInput>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'eventInput', subBuilder: $8.EventInput.create)
+    ..aOM<$8.QueryParameters>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'queryParams', subBuilder: $8.QueryParameters.create)
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'requestId')
+    ..hasRequiredFields = false;
 
   AnalyzeContentRequest._() : super();
-  factory AnalyzeContentRequest() => create();
-  factory AnalyzeContentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AnalyzeContentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  AnalyzeContentRequest clone() => AnalyzeContentRequest()..mergeFromMessage(this);
-  AnalyzeContentRequest copyWith(void Function(AnalyzeContentRequest) updates) => super.copyWith((message) => updates(message as AnalyzeContentRequest));
+  factory AnalyzeContentRequest({
+    $core.String? participant,
+    $19.OutputAudioConfig? replyAudioConfig,
+    $8.TextInput? textInput,
+    AudioInput? audioInput,
+    $8.EventInput? eventInput,
+    $8.QueryParameters? queryParams,
+    $core.String? requestId,
+  }) {
+    final _result = create();
+    if (participant != null) {
+      _result.participant = participant;
+    }
+    if (replyAudioConfig != null) {
+      _result.replyAudioConfig = replyAudioConfig;
+    }
+    if (textInput != null) {
+      _result.textInput = textInput;
+    }
+    if (audioInput != null) {
+      _result.audioInput = audioInput;
+    }
+    if (eventInput != null) {
+      _result.eventInput = eventInput;
+    }
+    if (queryParams != null) {
+      _result.queryParams = queryParams;
+    }
+    if (requestId != null) {
+      _result.requestId = requestId;
+    }
+    return _result;
+  }
+  factory AnalyzeContentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeContentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AnalyzeContentRequest clone() =>
+      AnalyzeContentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AnalyzeContentRequest copyWith(
+          void Function(AnalyzeContentRequest) updates) =>
+      super.copyWith((message) => updates(message as AnalyzeContentRequest))
+          as AnalyzeContentRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AnalyzeContentRequest create() => AnalyzeContentRequest._();
   AnalyzeContentRequest createEmptyInstance() => create();
-  static $pb.PbList<AnalyzeContentRequest> createRepeated() => $pb.PbList<AnalyzeContentRequest>();
+  static $pb.PbList<AnalyzeContentRequest> createRepeated() =>
+      $pb.PbList<AnalyzeContentRequest>();
   @$core.pragma('dart2js:noInline')
-  static AnalyzeContentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnalyzeContentRequest>(create);
-  static AnalyzeContentRequest _defaultInstance;
+  static AnalyzeContentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnalyzeContentRequest>(create);
+  static AnalyzeContentRequest? _defaultInstance;
 
-  AnalyzeContentRequest_Input whichInput() => _AnalyzeContentRequest_InputByTag[$_whichOneof(0)];
+  AnalyzeContentRequest_Input whichInput() =>
+      _AnalyzeContentRequest_InputByTag[$_whichOneof(0)]!;
   void clearInput() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get participant => $_getSZ(0);
   @$pb.TagNumber(1)
-  set participant($core.String v) { $_setString(0, v); }
+  set participant($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParticipant() => $_has(0);
   @$pb.TagNumber(1)
@@ -427,7 +879,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $19.OutputAudioConfig get replyAudioConfig => $_getN(1);
   @$pb.TagNumber(5)
-  set replyAudioConfig($19.OutputAudioConfig v) { setField(5, v); }
+  set replyAudioConfig($19.OutputAudioConfig v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasReplyAudioConfig() => $_has(1);
   @$pb.TagNumber(5)
@@ -438,7 +893,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $8.TextInput get textInput => $_getN(2);
   @$pb.TagNumber(6)
-  set textInput($8.TextInput v) { setField(6, v); }
+  set textInput($8.TextInput v) {
+    setField(6, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasTextInput() => $_has(2);
   @$pb.TagNumber(6)
@@ -449,7 +907,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   AudioInput get audioInput => $_getN(3);
   @$pb.TagNumber(7)
-  set audioInput(AudioInput v) { setField(7, v); }
+  set audioInput(AudioInput v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasAudioInput() => $_has(3);
   @$pb.TagNumber(7)
@@ -460,7 +921,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $8.EventInput get eventInput => $_getN(4);
   @$pb.TagNumber(8)
-  set eventInput($8.EventInput v) { setField(8, v); }
+  set eventInput($8.EventInput v) {
+    setField(8, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasEventInput() => $_has(4);
   @$pb.TagNumber(8)
@@ -471,7 +935,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $8.QueryParameters get queryParams => $_getN(5);
   @$pb.TagNumber(9)
-  set queryParams($8.QueryParameters v) { setField(9, v); }
+  set queryParams($8.QueryParameters v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasQueryParams() => $_has(5);
   @$pb.TagNumber(9)
@@ -482,7 +949,10 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.String get requestId => $_getSZ(6);
   @$pb.TagNumber(11)
-  set requestId($core.String v) { $_setString(6, v); }
+  set requestId($core.String v) {
+    $_setString(6, v);
+  }
+
   @$pb.TagNumber(11)
   $core.bool hasRequestId() => $_has(6);
   @$pb.TagNumber(11)
@@ -490,30 +960,66 @@ class AnalyzeContentRequest extends $pb.GeneratedMessage {
 }
 
 class DtmfParameters extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DtmfParameters', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOB(1, 'acceptsDtmfInput')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DtmfParameters',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'acceptsDtmfInput')
+    ..hasRequiredFields = false;
 
   DtmfParameters._() : super();
-  factory DtmfParameters() => create();
-  factory DtmfParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DtmfParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory DtmfParameters({
+    $core.bool? acceptsDtmfInput,
+  }) {
+    final _result = create();
+    if (acceptsDtmfInput != null) {
+      _result.acceptsDtmfInput = acceptsDtmfInput;
+    }
+    return _result;
+  }
+  factory DtmfParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DtmfParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   DtmfParameters clone() => DtmfParameters()..mergeFromMessage(this);
-  DtmfParameters copyWith(void Function(DtmfParameters) updates) => super.copyWith((message) => updates(message as DtmfParameters));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DtmfParameters copyWith(void Function(DtmfParameters) updates) =>
+      super.copyWith((message) => updates(message as DtmfParameters))
+          as DtmfParameters; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DtmfParameters create() => DtmfParameters._();
   DtmfParameters createEmptyInstance() => create();
-  static $pb.PbList<DtmfParameters> createRepeated() => $pb.PbList<DtmfParameters>();
+  static $pb.PbList<DtmfParameters> createRepeated() =>
+      $pb.PbList<DtmfParameters>();
   @$core.pragma('dart2js:noInline')
-  static DtmfParameters getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DtmfParameters>(create);
-  static DtmfParameters _defaultInstance;
+  static DtmfParameters getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DtmfParameters>(create);
+  static DtmfParameters? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get acceptsDtmfInput => $_getBF(0);
   @$pb.TagNumber(1)
-  set acceptsDtmfInput($core.bool v) { $_setBool(0, v); }
+  set acceptsDtmfInput($core.bool v) {
+    $_setBool(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasAcceptsDtmfInput() => $_has(0);
   @$pb.TagNumber(1)
@@ -521,36 +1027,101 @@ class DtmfParameters extends $pb.GeneratedMessage {
 }
 
 class AnalyzeContentResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeContentResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'replyText')
-    ..aOM<OutputAudio>(2, 'replyAudio', subBuilder: OutputAudio.create)
-    ..aOM<AutomatedAgentReply>(3, 'automatedAgentReply', subBuilder: AutomatedAgentReply.create)
-    ..aOM<Message>(5, 'message', subBuilder: Message.create)
-    ..pc<SuggestionResult>(6, 'humanAgentSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
-    ..pc<SuggestionResult>(7, 'endUserSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
-    ..aOM<DtmfParameters>(9, 'dtmfParameters', subBuilder: DtmfParameters.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AnalyzeContentResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'replyText')
+    ..aOM<OutputAudio>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'replyAudio',
+        subBuilder: OutputAudio.create)
+    ..aOM<AutomatedAgentReply>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'automatedAgentReply',
+        subBuilder: AutomatedAgentReply.create)
+    ..aOM<Message>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message',
+        subBuilder: Message.create)
+    ..pc<SuggestionResult>(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'humanAgentSuggestionResults', $pb.PbFieldType.PM,
+        subBuilder: SuggestionResult.create)
+    ..pc<SuggestionResult>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endUserSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
+    ..aOM<DtmfParameters>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dtmfParameters', subBuilder: DtmfParameters.create)
+    ..hasRequiredFields = false;
 
   AnalyzeContentResponse._() : super();
-  factory AnalyzeContentResponse() => create();
-  factory AnalyzeContentResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AnalyzeContentResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  AnalyzeContentResponse clone() => AnalyzeContentResponse()..mergeFromMessage(this);
-  AnalyzeContentResponse copyWith(void Function(AnalyzeContentResponse) updates) => super.copyWith((message) => updates(message as AnalyzeContentResponse));
+  factory AnalyzeContentResponse({
+    $core.String? replyText,
+    OutputAudio? replyAudio,
+    AutomatedAgentReply? automatedAgentReply,
+    Message? message,
+    $core.Iterable<SuggestionResult>? humanAgentSuggestionResults,
+    $core.Iterable<SuggestionResult>? endUserSuggestionResults,
+    DtmfParameters? dtmfParameters,
+  }) {
+    final _result = create();
+    if (replyText != null) {
+      _result.replyText = replyText;
+    }
+    if (replyAudio != null) {
+      _result.replyAudio = replyAudio;
+    }
+    if (automatedAgentReply != null) {
+      _result.automatedAgentReply = automatedAgentReply;
+    }
+    if (message != null) {
+      _result.message = message;
+    }
+    if (humanAgentSuggestionResults != null) {
+      _result.humanAgentSuggestionResults.addAll(humanAgentSuggestionResults);
+    }
+    if (endUserSuggestionResults != null) {
+      _result.endUserSuggestionResults.addAll(endUserSuggestionResults);
+    }
+    if (dtmfParameters != null) {
+      _result.dtmfParameters = dtmfParameters;
+    }
+    return _result;
+  }
+  factory AnalyzeContentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeContentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AnalyzeContentResponse clone() =>
+      AnalyzeContentResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AnalyzeContentResponse copyWith(
+          void Function(AnalyzeContentResponse) updates) =>
+      super.copyWith((message) => updates(message as AnalyzeContentResponse))
+          as AnalyzeContentResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AnalyzeContentResponse create() => AnalyzeContentResponse._();
   AnalyzeContentResponse createEmptyInstance() => create();
-  static $pb.PbList<AnalyzeContentResponse> createRepeated() => $pb.PbList<AnalyzeContentResponse>();
+  static $pb.PbList<AnalyzeContentResponse> createRepeated() =>
+      $pb.PbList<AnalyzeContentResponse>();
   @$core.pragma('dart2js:noInline')
-  static AnalyzeContentResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnalyzeContentResponse>(create);
-  static AnalyzeContentResponse _defaultInstance;
+  static AnalyzeContentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnalyzeContentResponse>(create);
+  static AnalyzeContentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get replyText => $_getSZ(0);
   @$pb.TagNumber(1)
-  set replyText($core.String v) { $_setString(0, v); }
+  set replyText($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasReplyText() => $_has(0);
   @$pb.TagNumber(1)
@@ -559,7 +1130,10 @@ class AnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   OutputAudio get replyAudio => $_getN(1);
   @$pb.TagNumber(2)
-  set replyAudio(OutputAudio v) { setField(2, v); }
+  set replyAudio(OutputAudio v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasReplyAudio() => $_has(1);
   @$pb.TagNumber(2)
@@ -570,7 +1144,10 @@ class AnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AutomatedAgentReply get automatedAgentReply => $_getN(2);
   @$pb.TagNumber(3)
-  set automatedAgentReply(AutomatedAgentReply v) { setField(3, v); }
+  set automatedAgentReply(AutomatedAgentReply v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasAutomatedAgentReply() => $_has(2);
   @$pb.TagNumber(3)
@@ -581,7 +1158,10 @@ class AnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Message get message => $_getN(3);
   @$pb.TagNumber(5)
-  set message(Message v) { setField(5, v); }
+  set message(Message v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasMessage() => $_has(3);
   @$pb.TagNumber(5)
@@ -598,7 +1178,10 @@ class AnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   DtmfParameters get dtmfParameters => $_getN(6);
   @$pb.TagNumber(9)
-  set dtmfParameters(DtmfParameters v) { setField(9, v); }
+  set dtmfParameters(DtmfParameters v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasDtmfParameters() => $_has(6);
   @$pb.TagNumber(9)
@@ -607,70 +1190,141 @@ class AnalyzeContentResponse extends $pb.GeneratedMessage {
   DtmfParameters ensureDtmfParameters() => $_ensure(6);
 }
 
-enum StreamingAnalyzeContentRequest_Config {
-  audioConfig, 
-  textConfig, 
-  notSet
-}
+enum StreamingAnalyzeContentRequest_Config { audioConfig, textConfig, notSet }
 
 enum StreamingAnalyzeContentRequest_Input {
-  inputAudio, 
-  inputText, 
-  inputDtmf, 
+  inputAudio,
+  inputText,
+  inputDtmf,
   notSet
 }
 
 class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, StreamingAnalyzeContentRequest_Config> _StreamingAnalyzeContentRequest_ConfigByTag = {
-    2 : StreamingAnalyzeContentRequest_Config.audioConfig,
-    3 : StreamingAnalyzeContentRequest_Config.textConfig,
-    0 : StreamingAnalyzeContentRequest_Config.notSet
+  static const $core.Map<$core.int, StreamingAnalyzeContentRequest_Config>
+      _StreamingAnalyzeContentRequest_ConfigByTag = {
+    2: StreamingAnalyzeContentRequest_Config.audioConfig,
+    3: StreamingAnalyzeContentRequest_Config.textConfig,
+    0: StreamingAnalyzeContentRequest_Config.notSet
   };
-  static const $core.Map<$core.int, StreamingAnalyzeContentRequest_Input> _StreamingAnalyzeContentRequest_InputByTag = {
-    5 : StreamingAnalyzeContentRequest_Input.inputAudio,
-    6 : StreamingAnalyzeContentRequest_Input.inputText,
-    9 : StreamingAnalyzeContentRequest_Input.inputDtmf,
-    0 : StreamingAnalyzeContentRequest_Input.notSet
+  static const $core.Map<$core.int, StreamingAnalyzeContentRequest_Input>
+      _StreamingAnalyzeContentRequest_InputByTag = {
+    5: StreamingAnalyzeContentRequest_Input.inputAudio,
+    6: StreamingAnalyzeContentRequest_Input.inputText,
+    9: StreamingAnalyzeContentRequest_Input.inputDtmf,
+    0: StreamingAnalyzeContentRequest_Input.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingAnalyzeContentRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'StreamingAnalyzeContentRequest',
+      package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..oo(1, [5, 6, 9])
-    ..aOS(1, 'participant')
-    ..aOM<$19.InputAudioConfig>(2, 'audioConfig', subBuilder: $19.InputAudioConfig.create)
-    ..aOM<InputTextConfig>(3, 'textConfig', subBuilder: InputTextConfig.create)
-    ..aOM<$19.OutputAudioConfig>(4, 'replyAudioConfig', subBuilder: $19.OutputAudioConfig.create)
-    ..a<$core.List<$core.int>>(5, 'inputAudio', $pb.PbFieldType.OY)
-    ..aOS(6, 'inputText')
-    ..aOM<$8.QueryParameters>(7, 'queryParams', subBuilder: $8.QueryParameters.create)
-    ..aOM<$19.TelephonyDtmfEvents>(9, 'inputDtmf', subBuilder: $19.TelephonyDtmfEvents.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'participant')
+    ..aOM<$19.InputAudioConfig>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'audioConfig',
+        subBuilder: $19.InputAudioConfig.create)
+    ..aOM<InputTextConfig>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'textConfig',
+        subBuilder: InputTextConfig.create)
+    ..aOM<$19.OutputAudioConfig>(
+        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'replyAudioConfig',
+        subBuilder: $19.OutputAudioConfig.create)
+    ..a<$core.List<$core.int>>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputAudio', $pb.PbFieldType.OY)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputText')
+    ..aOM<$8.QueryParameters>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'queryParams', subBuilder: $8.QueryParameters.create)
+    ..aOM<$19.TelephonyDtmfEvents>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputDtmf', subBuilder: $19.TelephonyDtmfEvents.create)
+    ..hasRequiredFields = false;
 
   StreamingAnalyzeContentRequest._() : super();
-  factory StreamingAnalyzeContentRequest() => create();
-  factory StreamingAnalyzeContentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StreamingAnalyzeContentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  StreamingAnalyzeContentRequest clone() => StreamingAnalyzeContentRequest()..mergeFromMessage(this);
-  StreamingAnalyzeContentRequest copyWith(void Function(StreamingAnalyzeContentRequest) updates) => super.copyWith((message) => updates(message as StreamingAnalyzeContentRequest));
+  factory StreamingAnalyzeContentRequest({
+    $core.String? participant,
+    $19.InputAudioConfig? audioConfig,
+    InputTextConfig? textConfig,
+    $19.OutputAudioConfig? replyAudioConfig,
+    $core.List<$core.int>? inputAudio,
+    $core.String? inputText,
+    $8.QueryParameters? queryParams,
+    $19.TelephonyDtmfEvents? inputDtmf,
+  }) {
+    final _result = create();
+    if (participant != null) {
+      _result.participant = participant;
+    }
+    if (audioConfig != null) {
+      _result.audioConfig = audioConfig;
+    }
+    if (textConfig != null) {
+      _result.textConfig = textConfig;
+    }
+    if (replyAudioConfig != null) {
+      _result.replyAudioConfig = replyAudioConfig;
+    }
+    if (inputAudio != null) {
+      _result.inputAudio = inputAudio;
+    }
+    if (inputText != null) {
+      _result.inputText = inputText;
+    }
+    if (queryParams != null) {
+      _result.queryParams = queryParams;
+    }
+    if (inputDtmf != null) {
+      _result.inputDtmf = inputDtmf;
+    }
+    return _result;
+  }
+  factory StreamingAnalyzeContentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAnalyzeContentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamingAnalyzeContentRequest clone() =>
+      StreamingAnalyzeContentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamingAnalyzeContentRequest copyWith(
+          void Function(StreamingAnalyzeContentRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as StreamingAnalyzeContentRequest))
+          as StreamingAnalyzeContentRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static StreamingAnalyzeContentRequest create() => StreamingAnalyzeContentRequest._();
+  static StreamingAnalyzeContentRequest create() =>
+      StreamingAnalyzeContentRequest._();
   StreamingAnalyzeContentRequest createEmptyInstance() => create();
-  static $pb.PbList<StreamingAnalyzeContentRequest> createRepeated() => $pb.PbList<StreamingAnalyzeContentRequest>();
+  static $pb.PbList<StreamingAnalyzeContentRequest> createRepeated() =>
+      $pb.PbList<StreamingAnalyzeContentRequest>();
   @$core.pragma('dart2js:noInline')
-  static StreamingAnalyzeContentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StreamingAnalyzeContentRequest>(create);
-  static StreamingAnalyzeContentRequest _defaultInstance;
+  static StreamingAnalyzeContentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingAnalyzeContentRequest>(create);
+  static StreamingAnalyzeContentRequest? _defaultInstance;
 
-  StreamingAnalyzeContentRequest_Config whichConfig() => _StreamingAnalyzeContentRequest_ConfigByTag[$_whichOneof(0)];
+  StreamingAnalyzeContentRequest_Config whichConfig() =>
+      _StreamingAnalyzeContentRequest_ConfigByTag[$_whichOneof(0)]!;
   void clearConfig() => clearField($_whichOneof(0));
 
-  StreamingAnalyzeContentRequest_Input whichInput() => _StreamingAnalyzeContentRequest_InputByTag[$_whichOneof(1)];
+  StreamingAnalyzeContentRequest_Input whichInput() =>
+      _StreamingAnalyzeContentRequest_InputByTag[$_whichOneof(1)]!;
   void clearInput() => clearField($_whichOneof(1));
 
   @$pb.TagNumber(1)
   $core.String get participant => $_getSZ(0);
   @$pb.TagNumber(1)
-  set participant($core.String v) { $_setString(0, v); }
+  set participant($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParticipant() => $_has(0);
   @$pb.TagNumber(1)
@@ -679,7 +1333,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $19.InputAudioConfig get audioConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set audioConfig($19.InputAudioConfig v) { setField(2, v); }
+  set audioConfig($19.InputAudioConfig v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasAudioConfig() => $_has(1);
   @$pb.TagNumber(2)
@@ -690,7 +1347,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   InputTextConfig get textConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set textConfig(InputTextConfig v) { setField(3, v); }
+  set textConfig(InputTextConfig v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasTextConfig() => $_has(2);
   @$pb.TagNumber(3)
@@ -701,7 +1361,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $19.OutputAudioConfig get replyAudioConfig => $_getN(3);
   @$pb.TagNumber(4)
-  set replyAudioConfig($19.OutputAudioConfig v) { setField(4, v); }
+  set replyAudioConfig($19.OutputAudioConfig v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasReplyAudioConfig() => $_has(3);
   @$pb.TagNumber(4)
@@ -712,7 +1375,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.List<$core.int> get inputAudio => $_getN(4);
   @$pb.TagNumber(5)
-  set inputAudio($core.List<$core.int> v) { $_setBytes(4, v); }
+  set inputAudio($core.List<$core.int> v) {
+    $_setBytes(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasInputAudio() => $_has(4);
   @$pb.TagNumber(5)
@@ -721,7 +1387,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get inputText => $_getSZ(5);
   @$pb.TagNumber(6)
-  set inputText($core.String v) { $_setString(5, v); }
+  set inputText($core.String v) {
+    $_setString(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasInputText() => $_has(5);
   @$pb.TagNumber(6)
@@ -730,7 +1399,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $8.QueryParameters get queryParams => $_getN(6);
   @$pb.TagNumber(7)
-  set queryParams($8.QueryParameters v) { setField(7, v); }
+  set queryParams($8.QueryParameters v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasQueryParams() => $_has(6);
   @$pb.TagNumber(7)
@@ -741,7 +1413,10 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $19.TelephonyDtmfEvents get inputDtmf => $_getN(7);
   @$pb.TagNumber(9)
-  set inputDtmf($19.TelephonyDtmfEvents v) { setField(9, v); }
+  set inputDtmf($19.TelephonyDtmfEvents v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasInputDtmf() => $_has(7);
   @$pb.TagNumber(9)
@@ -751,37 +1426,108 @@ class StreamingAnalyzeContentRequest extends $pb.GeneratedMessage {
 }
 
 class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingAnalyzeContentResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOM<$8.StreamingRecognitionResult>(1, 'recognitionResult', subBuilder: $8.StreamingRecognitionResult.create)
-    ..aOS(2, 'replyText')
-    ..aOM<OutputAudio>(3, 'replyAudio', subBuilder: OutputAudio.create)
-    ..aOM<AutomatedAgentReply>(4, 'automatedAgentReply', subBuilder: AutomatedAgentReply.create)
-    ..aOM<Message>(6, 'message', subBuilder: Message.create)
-    ..pc<SuggestionResult>(7, 'humanAgentSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
-    ..pc<SuggestionResult>(8, 'endUserSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
-    ..aOM<DtmfParameters>(10, 'dtmfParameters', subBuilder: DtmfParameters.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StreamingAnalyzeContentResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<$8.StreamingRecognitionResult>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recognitionResult',
+        subBuilder: $8.StreamingRecognitionResult.create)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'replyText')
+    ..aOM<OutputAudio>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'replyAudio',
+        subBuilder: OutputAudio.create)
+    ..aOM<AutomatedAgentReply>(
+        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'automatedAgentReply',
+        subBuilder: AutomatedAgentReply.create)
+    ..aOM<Message>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message', subBuilder: Message.create)
+    ..pc<SuggestionResult>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'humanAgentSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
+    ..pc<SuggestionResult>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endUserSuggestionResults', $pb.PbFieldType.PM, subBuilder: SuggestionResult.create)
+    ..aOM<DtmfParameters>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dtmfParameters', subBuilder: DtmfParameters.create)
+    ..hasRequiredFields = false;
 
   StreamingAnalyzeContentResponse._() : super();
-  factory StreamingAnalyzeContentResponse() => create();
-  factory StreamingAnalyzeContentResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StreamingAnalyzeContentResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  StreamingAnalyzeContentResponse clone() => StreamingAnalyzeContentResponse()..mergeFromMessage(this);
-  StreamingAnalyzeContentResponse copyWith(void Function(StreamingAnalyzeContentResponse) updates) => super.copyWith((message) => updates(message as StreamingAnalyzeContentResponse));
+  factory StreamingAnalyzeContentResponse({
+    $8.StreamingRecognitionResult? recognitionResult,
+    $core.String? replyText,
+    OutputAudio? replyAudio,
+    AutomatedAgentReply? automatedAgentReply,
+    Message? message,
+    $core.Iterable<SuggestionResult>? humanAgentSuggestionResults,
+    $core.Iterable<SuggestionResult>? endUserSuggestionResults,
+    DtmfParameters? dtmfParameters,
+  }) {
+    final _result = create();
+    if (recognitionResult != null) {
+      _result.recognitionResult = recognitionResult;
+    }
+    if (replyText != null) {
+      _result.replyText = replyText;
+    }
+    if (replyAudio != null) {
+      _result.replyAudio = replyAudio;
+    }
+    if (automatedAgentReply != null) {
+      _result.automatedAgentReply = automatedAgentReply;
+    }
+    if (message != null) {
+      _result.message = message;
+    }
+    if (humanAgentSuggestionResults != null) {
+      _result.humanAgentSuggestionResults.addAll(humanAgentSuggestionResults);
+    }
+    if (endUserSuggestionResults != null) {
+      _result.endUserSuggestionResults.addAll(endUserSuggestionResults);
+    }
+    if (dtmfParameters != null) {
+      _result.dtmfParameters = dtmfParameters;
+    }
+    return _result;
+  }
+  factory StreamingAnalyzeContentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAnalyzeContentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  StreamingAnalyzeContentResponse clone() =>
+      StreamingAnalyzeContentResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  StreamingAnalyzeContentResponse copyWith(
+          void Function(StreamingAnalyzeContentResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as StreamingAnalyzeContentResponse))
+          as StreamingAnalyzeContentResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static StreamingAnalyzeContentResponse create() => StreamingAnalyzeContentResponse._();
+  static StreamingAnalyzeContentResponse create() =>
+      StreamingAnalyzeContentResponse._();
   StreamingAnalyzeContentResponse createEmptyInstance() => create();
-  static $pb.PbList<StreamingAnalyzeContentResponse> createRepeated() => $pb.PbList<StreamingAnalyzeContentResponse>();
+  static $pb.PbList<StreamingAnalyzeContentResponse> createRepeated() =>
+      $pb.PbList<StreamingAnalyzeContentResponse>();
   @$core.pragma('dart2js:noInline')
-  static StreamingAnalyzeContentResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StreamingAnalyzeContentResponse>(create);
-  static StreamingAnalyzeContentResponse _defaultInstance;
+  static StreamingAnalyzeContentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingAnalyzeContentResponse>(
+          create);
+  static StreamingAnalyzeContentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $8.StreamingRecognitionResult get recognitionResult => $_getN(0);
   @$pb.TagNumber(1)
-  set recognitionResult($8.StreamingRecognitionResult v) { setField(1, v); }
+  set recognitionResult($8.StreamingRecognitionResult v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasRecognitionResult() => $_has(0);
   @$pb.TagNumber(1)
@@ -792,7 +1538,10 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get replyText => $_getSZ(1);
   @$pb.TagNumber(2)
-  set replyText($core.String v) { $_setString(1, v); }
+  set replyText($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasReplyText() => $_has(1);
   @$pb.TagNumber(2)
@@ -801,7 +1550,10 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   OutputAudio get replyAudio => $_getN(2);
   @$pb.TagNumber(3)
-  set replyAudio(OutputAudio v) { setField(3, v); }
+  set replyAudio(OutputAudio v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasReplyAudio() => $_has(2);
   @$pb.TagNumber(3)
@@ -812,7 +1564,10 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AutomatedAgentReply get automatedAgentReply => $_getN(3);
   @$pb.TagNumber(4)
-  set automatedAgentReply(AutomatedAgentReply v) { setField(4, v); }
+  set automatedAgentReply(AutomatedAgentReply v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasAutomatedAgentReply() => $_has(3);
   @$pb.TagNumber(4)
@@ -823,7 +1578,10 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Message get message => $_getN(4);
   @$pb.TagNumber(6)
-  set message(Message v) { setField(6, v); }
+  set message(Message v) {
+    setField(6, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasMessage() => $_has(4);
   @$pb.TagNumber(6)
@@ -840,7 +1598,10 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   DtmfParameters get dtmfParameters => $_getN(7);
   @$pb.TagNumber(10)
-  set dtmfParameters(DtmfParameters v) { setField(10, v); }
+  set dtmfParameters(DtmfParameters v) {
+    setField(10, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasDtmfParameters() => $_has(7);
   @$pb.TagNumber(10)
@@ -850,32 +1611,87 @@ class StreamingAnalyzeContentResponse extends $pb.GeneratedMessage {
 }
 
 class SuggestArticlesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SuggestArticlesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..aOS(2, 'latestMessage')
-    ..a<$core.int>(3, 'contextSize', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SuggestArticlesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'latestMessage')
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'contextSize',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
 
   SuggestArticlesRequest._() : super();
-  factory SuggestArticlesRequest() => create();
-  factory SuggestArticlesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SuggestArticlesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SuggestArticlesRequest clone() => SuggestArticlesRequest()..mergeFromMessage(this);
-  SuggestArticlesRequest copyWith(void Function(SuggestArticlesRequest) updates) => super.copyWith((message) => updates(message as SuggestArticlesRequest));
+  factory SuggestArticlesRequest({
+    $core.String? parent,
+    $core.String? latestMessage,
+    $core.int? contextSize,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (latestMessage != null) {
+      _result.latestMessage = latestMessage;
+    }
+    if (contextSize != null) {
+      _result.contextSize = contextSize;
+    }
+    return _result;
+  }
+  factory SuggestArticlesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestArticlesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SuggestArticlesRequest clone() =>
+      SuggestArticlesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SuggestArticlesRequest copyWith(
+          void Function(SuggestArticlesRequest) updates) =>
+      super.copyWith((message) => updates(message as SuggestArticlesRequest))
+          as SuggestArticlesRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SuggestArticlesRequest create() => SuggestArticlesRequest._();
   SuggestArticlesRequest createEmptyInstance() => create();
-  static $pb.PbList<SuggestArticlesRequest> createRepeated() => $pb.PbList<SuggestArticlesRequest>();
+  static $pb.PbList<SuggestArticlesRequest> createRepeated() =>
+      $pb.PbList<SuggestArticlesRequest>();
   @$core.pragma('dart2js:noInline')
-  static SuggestArticlesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SuggestArticlesRequest>(create);
-  static SuggestArticlesRequest _defaultInstance;
+  static SuggestArticlesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SuggestArticlesRequest>(create);
+  static SuggestArticlesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -884,7 +1700,10 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get latestMessage => $_getSZ(1);
   @$pb.TagNumber(2)
-  set latestMessage($core.String v) { $_setString(1, v); }
+  set latestMessage($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasLatestMessage() => $_has(1);
   @$pb.TagNumber(2)
@@ -893,7 +1712,10 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get contextSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set contextSize($core.int v) { $_setSignedInt32(2, v); }
+  set contextSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
@@ -901,27 +1723,73 @@ class SuggestArticlesRequest extends $pb.GeneratedMessage {
 }
 
 class SuggestArticlesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SuggestArticlesResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..pc<ArticleAnswer>(1, 'articleAnswers', $pb.PbFieldType.PM, subBuilder: ArticleAnswer.create)
-    ..aOS(2, 'latestMessage')
-    ..a<$core.int>(3, 'contextSize', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SuggestArticlesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<ArticleAnswer>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'articleAnswers',
+        $pb.PbFieldType.PM,
+        subBuilder: ArticleAnswer.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latestMessage')
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contextSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
 
   SuggestArticlesResponse._() : super();
-  factory SuggestArticlesResponse() => create();
-  factory SuggestArticlesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SuggestArticlesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SuggestArticlesResponse clone() => SuggestArticlesResponse()..mergeFromMessage(this);
-  SuggestArticlesResponse copyWith(void Function(SuggestArticlesResponse) updates) => super.copyWith((message) => updates(message as SuggestArticlesResponse));
+  factory SuggestArticlesResponse({
+    $core.Iterable<ArticleAnswer>? articleAnswers,
+    $core.String? latestMessage,
+    $core.int? contextSize,
+  }) {
+    final _result = create();
+    if (articleAnswers != null) {
+      _result.articleAnswers.addAll(articleAnswers);
+    }
+    if (latestMessage != null) {
+      _result.latestMessage = latestMessage;
+    }
+    if (contextSize != null) {
+      _result.contextSize = contextSize;
+    }
+    return _result;
+  }
+  factory SuggestArticlesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestArticlesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SuggestArticlesResponse clone() =>
+      SuggestArticlesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SuggestArticlesResponse copyWith(
+          void Function(SuggestArticlesResponse) updates) =>
+      super.copyWith((message) => updates(message as SuggestArticlesResponse))
+          as SuggestArticlesResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SuggestArticlesResponse create() => SuggestArticlesResponse._();
   SuggestArticlesResponse createEmptyInstance() => create();
-  static $pb.PbList<SuggestArticlesResponse> createRepeated() => $pb.PbList<SuggestArticlesResponse>();
+  static $pb.PbList<SuggestArticlesResponse> createRepeated() =>
+      $pb.PbList<SuggestArticlesResponse>();
   @$core.pragma('dart2js:noInline')
-  static SuggestArticlesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SuggestArticlesResponse>(create);
-  static SuggestArticlesResponse _defaultInstance;
+  static SuggestArticlesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SuggestArticlesResponse>(create);
+  static SuggestArticlesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<ArticleAnswer> get articleAnswers => $_getList(0);
@@ -929,7 +1797,10 @@ class SuggestArticlesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get latestMessage => $_getSZ(1);
   @$pb.TagNumber(2)
-  set latestMessage($core.String v) { $_setString(1, v); }
+  set latestMessage($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasLatestMessage() => $_has(1);
   @$pb.TagNumber(2)
@@ -938,7 +1809,10 @@ class SuggestArticlesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get contextSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set contextSize($core.int v) { $_setSignedInt32(2, v); }
+  set contextSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
@@ -946,32 +1820,87 @@ class SuggestArticlesResponse extends $pb.GeneratedMessage {
 }
 
 class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SuggestFaqAnswersRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..aOS(2, 'latestMessage')
-    ..a<$core.int>(3, 'contextSize', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SuggestFaqAnswersRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'latestMessage')
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'contextSize',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
 
   SuggestFaqAnswersRequest._() : super();
-  factory SuggestFaqAnswersRequest() => create();
-  factory SuggestFaqAnswersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SuggestFaqAnswersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SuggestFaqAnswersRequest clone() => SuggestFaqAnswersRequest()..mergeFromMessage(this);
-  SuggestFaqAnswersRequest copyWith(void Function(SuggestFaqAnswersRequest) updates) => super.copyWith((message) => updates(message as SuggestFaqAnswersRequest));
+  factory SuggestFaqAnswersRequest({
+    $core.String? parent,
+    $core.String? latestMessage,
+    $core.int? contextSize,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (latestMessage != null) {
+      _result.latestMessage = latestMessage;
+    }
+    if (contextSize != null) {
+      _result.contextSize = contextSize;
+    }
+    return _result;
+  }
+  factory SuggestFaqAnswersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestFaqAnswersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SuggestFaqAnswersRequest clone() =>
+      SuggestFaqAnswersRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SuggestFaqAnswersRequest copyWith(
+          void Function(SuggestFaqAnswersRequest) updates) =>
+      super.copyWith((message) => updates(message as SuggestFaqAnswersRequest))
+          as SuggestFaqAnswersRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SuggestFaqAnswersRequest create() => SuggestFaqAnswersRequest._();
   SuggestFaqAnswersRequest createEmptyInstance() => create();
-  static $pb.PbList<SuggestFaqAnswersRequest> createRepeated() => $pb.PbList<SuggestFaqAnswersRequest>();
+  static $pb.PbList<SuggestFaqAnswersRequest> createRepeated() =>
+      $pb.PbList<SuggestFaqAnswersRequest>();
   @$core.pragma('dart2js:noInline')
-  static SuggestFaqAnswersRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SuggestFaqAnswersRequest>(create);
-  static SuggestFaqAnswersRequest _defaultInstance;
+  static SuggestFaqAnswersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SuggestFaqAnswersRequest>(create);
+  static SuggestFaqAnswersRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -980,7 +1909,10 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get latestMessage => $_getSZ(1);
   @$pb.TagNumber(2)
-  set latestMessage($core.String v) { $_setString(1, v); }
+  set latestMessage($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasLatestMessage() => $_has(1);
   @$pb.TagNumber(2)
@@ -989,7 +1921,10 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get contextSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set contextSize($core.int v) { $_setSignedInt32(2, v); }
+  set contextSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
@@ -997,27 +1932,73 @@ class SuggestFaqAnswersRequest extends $pb.GeneratedMessage {
 }
 
 class SuggestFaqAnswersResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SuggestFaqAnswersResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..pc<FaqAnswer>(1, 'faqAnswers', $pb.PbFieldType.PM, subBuilder: FaqAnswer.create)
-    ..aOS(2, 'latestMessage')
-    ..a<$core.int>(3, 'contextSize', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SuggestFaqAnswersResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<FaqAnswer>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'faqAnswers',
+        $pb.PbFieldType.PM,
+        subBuilder: FaqAnswer.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latestMessage')
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contextSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
 
   SuggestFaqAnswersResponse._() : super();
-  factory SuggestFaqAnswersResponse() => create();
-  factory SuggestFaqAnswersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SuggestFaqAnswersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SuggestFaqAnswersResponse clone() => SuggestFaqAnswersResponse()..mergeFromMessage(this);
-  SuggestFaqAnswersResponse copyWith(void Function(SuggestFaqAnswersResponse) updates) => super.copyWith((message) => updates(message as SuggestFaqAnswersResponse));
+  factory SuggestFaqAnswersResponse({
+    $core.Iterable<FaqAnswer>? faqAnswers,
+    $core.String? latestMessage,
+    $core.int? contextSize,
+  }) {
+    final _result = create();
+    if (faqAnswers != null) {
+      _result.faqAnswers.addAll(faqAnswers);
+    }
+    if (latestMessage != null) {
+      _result.latestMessage = latestMessage;
+    }
+    if (contextSize != null) {
+      _result.contextSize = contextSize;
+    }
+    return _result;
+  }
+  factory SuggestFaqAnswersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestFaqAnswersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SuggestFaqAnswersResponse clone() =>
+      SuggestFaqAnswersResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SuggestFaqAnswersResponse copyWith(
+          void Function(SuggestFaqAnswersResponse) updates) =>
+      super.copyWith((message) => updates(message as SuggestFaqAnswersResponse))
+          as SuggestFaqAnswersResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SuggestFaqAnswersResponse create() => SuggestFaqAnswersResponse._();
   SuggestFaqAnswersResponse createEmptyInstance() => create();
-  static $pb.PbList<SuggestFaqAnswersResponse> createRepeated() => $pb.PbList<SuggestFaqAnswersResponse>();
+  static $pb.PbList<SuggestFaqAnswersResponse> createRepeated() =>
+      $pb.PbList<SuggestFaqAnswersResponse>();
   @$core.pragma('dart2js:noInline')
-  static SuggestFaqAnswersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SuggestFaqAnswersResponse>(create);
-  static SuggestFaqAnswersResponse _defaultInstance;
+  static SuggestFaqAnswersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SuggestFaqAnswersResponse>(create);
+  static SuggestFaqAnswersResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<FaqAnswer> get faqAnswers => $_getList(0);
@@ -1025,7 +2006,10 @@ class SuggestFaqAnswersResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get latestMessage => $_getSZ(1);
   @$pb.TagNumber(2)
-  set latestMessage($core.String v) { $_setString(1, v); }
+  set latestMessage($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasLatestMessage() => $_has(1);
   @$pb.TagNumber(2)
@@ -1034,7 +2018,10 @@ class SuggestFaqAnswersResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get contextSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set contextSize($core.int v) { $_setSignedInt32(2, v); }
+  set contextSize($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasContextSize() => $_has(2);
   @$pb.TagNumber(3)
@@ -1042,31 +2029,74 @@ class SuggestFaqAnswersResponse extends $pb.GeneratedMessage {
 }
 
 class AudioInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioInput', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOM<$19.InputAudioConfig>(1, 'config', subBuilder: $19.InputAudioConfig.create)
-    ..a<$core.List<$core.int>>(2, 'audio', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AudioInput',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<$19.InputAudioConfig>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'config',
+        subBuilder: $19.InputAudioConfig.create)
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'audio',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
 
   AudioInput._() : super();
-  factory AudioInput() => create();
-  factory AudioInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AudioInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory AudioInput({
+    $19.InputAudioConfig? config,
+    $core.List<$core.int>? audio,
+  }) {
+    final _result = create();
+    if (config != null) {
+      _result.config = config;
+    }
+    if (audio != null) {
+      _result.audio = audio;
+    }
+    return _result;
+  }
+  factory AudioInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   AudioInput clone() => AudioInput()..mergeFromMessage(this);
-  AudioInput copyWith(void Function(AudioInput) updates) => super.copyWith((message) => updates(message as AudioInput));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AudioInput copyWith(void Function(AudioInput) updates) =>
+      super.copyWith((message) => updates(message as AudioInput))
+          as AudioInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AudioInput create() => AudioInput._();
   AudioInput createEmptyInstance() => create();
   static $pb.PbList<AudioInput> createRepeated() => $pb.PbList<AudioInput>();
   @$core.pragma('dart2js:noInline')
-  static AudioInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AudioInput>(create);
-  static AudioInput _defaultInstance;
+  static AudioInput getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AudioInput>(create);
+  static AudioInput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $19.InputAudioConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($19.InputAudioConfig v) { setField(1, v); }
+  set config($19.InputAudioConfig v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
   @$pb.TagNumber(1)
@@ -1077,7 +2107,10 @@ class AudioInput extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.List<$core.int> get audio => $_getN(1);
   @$pb.TagNumber(2)
-  set audio($core.List<$core.int> v) { $_setBytes(1, v); }
+  set audio($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasAudio() => $_has(1);
   @$pb.TagNumber(2)
@@ -1085,31 +2118,74 @@ class AudioInput extends $pb.GeneratedMessage {
 }
 
 class OutputAudio extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputAudio', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOM<$19.OutputAudioConfig>(1, 'config', subBuilder: $19.OutputAudioConfig.create)
-    ..a<$core.List<$core.int>>(2, 'audio', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'OutputAudio',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<$19.OutputAudioConfig>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'config',
+        subBuilder: $19.OutputAudioConfig.create)
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'audio',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
 
   OutputAudio._() : super();
-  factory OutputAudio() => create();
-  factory OutputAudio.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OutputAudio.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory OutputAudio({
+    $19.OutputAudioConfig? config,
+    $core.List<$core.int>? audio,
+  }) {
+    final _result = create();
+    if (config != null) {
+      _result.config = config;
+    }
+    if (audio != null) {
+      _result.audio = audio;
+    }
+    return _result;
+  }
+  factory OutputAudio.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputAudio.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   OutputAudio clone() => OutputAudio()..mergeFromMessage(this);
-  OutputAudio copyWith(void Function(OutputAudio) updates) => super.copyWith((message) => updates(message as OutputAudio));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  OutputAudio copyWith(void Function(OutputAudio) updates) =>
+      super.copyWith((message) => updates(message as OutputAudio))
+          as OutputAudio; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static OutputAudio create() => OutputAudio._();
   OutputAudio createEmptyInstance() => create();
   static $pb.PbList<OutputAudio> createRepeated() => $pb.PbList<OutputAudio>();
   @$core.pragma('dart2js:noInline')
-  static OutputAudio getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OutputAudio>(create);
-  static OutputAudio _defaultInstance;
+  static OutputAudio getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OutputAudio>(create);
+  static OutputAudio? _defaultInstance;
 
   @$pb.TagNumber(1)
   $19.OutputAudioConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($19.OutputAudioConfig v) { setField(1, v); }
+  set config($19.OutputAudioConfig v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
   @$pb.TagNumber(1)
@@ -1120,7 +2196,10 @@ class OutputAudio extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.List<$core.int> get audio => $_getN(1);
   @$pb.TagNumber(2)
-  set audio($core.List<$core.int> v) { $_setBytes(1, v); }
+  set audio($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasAudio() => $_has(1);
   @$pb.TagNumber(2)
@@ -1128,30 +2207,67 @@ class OutputAudio extends $pb.GeneratedMessage {
 }
 
 class AutomatedAgentReply extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AutomatedAgentReply', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOM<$8.DetectIntentResponse>(1, 'detectIntentResponse', subBuilder: $8.DetectIntentResponse.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AutomatedAgentReply',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<$8.DetectIntentResponse>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'detectIntentResponse',
+        subBuilder: $8.DetectIntentResponse.create)
+    ..hasRequiredFields = false;
 
   AutomatedAgentReply._() : super();
-  factory AutomatedAgentReply() => create();
-  factory AutomatedAgentReply.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AutomatedAgentReply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory AutomatedAgentReply({
+    $8.DetectIntentResponse? detectIntentResponse,
+  }) {
+    final _result = create();
+    if (detectIntentResponse != null) {
+      _result.detectIntentResponse = detectIntentResponse;
+    }
+    return _result;
+  }
+  factory AutomatedAgentReply.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutomatedAgentReply.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   AutomatedAgentReply clone() => AutomatedAgentReply()..mergeFromMessage(this);
-  AutomatedAgentReply copyWith(void Function(AutomatedAgentReply) updates) => super.copyWith((message) => updates(message as AutomatedAgentReply));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AutomatedAgentReply copyWith(void Function(AutomatedAgentReply) updates) =>
+      super.copyWith((message) => updates(message as AutomatedAgentReply))
+          as AutomatedAgentReply; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AutomatedAgentReply create() => AutomatedAgentReply._();
   AutomatedAgentReply createEmptyInstance() => create();
-  static $pb.PbList<AutomatedAgentReply> createRepeated() => $pb.PbList<AutomatedAgentReply>();
+  static $pb.PbList<AutomatedAgentReply> createRepeated() =>
+      $pb.PbList<AutomatedAgentReply>();
   @$core.pragma('dart2js:noInline')
-  static AutomatedAgentReply getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AutomatedAgentReply>(create);
-  static AutomatedAgentReply _defaultInstance;
+  static AutomatedAgentReply getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AutomatedAgentReply>(create);
+  static AutomatedAgentReply? _defaultInstance;
 
   @$pb.TagNumber(1)
   $8.DetectIntentResponse get detectIntentResponse => $_getN(0);
   @$pb.TagNumber(1)
-  set detectIntentResponse($8.DetectIntentResponse v) { setField(1, v); }
+  set detectIntentResponse($8.DetectIntentResponse v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasDetectIntentResponse() => $_has(0);
   @$pb.TagNumber(1)
@@ -1161,35 +2277,104 @@ class AutomatedAgentReply extends $pb.GeneratedMessage {
 }
 
 class ArticleAnswer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ArticleAnswer', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'title')
-    ..aOS(2, 'uri')
-    ..pPS(3, 'snippets')
-    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
-    ..m<$core.String, $core.String>(5, 'metadata', entryClassName: 'ArticleAnswer.MetadataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..aOS(6, 'answerRecord')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ArticleAnswer',
+      package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'title')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'uri')
+    ..pPS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'snippets')
+    ..a<$core.double>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'confidence',
+        $pb.PbFieldType.OF)
+    ..m<$core.String, $core.String>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata',
+        entryClassName: 'ArticleAnswer.MetadataEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answerRecord')
+    ..hasRequiredFields = false;
 
   ArticleAnswer._() : super();
-  factory ArticleAnswer() => create();
-  factory ArticleAnswer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ArticleAnswer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ArticleAnswer({
+    $core.String? title,
+    $core.String? uri,
+    $core.Iterable<$core.String>? snippets,
+    $core.double? confidence,
+    $core.Map<$core.String, $core.String>? metadata,
+    $core.String? answerRecord,
+  }) {
+    final _result = create();
+    if (title != null) {
+      _result.title = title;
+    }
+    if (uri != null) {
+      _result.uri = uri;
+    }
+    if (snippets != null) {
+      _result.snippets.addAll(snippets);
+    }
+    if (confidence != null) {
+      _result.confidence = confidence;
+    }
+    if (metadata != null) {
+      _result.metadata.addAll(metadata);
+    }
+    if (answerRecord != null) {
+      _result.answerRecord = answerRecord;
+    }
+    return _result;
+  }
+  factory ArticleAnswer.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArticleAnswer.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ArticleAnswer clone() => ArticleAnswer()..mergeFromMessage(this);
-  ArticleAnswer copyWith(void Function(ArticleAnswer) updates) => super.copyWith((message) => updates(message as ArticleAnswer));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ArticleAnswer copyWith(void Function(ArticleAnswer) updates) =>
+      super.copyWith((message) => updates(message as ArticleAnswer))
+          as ArticleAnswer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ArticleAnswer create() => ArticleAnswer._();
   ArticleAnswer createEmptyInstance() => create();
-  static $pb.PbList<ArticleAnswer> createRepeated() => $pb.PbList<ArticleAnswer>();
+  static $pb.PbList<ArticleAnswer> createRepeated() =>
+      $pb.PbList<ArticleAnswer>();
   @$core.pragma('dart2js:noInline')
-  static ArticleAnswer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ArticleAnswer>(create);
-  static ArticleAnswer _defaultInstance;
+  static ArticleAnswer getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ArticleAnswer>(create);
+  static ArticleAnswer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
-  set title($core.String v) { $_setString(0, v); }
+  set title($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTitle() => $_has(0);
   @$pb.TagNumber(1)
@@ -1198,7 +2383,10 @@ class ArticleAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
-  set uri($core.String v) { $_setString(1, v); }
+  set uri($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
   @$pb.TagNumber(2)
@@ -1210,7 +2398,10 @@ class ArticleAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get confidence => $_getN(3);
   @$pb.TagNumber(4)
-  set confidence($core.double v) { $_setFloat(3, v); }
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasConfidence() => $_has(3);
   @$pb.TagNumber(4)
@@ -1222,7 +2413,10 @@ class ArticleAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get answerRecord => $_getSZ(5);
   @$pb.TagNumber(6)
-  set answerRecord($core.String v) { $_setString(5, v); }
+  set answerRecord($core.String v) {
+    $_setString(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasAnswerRecord() => $_has(5);
   @$pb.TagNumber(6)
@@ -1230,35 +2424,99 @@ class ArticleAnswer extends $pb.GeneratedMessage {
 }
 
 class FaqAnswer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaqAnswer', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'answer')
-    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
-    ..aOS(3, 'question')
-    ..aOS(4, 'source')
-    ..m<$core.String, $core.String>(5, 'metadata', entryClassName: 'FaqAnswer.MetadataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..aOS(6, 'answerRecord')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'FaqAnswer',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'answer')
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'confidence',
+        $pb.PbFieldType.OF)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'question')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source')
+    ..m<$core.String, $core.String>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', entryClassName: 'FaqAnswer.MetadataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answerRecord')
+    ..hasRequiredFields = false;
 
   FaqAnswer._() : super();
-  factory FaqAnswer() => create();
-  factory FaqAnswer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FaqAnswer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory FaqAnswer({
+    $core.String? answer,
+    $core.double? confidence,
+    $core.String? question,
+    $core.String? source,
+    $core.Map<$core.String, $core.String>? metadata,
+    $core.String? answerRecord,
+  }) {
+    final _result = create();
+    if (answer != null) {
+      _result.answer = answer;
+    }
+    if (confidence != null) {
+      _result.confidence = confidence;
+    }
+    if (question != null) {
+      _result.question = question;
+    }
+    if (source != null) {
+      _result.source = source;
+    }
+    if (metadata != null) {
+      _result.metadata.addAll(metadata);
+    }
+    if (answerRecord != null) {
+      _result.answerRecord = answerRecord;
+    }
+    return _result;
+  }
+  factory FaqAnswer.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FaqAnswer.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   FaqAnswer clone() => FaqAnswer()..mergeFromMessage(this);
-  FaqAnswer copyWith(void Function(FaqAnswer) updates) => super.copyWith((message) => updates(message as FaqAnswer));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FaqAnswer copyWith(void Function(FaqAnswer) updates) =>
+      super.copyWith((message) => updates(message as FaqAnswer))
+          as FaqAnswer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static FaqAnswer create() => FaqAnswer._();
   FaqAnswer createEmptyInstance() => create();
   static $pb.PbList<FaqAnswer> createRepeated() => $pb.PbList<FaqAnswer>();
   @$core.pragma('dart2js:noInline')
-  static FaqAnswer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FaqAnswer>(create);
-  static FaqAnswer _defaultInstance;
+  static FaqAnswer getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FaqAnswer>(create);
+  static FaqAnswer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get answer => $_getSZ(0);
   @$pb.TagNumber(1)
-  set answer($core.String v) { $_setString(0, v); }
+  set answer($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasAnswer() => $_has(0);
   @$pb.TagNumber(1)
@@ -1267,7 +2525,10 @@ class FaqAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.double get confidence => $_getN(1);
   @$pb.TagNumber(2)
-  set confidence($core.double v) { $_setFloat(1, v); }
+  set confidence($core.double v) {
+    $_setFloat(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasConfidence() => $_has(1);
   @$pb.TagNumber(2)
@@ -1276,7 +2537,10 @@ class FaqAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get question => $_getSZ(2);
   @$pb.TagNumber(3)
-  set question($core.String v) { $_setString(2, v); }
+  set question($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasQuestion() => $_has(2);
   @$pb.TagNumber(3)
@@ -1285,7 +2549,10 @@ class FaqAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get source => $_getSZ(3);
   @$pb.TagNumber(4)
-  set source($core.String v) { $_setString(3, v); }
+  set source($core.String v) {
+    $_setString(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasSource() => $_has(3);
   @$pb.TagNumber(4)
@@ -1297,7 +2564,10 @@ class FaqAnswer extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get answerRecord => $_getSZ(5);
   @$pb.TagNumber(6)
-  set answerRecord($core.String v) { $_setString(5, v); }
+  set answerRecord($core.String v) {
+    $_setString(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasAnswerRecord() => $_has(5);
   @$pb.TagNumber(6)
@@ -1305,49 +2575,96 @@ class FaqAnswer extends $pb.GeneratedMessage {
 }
 
 enum SuggestionResult_SuggestionResponse {
-  error, 
-  suggestArticlesResponse, 
-  suggestFaqAnswersResponse, 
+  error,
+  suggestArticlesResponse,
+  suggestFaqAnswersResponse,
   notSet
 }
 
 class SuggestionResult extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, SuggestionResult_SuggestionResponse> _SuggestionResult_SuggestionResponseByTag = {
-    1 : SuggestionResult_SuggestionResponse.error,
-    2 : SuggestionResult_SuggestionResponse.suggestArticlesResponse,
-    3 : SuggestionResult_SuggestionResponse.suggestFaqAnswersResponse,
-    0 : SuggestionResult_SuggestionResponse.notSet
+  static const $core.Map<$core.int, SuggestionResult_SuggestionResponse>
+      _SuggestionResult_SuggestionResponseByTag = {
+    1: SuggestionResult_SuggestionResponse.error,
+    2: SuggestionResult_SuggestionResponse.suggestArticlesResponse,
+    3: SuggestionResult_SuggestionResponse.suggestFaqAnswersResponse,
+    0: SuggestionResult_SuggestionResponse.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SuggestionResult', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SuggestionResult',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<$20.Status>(1, 'error', subBuilder: $20.Status.create)
-    ..aOM<SuggestArticlesResponse>(2, 'suggestArticlesResponse', subBuilder: SuggestArticlesResponse.create)
-    ..aOM<SuggestFaqAnswersResponse>(3, 'suggestFaqAnswersResponse', subBuilder: SuggestFaqAnswersResponse.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$20.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'error',
+        subBuilder: $20.Status.create)
+    ..aOM<SuggestArticlesResponse>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'suggestArticlesResponse',
+        subBuilder: SuggestArticlesResponse.create)
+    ..aOM<SuggestFaqAnswersResponse>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'suggestFaqAnswersResponse',
+        subBuilder: SuggestFaqAnswersResponse.create)
+    ..hasRequiredFields = false;
 
   SuggestionResult._() : super();
-  factory SuggestionResult() => create();
-  factory SuggestionResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SuggestionResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory SuggestionResult({
+    $20.Status? error,
+    SuggestArticlesResponse? suggestArticlesResponse,
+    SuggestFaqAnswersResponse? suggestFaqAnswersResponse,
+  }) {
+    final _result = create();
+    if (error != null) {
+      _result.error = error;
+    }
+    if (suggestArticlesResponse != null) {
+      _result.suggestArticlesResponse = suggestArticlesResponse;
+    }
+    if (suggestFaqAnswersResponse != null) {
+      _result.suggestFaqAnswersResponse = suggestFaqAnswersResponse;
+    }
+    return _result;
+  }
+  factory SuggestionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SuggestionResult clone() => SuggestionResult()..mergeFromMessage(this);
-  SuggestionResult copyWith(void Function(SuggestionResult) updates) => super.copyWith((message) => updates(message as SuggestionResult));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SuggestionResult copyWith(void Function(SuggestionResult) updates) =>
+      super.copyWith((message) => updates(message as SuggestionResult))
+          as SuggestionResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SuggestionResult create() => SuggestionResult._();
   SuggestionResult createEmptyInstance() => create();
-  static $pb.PbList<SuggestionResult> createRepeated() => $pb.PbList<SuggestionResult>();
+  static $pb.PbList<SuggestionResult> createRepeated() =>
+      $pb.PbList<SuggestionResult>();
   @$core.pragma('dart2js:noInline')
-  static SuggestionResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SuggestionResult>(create);
-  static SuggestionResult _defaultInstance;
+  static SuggestionResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SuggestionResult>(create);
+  static SuggestionResult? _defaultInstance;
 
-  SuggestionResult_SuggestionResponse whichSuggestionResponse() => _SuggestionResult_SuggestionResponseByTag[$_whichOneof(0)];
+  SuggestionResult_SuggestionResponse whichSuggestionResponse() =>
+      _SuggestionResult_SuggestionResponseByTag[$_whichOneof(0)]!;
   void clearSuggestionResponse() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $20.Status get error => $_getN(0);
   @$pb.TagNumber(1)
-  set error($20.Status v) { setField(1, v); }
+  set error($20.Status v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasError() => $_has(0);
   @$pb.TagNumber(1)
@@ -1358,7 +2675,10 @@ class SuggestionResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SuggestArticlesResponse get suggestArticlesResponse => $_getN(1);
   @$pb.TagNumber(2)
-  set suggestArticlesResponse(SuggestArticlesResponse v) { setField(2, v); }
+  set suggestArticlesResponse(SuggestArticlesResponse v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasSuggestArticlesResponse() => $_has(1);
   @$pb.TagNumber(2)
@@ -1369,7 +2689,10 @@ class SuggestionResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   SuggestFaqAnswersResponse get suggestFaqAnswersResponse => $_getN(2);
   @$pb.TagNumber(3)
-  set suggestFaqAnswersResponse(SuggestFaqAnswersResponse v) { setField(3, v); }
+  set suggestFaqAnswersResponse(SuggestFaqAnswersResponse v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasSuggestFaqAnswersResponse() => $_has(2);
   @$pb.TagNumber(3)
@@ -1379,30 +2702,66 @@ class SuggestionResult extends $pb.GeneratedMessage {
 }
 
 class InputTextConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputTextConfig', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'languageCode')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'InputTextConfig',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'languageCode')
+    ..hasRequiredFields = false;
 
   InputTextConfig._() : super();
-  factory InputTextConfig() => create();
-  factory InputTextConfig.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory InputTextConfig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory InputTextConfig({
+    $core.String? languageCode,
+  }) {
+    final _result = create();
+    if (languageCode != null) {
+      _result.languageCode = languageCode;
+    }
+    return _result;
+  }
+  factory InputTextConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InputTextConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   InputTextConfig clone() => InputTextConfig()..mergeFromMessage(this);
-  InputTextConfig copyWith(void Function(InputTextConfig) updates) => super.copyWith((message) => updates(message as InputTextConfig));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  InputTextConfig copyWith(void Function(InputTextConfig) updates) =>
+      super.copyWith((message) => updates(message as InputTextConfig))
+          as InputTextConfig; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static InputTextConfig create() => InputTextConfig._();
   InputTextConfig createEmptyInstance() => create();
-  static $pb.PbList<InputTextConfig> createRepeated() => $pb.PbList<InputTextConfig>();
+  static $pb.PbList<InputTextConfig> createRepeated() =>
+      $pb.PbList<InputTextConfig>();
   @$core.pragma('dart2js:noInline')
-  static InputTextConfig getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<InputTextConfig>(create);
-  static InputTextConfig _defaultInstance;
+  static InputTextConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InputTextConfig>(create);
+  static InputTextConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get languageCode => $_getSZ(0);
   @$pb.TagNumber(1)
-  set languageCode($core.String v) { $_setString(0, v); }
+  set languageCode($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasLanguageCode() => $_has(0);
   @$pb.TagNumber(1)
@@ -1410,32 +2769,86 @@ class InputTextConfig extends $pb.GeneratedMessage {
 }
 
 class AnnotatedMessagePart extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotatedMessagePart', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..aOS(1, 'text')
-    ..aOS(2, 'entityType')
-    ..aOM<$18.Value>(3, 'formattedValue', subBuilder: $18.Value.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AnnotatedMessagePart',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'text')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'entityType')
+    ..aOM<$18.Value>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'formattedValue',
+        subBuilder: $18.Value.create)
+    ..hasRequiredFields = false;
 
   AnnotatedMessagePart._() : super();
-  factory AnnotatedMessagePart() => create();
-  factory AnnotatedMessagePart.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AnnotatedMessagePart.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  AnnotatedMessagePart clone() => AnnotatedMessagePart()..mergeFromMessage(this);
-  AnnotatedMessagePart copyWith(void Function(AnnotatedMessagePart) updates) => super.copyWith((message) => updates(message as AnnotatedMessagePart));
+  factory AnnotatedMessagePart({
+    $core.String? text,
+    $core.String? entityType,
+    $18.Value? formattedValue,
+  }) {
+    final _result = create();
+    if (text != null) {
+      _result.text = text;
+    }
+    if (entityType != null) {
+      _result.entityType = entityType;
+    }
+    if (formattedValue != null) {
+      _result.formattedValue = formattedValue;
+    }
+    return _result;
+  }
+  factory AnnotatedMessagePart.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotatedMessagePart.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AnnotatedMessagePart clone() =>
+      AnnotatedMessagePart()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AnnotatedMessagePart copyWith(void Function(AnnotatedMessagePart) updates) =>
+      super.copyWith((message) => updates(message as AnnotatedMessagePart))
+          as AnnotatedMessagePart; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AnnotatedMessagePart create() => AnnotatedMessagePart._();
   AnnotatedMessagePart createEmptyInstance() => create();
-  static $pb.PbList<AnnotatedMessagePart> createRepeated() => $pb.PbList<AnnotatedMessagePart>();
+  static $pb.PbList<AnnotatedMessagePart> createRepeated() =>
+      $pb.PbList<AnnotatedMessagePart>();
   @$core.pragma('dart2js:noInline')
-  static AnnotatedMessagePart getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnnotatedMessagePart>(create);
-  static AnnotatedMessagePart _defaultInstance;
+  static AnnotatedMessagePart getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnnotatedMessagePart>(create);
+  static AnnotatedMessagePart? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get text => $_getSZ(0);
   @$pb.TagNumber(1)
-  set text($core.String v) { $_setString(0, v); }
+  set text($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
   @$pb.TagNumber(1)
@@ -1444,7 +2857,10 @@ class AnnotatedMessagePart extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get entityType => $_getSZ(1);
   @$pb.TagNumber(2)
-  set entityType($core.String v) { $_setString(1, v); }
+  set entityType($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasEntityType() => $_has(1);
   @$pb.TagNumber(2)
@@ -1453,7 +2869,10 @@ class AnnotatedMessagePart extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $18.Value get formattedValue => $_getN(2);
   @$pb.TagNumber(3)
-  set formattedValue($18.Value v) { setField(3, v); }
+  set formattedValue($18.Value v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasFormattedValue() => $_has(2);
   @$pb.TagNumber(3)
@@ -1463,26 +2882,66 @@ class AnnotatedMessagePart extends $pb.GeneratedMessage {
 }
 
 class MessageAnnotation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MessageAnnotation', package: const $pb.PackageName('google.cloud.dialogflow.v2'), createEmptyInstance: create)
-    ..pc<AnnotatedMessagePart>(1, 'parts', $pb.PbFieldType.PM, subBuilder: AnnotatedMessagePart.create)
-    ..aOB(2, 'containEntities')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MessageAnnotation',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<AnnotatedMessagePart>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parts',
+        $pb.PbFieldType.PM,
+        subBuilder: AnnotatedMessagePart.create)
+    ..aOB(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'containEntities')
+    ..hasRequiredFields = false;
 
   MessageAnnotation._() : super();
-  factory MessageAnnotation() => create();
-  factory MessageAnnotation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MessageAnnotation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory MessageAnnotation({
+    $core.Iterable<AnnotatedMessagePart>? parts,
+    $core.bool? containEntities,
+  }) {
+    final _result = create();
+    if (parts != null) {
+      _result.parts.addAll(parts);
+    }
+    if (containEntities != null) {
+      _result.containEntities = containEntities;
+    }
+    return _result;
+  }
+  factory MessageAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MessageAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MessageAnnotation clone() => MessageAnnotation()..mergeFromMessage(this);
-  MessageAnnotation copyWith(void Function(MessageAnnotation) updates) => super.copyWith((message) => updates(message as MessageAnnotation));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  MessageAnnotation copyWith(void Function(MessageAnnotation) updates) =>
+      super.copyWith((message) => updates(message as MessageAnnotation))
+          as MessageAnnotation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MessageAnnotation create() => MessageAnnotation._();
   MessageAnnotation createEmptyInstance() => create();
-  static $pb.PbList<MessageAnnotation> createRepeated() => $pb.PbList<MessageAnnotation>();
+  static $pb.PbList<MessageAnnotation> createRepeated() =>
+      $pb.PbList<MessageAnnotation>();
   @$core.pragma('dart2js:noInline')
-  static MessageAnnotation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MessageAnnotation>(create);
-  static MessageAnnotation _defaultInstance;
+  static MessageAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MessageAnnotation>(create);
+  static MessageAnnotation? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<AnnotatedMessagePart> get parts => $_getList(0);
@@ -1490,10 +2949,12 @@ class MessageAnnotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get containEntities => $_getBF(1);
   @$pb.TagNumber(2)
-  set containEntities($core.bool v) { $_setBool(1, v); }
+  set containEntities($core.bool v) {
+    $_setBool(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasContainEntities() => $_has(1);
   @$pb.TagNumber(2)
   void clearContainEntities() => clearField(2);
 }
-

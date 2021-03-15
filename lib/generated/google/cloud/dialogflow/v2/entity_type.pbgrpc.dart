@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/entity_type.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -68,97 +68,71 @@ class EntityTypesClient extends $grpc.Client {
           ($6.BatchDeleteEntitiesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
-  EntityTypesClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  EntityTypesClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$6.ListEntityTypesResponse> listEntityTypes(
       $6.ListEntityTypesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listEntityTypes, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listEntityTypes, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.EntityType> getEntityType(
       $6.GetEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getEntityType, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getEntityType, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.EntityType> createEntityType(
       $6.CreateEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createEntityType, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createEntityType, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.EntityType> updateEntityType(
       $6.UpdateEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateEntityType, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateEntityType, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteEntityType(
       $6.DeleteEntityTypeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteEntityType, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEntityType, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> batchUpdateEntityTypes(
       $6.BatchUpdateEntityTypesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchUpdateEntityTypes, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchUpdateEntityTypes, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.Operation> batchDeleteEntityTypes(
       $6.BatchDeleteEntityTypesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchDeleteEntityTypes, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchDeleteEntityTypes, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.Operation> batchCreateEntities(
       $6.BatchCreateEntitiesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchCreateEntities, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchCreateEntities, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> batchUpdateEntities(
       $6.BatchUpdateEntitiesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchUpdateEntities, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchUpdateEntities, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> batchDeleteEntities(
       $6.BatchDeleteEntitiesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$batchDeleteEntities, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$batchDeleteEntities, request, options: options);
   }
 }
 

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/context.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -47,59 +47,43 @@ class ContextsClient extends $grpc.Client {
           ($4.DeleteAllContextsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  ContextsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  ContextsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$4.ListContextsResponse> listContexts(
       $4.ListContextsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listContexts, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listContexts, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.Context> getContext($4.GetContextRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getContext, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getContext, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.Context> createContext(
       $4.CreateContextRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createContext, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createContext, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.Context> updateContext(
       $4.UpdateContextRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateContext, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateContext, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteContext($4.DeleteContextRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteContext, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteContext, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteAllContexts(
       $4.DeleteAllContextsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteAllContexts, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAllContexts, request, options: options);
   }
 }
 

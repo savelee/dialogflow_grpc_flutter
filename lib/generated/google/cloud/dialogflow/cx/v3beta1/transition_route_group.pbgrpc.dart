@@ -2,97 +2,88 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/cx/v3beta1/transition_route_group.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'transition_route_group.pb.dart' as $12;
+import 'transition_route_group.pb.dart' as $10;
 import '../../../../protobuf/empty.pb.dart' as $1;
 export 'transition_route_group.pb.dart';
 
 class TransitionRouteGroupsClient extends $grpc.Client {
   static final _$listTransitionRouteGroups = $grpc.ClientMethod<
-          $12.ListTransitionRouteGroupsRequest,
-          $12.ListTransitionRouteGroupsResponse>(
+          $10.ListTransitionRouteGroupsRequest,
+          $10.ListTransitionRouteGroupsResponse>(
       '/google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups/ListTransitionRouteGroups',
-      ($12.ListTransitionRouteGroupsRequest value) => value.writeToBuffer(),
+      ($10.ListTransitionRouteGroupsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $12.ListTransitionRouteGroupsResponse.fromBuffer(value));
+          $10.ListTransitionRouteGroupsResponse.fromBuffer(value));
   static final _$getTransitionRouteGroup = $grpc.ClientMethod<
-          $12.GetTransitionRouteGroupRequest, $12.TransitionRouteGroup>(
+          $10.GetTransitionRouteGroupRequest, $10.TransitionRouteGroup>(
       '/google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups/GetTransitionRouteGroup',
-      ($12.GetTransitionRouteGroupRequest value) => value.writeToBuffer(),
+      ($10.GetTransitionRouteGroupRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $12.TransitionRouteGroup.fromBuffer(value));
+          $10.TransitionRouteGroup.fromBuffer(value));
   static final _$createTransitionRouteGroup = $grpc.ClientMethod<
-          $12.CreateTransitionRouteGroupRequest, $12.TransitionRouteGroup>(
+          $10.CreateTransitionRouteGroupRequest, $10.TransitionRouteGroup>(
       '/google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups/CreateTransitionRouteGroup',
-      ($12.CreateTransitionRouteGroupRequest value) => value.writeToBuffer(),
+      ($10.CreateTransitionRouteGroupRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $12.TransitionRouteGroup.fromBuffer(value));
+          $10.TransitionRouteGroup.fromBuffer(value));
   static final _$updateTransitionRouteGroup = $grpc.ClientMethod<
-          $12.UpdateTransitionRouteGroupRequest, $12.TransitionRouteGroup>(
+          $10.UpdateTransitionRouteGroupRequest, $10.TransitionRouteGroup>(
       '/google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups/UpdateTransitionRouteGroup',
-      ($12.UpdateTransitionRouteGroupRequest value) => value.writeToBuffer(),
+      ($10.UpdateTransitionRouteGroupRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $12.TransitionRouteGroup.fromBuffer(value));
+          $10.TransitionRouteGroup.fromBuffer(value));
   static final _$deleteTransitionRouteGroup = $grpc.ClientMethod<
-          $12.DeleteTransitionRouteGroupRequest, $1.Empty>(
+          $10.DeleteTransitionRouteGroupRequest, $1.Empty>(
       '/google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups/DeleteTransitionRouteGroup',
-      ($12.DeleteTransitionRouteGroupRequest value) => value.writeToBuffer(),
+      ($10.DeleteTransitionRouteGroupRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   TransitionRouteGroupsClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions options})
-      : super(channel, options: options);
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$12.ListTransitionRouteGroupsResponse>
-      listTransitionRouteGroups($12.ListTransitionRouteGroupsRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listTransitionRouteGroups, $async.Stream.fromIterable([request]),
+  $grpc.ResponseFuture<$10.ListTransitionRouteGroupsResponse>
+      listTransitionRouteGroups($10.ListTransitionRouteGroupsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listTransitionRouteGroups, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$12.TransitionRouteGroup> getTransitionRouteGroup(
-      $12.GetTransitionRouteGroupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getTransitionRouteGroup, $async.Stream.fromIterable([request]),
+  $grpc.ResponseFuture<$10.TransitionRouteGroup> getTransitionRouteGroup(
+      $10.GetTransitionRouteGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTransitionRouteGroup, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$12.TransitionRouteGroup> createTransitionRouteGroup(
-      $12.CreateTransitionRouteGroupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createTransitionRouteGroup, $async.Stream.fromIterable([request]),
+  $grpc.ResponseFuture<$10.TransitionRouteGroup> createTransitionRouteGroup(
+      $10.CreateTransitionRouteGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createTransitionRouteGroup, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$12.TransitionRouteGroup> updateTransitionRouteGroup(
-      $12.UpdateTransitionRouteGroupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateTransitionRouteGroup, $async.Stream.fromIterable([request]),
+  $grpc.ResponseFuture<$10.TransitionRouteGroup> updateTransitionRouteGroup(
+      $10.UpdateTransitionRouteGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateTransitionRouteGroup, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteTransitionRouteGroup(
-      $12.DeleteTransitionRouteGroupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteTransitionRouteGroup, $async.Stream.fromIterable([request]),
+      $10.DeleteTransitionRouteGroupRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteTransitionRouteGroup, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 
@@ -101,92 +92,92 @@ abstract class TransitionRouteGroupsServiceBase extends $grpc.Service {
       'google.cloud.dialogflow.cx.v3beta1.TransitionRouteGroups';
 
   TransitionRouteGroupsServiceBase() {
-    $addMethod($grpc.ServiceMethod<$12.ListTransitionRouteGroupsRequest,
-            $12.ListTransitionRouteGroupsResponse>(
+    $addMethod($grpc.ServiceMethod<$10.ListTransitionRouteGroupsRequest,
+            $10.ListTransitionRouteGroupsResponse>(
         'ListTransitionRouteGroups',
         listTransitionRouteGroups_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $12.ListTransitionRouteGroupsRequest.fromBuffer(value),
-        ($12.ListTransitionRouteGroupsResponse value) =>
+            $10.ListTransitionRouteGroupsRequest.fromBuffer(value),
+        ($10.ListTransitionRouteGroupsResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$12.GetTransitionRouteGroupRequest,
-            $12.TransitionRouteGroup>(
+    $addMethod($grpc.ServiceMethod<$10.GetTransitionRouteGroupRequest,
+            $10.TransitionRouteGroup>(
         'GetTransitionRouteGroup',
         getTransitionRouteGroup_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $12.GetTransitionRouteGroupRequest.fromBuffer(value),
-        ($12.TransitionRouteGroup value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$12.CreateTransitionRouteGroupRequest,
-            $12.TransitionRouteGroup>(
+            $10.GetTransitionRouteGroupRequest.fromBuffer(value),
+        ($10.TransitionRouteGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$10.CreateTransitionRouteGroupRequest,
+            $10.TransitionRouteGroup>(
         'CreateTransitionRouteGroup',
         createTransitionRouteGroup_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $12.CreateTransitionRouteGroupRequest.fromBuffer(value),
-        ($12.TransitionRouteGroup value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$12.UpdateTransitionRouteGroupRequest,
-            $12.TransitionRouteGroup>(
+            $10.CreateTransitionRouteGroupRequest.fromBuffer(value),
+        ($10.TransitionRouteGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$10.UpdateTransitionRouteGroupRequest,
+            $10.TransitionRouteGroup>(
         'UpdateTransitionRouteGroup',
         updateTransitionRouteGroup_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $12.UpdateTransitionRouteGroupRequest.fromBuffer(value),
-        ($12.TransitionRouteGroup value) => value.writeToBuffer()));
+            $10.UpdateTransitionRouteGroupRequest.fromBuffer(value),
+        ($10.TransitionRouteGroup value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$12.DeleteTransitionRouteGroupRequest, $1.Empty>(
+        $grpc.ServiceMethod<$10.DeleteTransitionRouteGroupRequest, $1.Empty>(
             'DeleteTransitionRouteGroup',
             deleteTransitionRouteGroup_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $12.DeleteTransitionRouteGroupRequest.fromBuffer(value),
+                $10.DeleteTransitionRouteGroupRequest.fromBuffer(value),
             ($1.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$12.ListTransitionRouteGroupsResponse>
+  $async.Future<$10.ListTransitionRouteGroupsResponse>
       listTransitionRouteGroups_Pre($grpc.ServiceCall call,
-          $async.Future<$12.ListTransitionRouteGroupsRequest> request) async {
+          $async.Future<$10.ListTransitionRouteGroupsRequest> request) async {
     return listTransitionRouteGroups(call, await request);
   }
 
-  $async.Future<$12.TransitionRouteGroup> getTransitionRouteGroup_Pre(
+  $async.Future<$10.TransitionRouteGroup> getTransitionRouteGroup_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$12.GetTransitionRouteGroupRequest> request) async {
+      $async.Future<$10.GetTransitionRouteGroupRequest> request) async {
     return getTransitionRouteGroup(call, await request);
   }
 
-  $async.Future<$12.TransitionRouteGroup> createTransitionRouteGroup_Pre(
+  $async.Future<$10.TransitionRouteGroup> createTransitionRouteGroup_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$12.CreateTransitionRouteGroupRequest> request) async {
+      $async.Future<$10.CreateTransitionRouteGroupRequest> request) async {
     return createTransitionRouteGroup(call, await request);
   }
 
-  $async.Future<$12.TransitionRouteGroup> updateTransitionRouteGroup_Pre(
+  $async.Future<$10.TransitionRouteGroup> updateTransitionRouteGroup_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$12.UpdateTransitionRouteGroupRequest> request) async {
+      $async.Future<$10.UpdateTransitionRouteGroupRequest> request) async {
     return updateTransitionRouteGroup(call, await request);
   }
 
   $async.Future<$1.Empty> deleteTransitionRouteGroup_Pre($grpc.ServiceCall call,
-      $async.Future<$12.DeleteTransitionRouteGroupRequest> request) async {
+      $async.Future<$10.DeleteTransitionRouteGroupRequest> request) async {
     return deleteTransitionRouteGroup(call, await request);
   }
 
-  $async.Future<$12.ListTransitionRouteGroupsResponse>
+  $async.Future<$10.ListTransitionRouteGroupsResponse>
       listTransitionRouteGroups(
-          $grpc.ServiceCall call, $12.ListTransitionRouteGroupsRequest request);
-  $async.Future<$12.TransitionRouteGroup> getTransitionRouteGroup(
-      $grpc.ServiceCall call, $12.GetTransitionRouteGroupRequest request);
-  $async.Future<$12.TransitionRouteGroup> createTransitionRouteGroup(
-      $grpc.ServiceCall call, $12.CreateTransitionRouteGroupRequest request);
-  $async.Future<$12.TransitionRouteGroup> updateTransitionRouteGroup(
-      $grpc.ServiceCall call, $12.UpdateTransitionRouteGroupRequest request);
+          $grpc.ServiceCall call, $10.ListTransitionRouteGroupsRequest request);
+  $async.Future<$10.TransitionRouteGroup> getTransitionRouteGroup(
+      $grpc.ServiceCall call, $10.GetTransitionRouteGroupRequest request);
+  $async.Future<$10.TransitionRouteGroup> createTransitionRouteGroup(
+      $grpc.ServiceCall call, $10.CreateTransitionRouteGroupRequest request);
+  $async.Future<$10.TransitionRouteGroup> updateTransitionRouteGroup(
+      $grpc.ServiceCall call, $10.UpdateTransitionRouteGroupRequest request);
   $async.Future<$1.Empty> deleteTransitionRouteGroup(
-      $grpc.ServiceCall call, $12.DeleteTransitionRouteGroupRequest request);
+      $grpc.ServiceCall call, $10.DeleteTransitionRouteGroupRequest request);
 }

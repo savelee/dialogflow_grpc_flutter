@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/session.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -27,24 +27,22 @@ class SessionsClient extends $grpc.Client {
       ($core.List<$core.int> value) =>
           $8.StreamingDetectIntentResponse.fromBuffer(value));
 
-  SessionsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  SessionsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$8.DetectIntentResponse> detectIntent(
       $8.DetectIntentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$detectIntent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$detectIntent, request, options: options);
   }
 
   $grpc.ResponseStream<$8.StreamingDetectIntentResponse> streamingDetectIntent(
       $async.Stream<$8.StreamingDetectIntentRequest> request,
-      {$grpc.CallOptions options}) {
-    final call =
-        $createCall(_$streamingDetectIntent, request, options: options);
-    return $grpc.ResponseStream(call);
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$streamingDetectIntent, request,
+        options: options);
   }
 }
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dialogflow_grpc_flutter.iml" filepath="$PROJECT_DIR$/.idea/dialogflow_grpc_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dialogflow_grpc.iml" filepath="$PROJECT_DIR$/dialogflow_grpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/dialogflow_grpc_android.iml" filepath="$PROJECT_DIR$/android/dialogflow_grpc_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/dialogflow_grpc_example_android.iml" filepath="$PROJECT_DIR$/example/android/dialogflow_grpc_example_android.iml" />
     </modules>
   </component>
 </project>

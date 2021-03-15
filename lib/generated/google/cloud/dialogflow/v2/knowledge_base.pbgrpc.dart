@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/knowledge_base.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -42,52 +42,39 @@ class KnowledgeBasesClient extends $grpc.Client {
           ($15.UpdateKnowledgeBaseRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $15.KnowledgeBase.fromBuffer(value));
 
-  KnowledgeBasesClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  KnowledgeBasesClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$15.ListKnowledgeBasesResponse> listKnowledgeBases(
       $15.ListKnowledgeBasesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listKnowledgeBases, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listKnowledgeBases, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.KnowledgeBase> getKnowledgeBase(
       $15.GetKnowledgeBaseRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getKnowledgeBase, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getKnowledgeBase, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.KnowledgeBase> createKnowledgeBase(
       $15.CreateKnowledgeBaseRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createKnowledgeBase, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createKnowledgeBase, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteKnowledgeBase(
       $15.DeleteKnowledgeBaseRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteKnowledgeBase, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteKnowledgeBase, request, options: options);
   }
 
   $grpc.ResponseFuture<$15.KnowledgeBase> updateKnowledgeBase(
       $15.UpdateKnowledgeBaseRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateKnowledgeBase, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateKnowledgeBase, request, options: options);
   }
 }
 

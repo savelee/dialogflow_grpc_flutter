@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-
 import 'dart:async';
-import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sound_stream/sound_stream.dart';
@@ -18,7 +16,7 @@ class Chat extends StatefulWidget {
 
 class _ChatState extends State<Chat> {
   final List<ChatMessage> _messages = <ChatMessage>[];
-  final TextEditingController _textController = new TextEditingController();
+  final TextEditingController _textController = TextEditingController();
 
   bool _isRecording = false;
 
@@ -74,7 +72,7 @@ class _ChatState extends State<Chat> {
     _textController.clear();
 
     // Dialogflow detectIntent call
-    ChatMessage message = new ChatMessage(
+    ChatMessage message = ChatMessage(
       text: text,
       name: "You",
       type: true,
@@ -87,7 +85,7 @@ class _ChatState extends State<Chat> {
     var data = await dialogflow.detectIntent(text, 'en-US');
     String fulfillmentText = data.queryResult.fulfillmentText;
     if(fulfillmentText.isNotEmpty) {
-      ChatMessage botMessage = new ChatMessage(
+      ChatMessage botMessage = ChatMessage(
         text: fulfillmentText,
         name: "Bot",
         type: false,
@@ -129,13 +127,13 @@ class _ChatState extends State<Chat> {
         String fulfillmentText = data.queryResult.fulfillmentText;
 
         if(fulfillmentText.isNotEmpty) {
-          ChatMessage message = new ChatMessage(
+          ChatMessage message = ChatMessage(
             text: queryText,
             name: "You",
             type: true,
           );
 
-          ChatMessage botMessage = new ChatMessage(
+          ChatMessage botMessage = ChatMessage(
             text: fulfillmentText,
             name: "Bot",
             type: false,
@@ -222,19 +220,19 @@ class ChatMessage extends StatelessWidget {
 
   List<Widget> otherMessage(context) {
     return <Widget>[
-      new Container(
+      Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: new CircleAvatar(child: new Text('B')),
+        child: CircleAvatar(child: Text('B')),
       ),
-      new Expanded(
-        child: new Column(
+      Expanded(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Text(this.name,
-                style: new TextStyle(fontWeight: FontWeight.bold)),
-            new Container(
+            Text(this.name,
+                style: TextStyle(fontWeight: FontWeight.bold)),
+            Container(
               margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text),
+              child: Text(text),
             ),
           ],
         ),
@@ -244,24 +242,24 @@ class ChatMessage extends StatelessWidget {
 
   List<Widget> myMessage(context) {
     return <Widget>[
-      new Expanded(
-        child: new Column(
+      Expanded(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            new Text(this.name, style: Theme.of(context).textTheme.subhead),
-            new Container(
+            Text(this.name, style: Theme.of(context).textTheme.subtitle1),
+            Container(
               margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text),
+              child: Text(text),
             ),
           ],
         ),
       ),
-      new Container(
+      Container(
         margin: const EdgeInsets.only(left: 16.0),
-        child: new CircleAvatar(
-            child: new Text(
+        child: CircleAvatar(
+            child: Text(
               this.name[0],
-              style: new TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold),
             )),
       ),
     ];
@@ -269,9 +267,9 @@ class ChatMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       margin: const EdgeInsets.symmetric(vertical: 10.0),
-      child: new Row(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: this.type ? myMessage(context) : otherMessage(context),
       ),

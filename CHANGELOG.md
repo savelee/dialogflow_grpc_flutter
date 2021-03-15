@@ -1,5 +1,9 @@
+## 0.2.4
 
-## 0.2.2
+* Generate new Dart files
+* Fix validation errors & warnings
+
+## 0.2.3
 
 * Fixes in Documentation
 

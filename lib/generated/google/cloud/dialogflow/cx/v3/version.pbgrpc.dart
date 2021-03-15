@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/cx/v3/version.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -48,58 +48,42 @@ class VersionsClient extends $grpc.Client {
           ($14.LoadVersionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
 
-  VersionsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  VersionsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$14.ListVersionsResponse> listVersions(
       $14.ListVersionsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listVersions, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listVersions, request, options: options);
   }
 
   $grpc.ResponseFuture<$14.Version> getVersion($14.GetVersionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getVersion, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> createVersion(
       $14.CreateVersionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createVersion, request, options: options);
   }
 
   $grpc.ResponseFuture<$14.Version> updateVersion(
       $14.UpdateVersionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateVersion, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteVersion($14.DeleteVersionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteVersion, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.Operation> loadVersion($14.LoadVersionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$loadVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$loadVersion, request, options: options);
   }
 }
 

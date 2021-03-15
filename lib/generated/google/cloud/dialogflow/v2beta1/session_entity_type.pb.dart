@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/session_entity_type.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -17,32 +17,83 @@ import 'session_entity_type.pbenum.dart';
 export 'session_entity_type.pbenum.dart';
 
 class SessionEntityType extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SessionEntityType', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..e<SessionEntityType_EntityOverrideMode>(2, 'entityOverrideMode', $pb.PbFieldType.OE, defaultOrMaker: SessionEntityType_EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED, valueOf: SessionEntityType_EntityOverrideMode.valueOf, enumValues: SessionEntityType_EntityOverrideMode.values)
-    ..pc<$7.EntityType_Entity>(3, 'entities', $pb.PbFieldType.PM, subBuilder: $7.EntityType_Entity.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SessionEntityType',
+          package: const $pb.PackageName(
+              const $core.bool.fromEnvironment('protobuf.omit_message_names')
+                  ? ''
+                  : 'google.cloud.dialogflow.v2beta1'),
+          createEmptyInstance: create)
+        ..aOS(
+            1,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names')
+                ? ''
+                : 'name')
+        ..e<SessionEntityType_EntityOverrideMode>(
+            2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'entityOverrideMode', $pb.PbFieldType.OE,
+            defaultOrMaker: SessionEntityType_EntityOverrideMode
+                .ENTITY_OVERRIDE_MODE_UNSPECIFIED,
+            valueOf: SessionEntityType_EntityOverrideMode.valueOf,
+            enumValues: SessionEntityType_EntityOverrideMode.values)
+        ..pc<$7.EntityType_Entity>(
+            3,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'entities',
+            $pb.PbFieldType.PM,
+            subBuilder: $7.EntityType_Entity.create)
+        ..hasRequiredFields = false;
 
   SessionEntityType._() : super();
-  factory SessionEntityType() => create();
-  factory SessionEntityType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SessionEntityType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory SessionEntityType({
+    $core.String? name,
+    SessionEntityType_EntityOverrideMode? entityOverrideMode,
+    $core.Iterable<$7.EntityType_Entity>? entities,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (entityOverrideMode != null) {
+      _result.entityOverrideMode = entityOverrideMode;
+    }
+    if (entities != null) {
+      _result.entities.addAll(entities);
+    }
+    return _result;
+  }
+  factory SessionEntityType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SessionEntityType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SessionEntityType clone() => SessionEntityType()..mergeFromMessage(this);
-  SessionEntityType copyWith(void Function(SessionEntityType) updates) => super.copyWith((message) => updates(message as SessionEntityType));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SessionEntityType copyWith(void Function(SessionEntityType) updates) =>
+      super.copyWith((message) => updates(message as SessionEntityType))
+          as SessionEntityType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionEntityType create() => SessionEntityType._();
   SessionEntityType createEmptyInstance() => create();
-  static $pb.PbList<SessionEntityType> createRepeated() => $pb.PbList<SessionEntityType>();
+  static $pb.PbList<SessionEntityType> createRepeated() =>
+      $pb.PbList<SessionEntityType>();
   @$core.pragma('dart2js:noInline')
-  static SessionEntityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SessionEntityType>(create);
-  static SessionEntityType _defaultInstance;
+  static SessionEntityType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SessionEntityType>(create);
+  static SessionEntityType? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -51,7 +102,10 @@ class SessionEntityType extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SessionEntityType_EntityOverrideMode get entityOverrideMode => $_getN(1);
   @$pb.TagNumber(2)
-  set entityOverrideMode(SessionEntityType_EntityOverrideMode v) { setField(2, v); }
+  set entityOverrideMode(SessionEntityType_EntityOverrideMode v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasEntityOverrideMode() => $_has(1);
   @$pb.TagNumber(2)
@@ -62,32 +116,89 @@ class SessionEntityType extends $pb.GeneratedMessage {
 }
 
 class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionEntityTypesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
-    ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListSessionEntityTypesRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
 
   ListSessionEntityTypesRequest._() : super();
-  factory ListSessionEntityTypesRequest() => create();
-  factory ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListSessionEntityTypesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ListSessionEntityTypesRequest clone() => ListSessionEntityTypesRequest()..mergeFromMessage(this);
-  ListSessionEntityTypesRequest copyWith(void Function(ListSessionEntityTypesRequest) updates) => super.copyWith((message) => updates(message as ListSessionEntityTypesRequest));
+  factory ListSessionEntityTypesRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionEntityTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListSessionEntityTypesRequest clone() =>
+      ListSessionEntityTypesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListSessionEntityTypesRequest copyWith(
+          void Function(ListSessionEntityTypesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListSessionEntityTypesRequest))
+          as ListSessionEntityTypesRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ListSessionEntityTypesRequest create() => ListSessionEntityTypesRequest._();
+  static ListSessionEntityTypesRequest create() =>
+      ListSessionEntityTypesRequest._();
   ListSessionEntityTypesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() => $pb.PbList<ListSessionEntityTypesRequest>();
+  static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() =>
+      $pb.PbList<ListSessionEntityTypesRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListSessionEntityTypesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesRequest>(create);
-  static ListSessionEntityTypesRequest _defaultInstance;
+  static ListSessionEntityTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesRequest>(create);
+  static ListSessionEntityTypesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -96,7 +207,10 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
@@ -105,7 +219,10 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) { $_setString(2, v); }
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
@@ -113,26 +230,70 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
 }
 
 class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionEntityTypesResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..pc<SessionEntityType>(1, 'sessionEntityTypes', $pb.PbFieldType.PM, subBuilder: SessionEntityType.create)
-    ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListSessionEntityTypesResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..pc<SessionEntityType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sessionEntityTypes',
+        $pb.PbFieldType.PM,
+        subBuilder: SessionEntityType.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListSessionEntityTypesResponse._() : super();
-  factory ListSessionEntityTypesResponse() => create();
-  factory ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListSessionEntityTypesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ListSessionEntityTypesResponse clone() => ListSessionEntityTypesResponse()..mergeFromMessage(this);
-  ListSessionEntityTypesResponse copyWith(void Function(ListSessionEntityTypesResponse) updates) => super.copyWith((message) => updates(message as ListSessionEntityTypesResponse));
+  factory ListSessionEntityTypesResponse({
+    $core.Iterable<SessionEntityType>? sessionEntityTypes,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (sessionEntityTypes != null) {
+      _result.sessionEntityTypes.addAll(sessionEntityTypes);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionEntityTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListSessionEntityTypesResponse clone() =>
+      ListSessionEntityTypesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListSessionEntityTypesResponse copyWith(
+          void Function(ListSessionEntityTypesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListSessionEntityTypesResponse))
+          as ListSessionEntityTypesResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ListSessionEntityTypesResponse create() => ListSessionEntityTypesResponse._();
+  static ListSessionEntityTypesResponse create() =>
+      ListSessionEntityTypesResponse._();
   ListSessionEntityTypesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() => $pb.PbList<ListSessionEntityTypesResponse>();
+  static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() =>
+      $pb.PbList<ListSessionEntityTypesResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListSessionEntityTypesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesResponse>(create);
-  static ListSessionEntityTypesResponse _defaultInstance;
+  static ListSessionEntityTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesResponse>(create);
+  static ListSessionEntityTypesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<SessionEntityType> get sessionEntityTypes => $_getList(0);
@@ -140,7 +301,10 @@ class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) { $_setString(1, v); }
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
@@ -148,30 +312,70 @@ class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
 }
 
 class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetSessionEntityTypeRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
 
   GetSessionEntityTypeRequest._() : super();
-  factory GetSessionEntityTypeRequest() => create();
-  factory GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  GetSessionEntityTypeRequest clone() => GetSessionEntityTypeRequest()..mergeFromMessage(this);
-  GetSessionEntityTypeRequest copyWith(void Function(GetSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as GetSessionEntityTypeRequest));
+  factory GetSessionEntityTypeRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GetSessionEntityTypeRequest clone() =>
+      GetSessionEntityTypeRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetSessionEntityTypeRequest copyWith(
+          void Function(GetSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetSessionEntityTypeRequest))
+          as GetSessionEntityTypeRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static GetSessionEntityTypeRequest create() => GetSessionEntityTypeRequest._();
+  static GetSessionEntityTypeRequest create() =>
+      GetSessionEntityTypeRequest._();
   GetSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() => $pb.PbList<GetSessionEntityTypeRequest>();
+  static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<GetSessionEntityTypeRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetSessionEntityTypeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSessionEntityTypeRequest>(create);
-  static GetSessionEntityTypeRequest _defaultInstance;
+  static GetSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSessionEntityTypeRequest>(create);
+  static GetSessionEntityTypeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -179,31 +383,80 @@ class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
 }
 
 class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..aOM<SessionEntityType>(2, 'sessionEntityType', subBuilder: SessionEntityType.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateSessionEntityTypeRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<SessionEntityType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sessionEntityType',
+        subBuilder: SessionEntityType.create)
+    ..hasRequiredFields = false;
 
   CreateSessionEntityTypeRequest._() : super();
-  factory CreateSessionEntityTypeRequest() => create();
-  factory CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreateSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  CreateSessionEntityTypeRequest clone() => CreateSessionEntityTypeRequest()..mergeFromMessage(this);
-  CreateSessionEntityTypeRequest copyWith(void Function(CreateSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as CreateSessionEntityTypeRequest));
+  factory CreateSessionEntityTypeRequest({
+    $core.String? parent,
+    SessionEntityType? sessionEntityType,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (sessionEntityType != null) {
+      _result.sessionEntityType = sessionEntityType;
+    }
+    return _result;
+  }
+  factory CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateSessionEntityTypeRequest clone() =>
+      CreateSessionEntityTypeRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateSessionEntityTypeRequest copyWith(
+          void Function(CreateSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateSessionEntityTypeRequest))
+          as CreateSessionEntityTypeRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static CreateSessionEntityTypeRequest create() => CreateSessionEntityTypeRequest._();
+  static CreateSessionEntityTypeRequest create() =>
+      CreateSessionEntityTypeRequest._();
   CreateSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() => $pb.PbList<CreateSessionEntityTypeRequest>();
+  static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<CreateSessionEntityTypeRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateSessionEntityTypeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSessionEntityTypeRequest>(create);
-  static CreateSessionEntityTypeRequest _defaultInstance;
+  static CreateSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSessionEntityTypeRequest>(create);
+  static CreateSessionEntityTypeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -212,7 +465,10 @@ class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SessionEntityType get sessionEntityType => $_getN(1);
   @$pb.TagNumber(2)
-  set sessionEntityType(SessionEntityType v) { setField(2, v); }
+  set sessionEntityType(SessionEntityType v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasSessionEntityType() => $_has(1);
   @$pb.TagNumber(2)
@@ -222,31 +478,78 @@ class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOM<SessionEntityType>(1, 'sessionEntityType', subBuilder: SessionEntityType.create)
-    ..aOM<$18.FieldMask>(2, 'updateMask', subBuilder: $18.FieldMask.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateSessionEntityTypeRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOM<SessionEntityType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sessionEntityType',
+        subBuilder: SessionEntityType.create)
+    ..aOM<$18.FieldMask>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
+        subBuilder: $18.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateSessionEntityTypeRequest._() : super();
-  factory UpdateSessionEntityTypeRequest() => create();
-  factory UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UpdateSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UpdateSessionEntityTypeRequest clone() => UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
-  UpdateSessionEntityTypeRequest copyWith(void Function(UpdateSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as UpdateSessionEntityTypeRequest));
+  factory UpdateSessionEntityTypeRequest({
+    SessionEntityType? sessionEntityType,
+    $18.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (sessionEntityType != null) {
+      _result.sessionEntityType = sessionEntityType;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateSessionEntityTypeRequest clone() =>
+      UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateSessionEntityTypeRequest copyWith(
+          void Function(UpdateSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateSessionEntityTypeRequest))
+          as UpdateSessionEntityTypeRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static UpdateSessionEntityTypeRequest create() => UpdateSessionEntityTypeRequest._();
+  static UpdateSessionEntityTypeRequest create() =>
+      UpdateSessionEntityTypeRequest._();
   UpdateSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() => $pb.PbList<UpdateSessionEntityTypeRequest>();
+  static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<UpdateSessionEntityTypeRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateSessionEntityTypeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSessionEntityTypeRequest>(create);
-  static UpdateSessionEntityTypeRequest _defaultInstance;
+  static UpdateSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSessionEntityTypeRequest>(create);
+  static UpdateSessionEntityTypeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   SessionEntityType get sessionEntityType => $_getN(0);
   @$pb.TagNumber(1)
-  set sessionEntityType(SessionEntityType v) { setField(1, v); }
+  set sessionEntityType(SessionEntityType v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasSessionEntityType() => $_has(0);
   @$pb.TagNumber(1)
@@ -257,7 +560,10 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $18.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($18.FieldMask v) { setField(2, v); }
+  set updateMask($18.FieldMask v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
@@ -267,33 +573,72 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteSessionEntityTypeRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
 
   DeleteSessionEntityTypeRequest._() : super();
-  factory DeleteSessionEntityTypeRequest() => create();
-  factory DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DeleteSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  DeleteSessionEntityTypeRequest clone() => DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
-  DeleteSessionEntityTypeRequest copyWith(void Function(DeleteSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as DeleteSessionEntityTypeRequest));
+  factory DeleteSessionEntityTypeRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteSessionEntityTypeRequest clone() =>
+      DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteSessionEntityTypeRequest copyWith(
+          void Function(DeleteSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeleteSessionEntityTypeRequest))
+          as DeleteSessionEntityTypeRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static DeleteSessionEntityTypeRequest create() => DeleteSessionEntityTypeRequest._();
+  static DeleteSessionEntityTypeRequest create() =>
+      DeleteSessionEntityTypeRequest._();
   DeleteSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() => $pb.PbList<DeleteSessionEntityTypeRequest>();
+  static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<DeleteSessionEntityTypeRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteSessionEntityTypeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeleteSessionEntityTypeRequest>(create);
-  static DeleteSessionEntityTypeRequest _defaultInstance;
+  static DeleteSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSessionEntityTypeRequest>(create);
+  static DeleteSessionEntityTypeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
-

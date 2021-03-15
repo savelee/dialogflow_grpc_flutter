@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/context.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -13,32 +13,82 @@ import '../../../protobuf/struct.pb.dart' as $19;
 import '../../../protobuf/field_mask.pb.dart' as $18;
 
 class Context extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Context', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..a<$core.int>(2, 'lifespanCount', $pb.PbFieldType.O3)
-    ..aOM<$19.Struct>(3, 'parameters', subBuilder: $19.Struct.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Context',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'lifespanCount',
+        $pb.PbFieldType.O3)
+    ..aOM<$19.Struct>(3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters',
+        subBuilder: $19.Struct.create)
+    ..hasRequiredFields = false;
 
   Context._() : super();
-  factory Context() => create();
-  factory Context.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Context.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Context({
+    $core.String? name,
+    $core.int? lifespanCount,
+    $19.Struct? parameters,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (lifespanCount != null) {
+      _result.lifespanCount = lifespanCount;
+    }
+    if (parameters != null) {
+      _result.parameters = parameters;
+    }
+    return _result;
+  }
+  factory Context.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Context.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Context clone() => Context()..mergeFromMessage(this);
-  Context copyWith(void Function(Context) updates) => super.copyWith((message) => updates(message as Context));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Context copyWith(void Function(Context) updates) =>
+      super.copyWith((message) => updates(message as Context))
+          as Context; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Context create() => Context._();
   Context createEmptyInstance() => create();
   static $pb.PbList<Context> createRepeated() => $pb.PbList<Context>();
   @$core.pragma('dart2js:noInline')
-  static Context getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Context>(create);
-  static Context _defaultInstance;
+  static Context getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Context>(create);
+  static Context? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -47,7 +97,10 @@ class Context extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get lifespanCount => $_getIZ(1);
   @$pb.TagNumber(2)
-  set lifespanCount($core.int v) { $_setSignedInt32(1, v); }
+  set lifespanCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasLifespanCount() => $_has(1);
   @$pb.TagNumber(2)
@@ -56,7 +109,10 @@ class Context extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $19.Struct get parameters => $_getN(2);
   @$pb.TagNumber(3)
-  set parameters($19.Struct v) { setField(3, v); }
+  set parameters($19.Struct v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasParameters() => $_has(2);
   @$pb.TagNumber(3)
@@ -66,32 +122,85 @@ class Context extends $pb.GeneratedMessage {
 }
 
 class ListContextsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListContextsRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
-    ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListContextsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageSize',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pageToken')
+    ..hasRequiredFields = false;
 
   ListContextsRequest._() : super();
-  factory ListContextsRequest() => create();
-  factory ListContextsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListContextsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ListContextsRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (pageSize != null) {
+      _result.pageSize = pageSize;
+    }
+    if (pageToken != null) {
+      _result.pageToken = pageToken;
+    }
+    return _result;
+  }
+  factory ListContextsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListContextsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ListContextsRequest clone() => ListContextsRequest()..mergeFromMessage(this);
-  ListContextsRequest copyWith(void Function(ListContextsRequest) updates) => super.copyWith((message) => updates(message as ListContextsRequest));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListContextsRequest copyWith(void Function(ListContextsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListContextsRequest))
+          as ListContextsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ListContextsRequest create() => ListContextsRequest._();
   ListContextsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListContextsRequest> createRepeated() => $pb.PbList<ListContextsRequest>();
+  static $pb.PbList<ListContextsRequest> createRepeated() =>
+      $pb.PbList<ListContextsRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListContextsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListContextsRequest>(create);
-  static ListContextsRequest _defaultInstance;
+  static ListContextsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListContextsRequest>(create);
+  static ListContextsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -100,7 +209,10 @@ class ListContextsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
@@ -109,7 +221,10 @@ class ListContextsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) { $_setString(2, v); }
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
@@ -117,26 +232,67 @@ class ListContextsRequest extends $pb.GeneratedMessage {
 }
 
 class ListContextsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListContextsResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..pc<Context>(1, 'contexts', $pb.PbFieldType.PM, subBuilder: Context.create)
-    ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListContextsResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..pc<Context>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'contexts',
+        $pb.PbFieldType.PM,
+        subBuilder: Context.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListContextsResponse._() : super();
-  factory ListContextsResponse() => create();
-  factory ListContextsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListContextsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ListContextsResponse clone() => ListContextsResponse()..mergeFromMessage(this);
-  ListContextsResponse copyWith(void Function(ListContextsResponse) updates) => super.copyWith((message) => updates(message as ListContextsResponse));
+  factory ListContextsResponse({
+    $core.Iterable<Context>? contexts,
+    $core.String? nextPageToken,
+  }) {
+    final _result = create();
+    if (contexts != null) {
+      _result.contexts.addAll(contexts);
+    }
+    if (nextPageToken != null) {
+      _result.nextPageToken = nextPageToken;
+    }
+    return _result;
+  }
+  factory ListContextsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListContextsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListContextsResponse clone() =>
+      ListContextsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListContextsResponse copyWith(void Function(ListContextsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListContextsResponse))
+          as ListContextsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ListContextsResponse create() => ListContextsResponse._();
   ListContextsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListContextsResponse> createRepeated() => $pb.PbList<ListContextsResponse>();
+  static $pb.PbList<ListContextsResponse> createRepeated() =>
+      $pb.PbList<ListContextsResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListContextsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListContextsResponse>(create);
-  static ListContextsResponse _defaultInstance;
+  static ListContextsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListContextsResponse>(create);
+  static ListContextsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Context> get contexts => $_getList(0);
@@ -144,7 +300,10 @@ class ListContextsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) { $_setString(1, v); }
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
@@ -152,30 +311,66 @@ class ListContextsResponse extends $pb.GeneratedMessage {
 }
 
 class GetContextRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetContextRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetContextRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
 
   GetContextRequest._() : super();
-  factory GetContextRequest() => create();
-  factory GetContextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetContextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory GetContextRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory GetContextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetContextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   GetContextRequest clone() => GetContextRequest()..mergeFromMessage(this);
-  GetContextRequest copyWith(void Function(GetContextRequest) updates) => super.copyWith((message) => updates(message as GetContextRequest));
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GetContextRequest copyWith(void Function(GetContextRequest) updates) =>
+      super.copyWith((message) => updates(message as GetContextRequest))
+          as GetContextRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetContextRequest create() => GetContextRequest._();
   GetContextRequest createEmptyInstance() => create();
-  static $pb.PbList<GetContextRequest> createRepeated() => $pb.PbList<GetContextRequest>();
+  static $pb.PbList<GetContextRequest> createRepeated() =>
+      $pb.PbList<GetContextRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetContextRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetContextRequest>(create);
-  static GetContextRequest _defaultInstance;
+  static GetContextRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetContextRequest>(create);
+  static GetContextRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -183,31 +378,77 @@ class GetContextRequest extends $pb.GeneratedMessage {
 }
 
 class CreateContextRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateContextRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..aOM<Context>(2, 'context', subBuilder: Context.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CreateContextRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..aOM<Context>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'context',
+        subBuilder: Context.create)
+    ..hasRequiredFields = false;
 
   CreateContextRequest._() : super();
-  factory CreateContextRequest() => create();
-  factory CreateContextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreateContextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  CreateContextRequest clone() => CreateContextRequest()..mergeFromMessage(this);
-  CreateContextRequest copyWith(void Function(CreateContextRequest) updates) => super.copyWith((message) => updates(message as CreateContextRequest));
+  factory CreateContextRequest({
+    $core.String? parent,
+    Context? context,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    if (context != null) {
+      _result.context = context;
+    }
+    return _result;
+  }
+  factory CreateContextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateContextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CreateContextRequest clone() =>
+      CreateContextRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CreateContextRequest copyWith(void Function(CreateContextRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateContextRequest))
+          as CreateContextRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateContextRequest create() => CreateContextRequest._();
   CreateContextRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateContextRequest> createRepeated() => $pb.PbList<CreateContextRequest>();
+  static $pb.PbList<CreateContextRequest> createRepeated() =>
+      $pb.PbList<CreateContextRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateContextRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateContextRequest>(create);
-  static CreateContextRequest _defaultInstance;
+  static CreateContextRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateContextRequest>(create);
+  static CreateContextRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
@@ -216,7 +457,10 @@ class CreateContextRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Context get context => $_getN(1);
   @$pb.TagNumber(2)
-  set context(Context v) { setField(2, v); }
+  set context(Context v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasContext() => $_has(1);
   @$pb.TagNumber(2)
@@ -226,31 +470,75 @@ class CreateContextRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateContextRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateContextRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOM<Context>(1, 'context', subBuilder: Context.create)
-    ..aOM<$18.FieldMask>(2, 'updateMask', subBuilder: $18.FieldMask.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'UpdateContextRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOM<Context>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context',
+        subBuilder: Context.create)
+    ..aOM<$18.FieldMask>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'updateMask',
+        subBuilder: $18.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateContextRequest._() : super();
-  factory UpdateContextRequest() => create();
-  factory UpdateContextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UpdateContextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UpdateContextRequest clone() => UpdateContextRequest()..mergeFromMessage(this);
-  UpdateContextRequest copyWith(void Function(UpdateContextRequest) updates) => super.copyWith((message) => updates(message as UpdateContextRequest));
+  factory UpdateContextRequest({
+    Context? context,
+    $18.FieldMask? updateMask,
+  }) {
+    final _result = create();
+    if (context != null) {
+      _result.context = context;
+    }
+    if (updateMask != null) {
+      _result.updateMask = updateMask;
+    }
+    return _result;
+  }
+  factory UpdateContextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateContextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateContextRequest clone() =>
+      UpdateContextRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateContextRequest copyWith(void Function(UpdateContextRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateContextRequest))
+          as UpdateContextRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UpdateContextRequest create() => UpdateContextRequest._();
   UpdateContextRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateContextRequest> createRepeated() => $pb.PbList<UpdateContextRequest>();
+  static $pb.PbList<UpdateContextRequest> createRepeated() =>
+      $pb.PbList<UpdateContextRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateContextRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateContextRequest>(create);
-  static UpdateContextRequest _defaultInstance;
+  static UpdateContextRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateContextRequest>(create);
+  static UpdateContextRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   Context get context => $_getN(0);
   @$pb.TagNumber(1)
-  set context(Context v) { setField(1, v); }
+  set context(Context v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasContext() => $_has(0);
   @$pb.TagNumber(1)
@@ -261,7 +549,10 @@ class UpdateContextRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $18.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($18.FieldMask v) { setField(2, v); }
+  set updateMask($18.FieldMask v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
@@ -271,30 +562,67 @@ class UpdateContextRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteContextRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteContextRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteContextRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..hasRequiredFields = false;
 
   DeleteContextRequest._() : super();
-  factory DeleteContextRequest() => create();
-  factory DeleteContextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DeleteContextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  DeleteContextRequest clone() => DeleteContextRequest()..mergeFromMessage(this);
-  DeleteContextRequest copyWith(void Function(DeleteContextRequest) updates) => super.copyWith((message) => updates(message as DeleteContextRequest));
+  factory DeleteContextRequest({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory DeleteContextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteContextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteContextRequest clone() =>
+      DeleteContextRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteContextRequest copyWith(void Function(DeleteContextRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteContextRequest))
+          as DeleteContextRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeleteContextRequest create() => DeleteContextRequest._();
   DeleteContextRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteContextRequest> createRepeated() => $pb.PbList<DeleteContextRequest>();
+  static $pb.PbList<DeleteContextRequest> createRepeated() =>
+      $pb.PbList<DeleteContextRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteContextRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeleteContextRequest>(create);
-  static DeleteContextRequest _defaultInstance;
+  static DeleteContextRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteContextRequest>(create);
+  static DeleteContextRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -302,33 +630,70 @@ class DeleteContextRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteAllContextsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAllContextsRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'), createEmptyInstance: create)
-    ..aOS(1, 'parent')
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeleteAllContextsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'parent')
+    ..hasRequiredFields = false;
 
   DeleteAllContextsRequest._() : super();
-  factory DeleteAllContextsRequest() => create();
-  factory DeleteAllContextsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DeleteAllContextsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  DeleteAllContextsRequest clone() => DeleteAllContextsRequest()..mergeFromMessage(this);
-  DeleteAllContextsRequest copyWith(void Function(DeleteAllContextsRequest) updates) => super.copyWith((message) => updates(message as DeleteAllContextsRequest));
+  factory DeleteAllContextsRequest({
+    $core.String? parent,
+  }) {
+    final _result = create();
+    if (parent != null) {
+      _result.parent = parent;
+    }
+    return _result;
+  }
+  factory DeleteAllContextsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAllContextsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DeleteAllContextsRequest clone() =>
+      DeleteAllContextsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DeleteAllContextsRequest copyWith(
+          void Function(DeleteAllContextsRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteAllContextsRequest))
+          as DeleteAllContextsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeleteAllContextsRequest create() => DeleteAllContextsRequest._();
   DeleteAllContextsRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAllContextsRequest> createRepeated() => $pb.PbList<DeleteAllContextsRequest>();
+  static $pb.PbList<DeleteAllContextsRequest> createRepeated() =>
+      $pb.PbList<DeleteAllContextsRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteAllContextsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeleteAllContextsRequest>(create);
-  static DeleteAllContextsRequest _defaultInstance;
+  static DeleteAllContextsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAllContextsRequest>(create);
+  static DeleteAllContextsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 }
-

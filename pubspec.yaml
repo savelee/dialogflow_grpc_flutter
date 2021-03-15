@@ -1,11 +1,11 @@
 name: dialogflow_grpc
 description: Flutter package for Dialogflow CX, V2 and V2beta using gRPC. A faster integration with the Dialogflow API and also the possibility to do audio streaming.
-version: 0.2.2
+version: 0.2.4
 homepage: https://www.leeboonstra.dev
 repository: https://github.com/savelee/dialogflow_grpc_flutter
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.20.0"
 
 dependencies:
@@ -18,7 +18,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  pedantic: ^1.11.0
   flutter_test:
     sdk: flutter
 
@@ -33,24 +32,11 @@ flutter:
   # adding or updating assets for this project.
   plugin:
     platforms:
-    # This plugin project was generated without specifying any
-    # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
-    # then add platforms following the instruction here:
-    # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
-    # -------------------
       android:
-        package: com.leeboonstra.DialogflowGrpc
-        pluginClass: DialogflowGrpc
+        package: com.leeboonstra.dialogflow_grpc
+        pluginClass: DialogflowGrpcPlugin
       ios:
-          pluginClass: DialogflowGrpc
-      macos:
-          pluginClass: DialogflowGrpc
-      windows:
-        pluginClass: DialogflowGrpc
-      web:
-          pluginClass: DialogflowGrpc
-          fileName: dialogflow_grpc.dart
-    # -------------------
+        pluginClass: DialogflowGrpcPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

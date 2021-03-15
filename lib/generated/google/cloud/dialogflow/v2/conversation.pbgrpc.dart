@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/conversation.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -59,79 +59,57 @@ class ConversationsClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $11.ListMessagesResponse.fromBuffer(value));
 
-  ConversationsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  ConversationsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$11.Conversation> createConversation(
       $11.CreateConversationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createConversation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createConversation, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.ListConversationsResponse> listConversations(
       $11.ListConversationsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listConversations, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listConversations, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.Conversation> getConversation(
       $11.GetConversationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getConversation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getConversation, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.Conversation> completeConversation(
       $11.CompleteConversationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$completeConversation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$completeConversation, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.CallMatcher> createCallMatcher(
       $11.CreateCallMatcherRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createCallMatcher, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createCallMatcher, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.ListCallMatchersResponse> listCallMatchers(
       $11.ListCallMatchersRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listCallMatchers, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listCallMatchers, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteCallMatcher(
       $11.DeleteCallMatcherRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteCallMatcher, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteCallMatcher, request, options: options);
   }
 
   $grpc.ResponseFuture<$11.ListMessagesResponse> listMessages(
       $11.ListMessagesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listMessages, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listMessages, request, options: options);
   }
 }
 
