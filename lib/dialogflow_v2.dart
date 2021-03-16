@@ -11,7 +11,6 @@ import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pbg
 import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:grpc/grpc.dart';
 import 'package:uuid/uuid.dart';
-import 'package:meta/meta.dart';
 
 
 /// An interface to Google Cloud's Dialogflow API via gRPC
@@ -24,7 +23,7 @@ class DialogflowGrpc {
   /// [ClientChannel] which is used for Dialogflow
   final ClientChannel _channel = ClientChannel('dialogflow.googleapis.com');
 
-  SessionsClient client;
+  late SessionsClient client;
 
   // Private constructor to prevent direct initialization of the class.
   DialogflowGrpc._(this._options) {
@@ -43,7 +42,7 @@ class DialogflowGrpc {
 
   /// Listen to audio stream.
   /// Cancelled as soon as dispose is called.
-  StreamSubscription<List<int>> _audioStreamSubscription;
+  late StreamSubscription<List<int>> _audioStreamSubscription;
 
   Future<DetectIntentResponse> detectIntent(String text, String lang){
 
@@ -74,15 +73,19 @@ class DialogflowGrpc {
     print(DialogflowAuth.session);
 
     QueryInput queryInput = QueryInput()..audioConfig = config.cast();
+
+    print(queryInput);
     request
         .add(StreamingDetectIntentRequest()
       ..queryInput = queryInput
       ..session = DialogflowAuth.session
     );
 
+
+
     // Send the request first
     // Afterwards start streaming the audio
-    _audioStreamSubscription = audioStream.listen((audio) {
+     _audioStreamSubscription = audioStream.listen((audio) {
       // Add audio content when stream changes.
       request.add(StreamingDetectIntentRequest()..inputAudio = audio);
     });
@@ -96,7 +99,7 @@ class DialogflowGrpc {
   }
 
   void dispose() {
-    _audioStreamSubscription?.cancel();
+    _audioStreamSubscription.cancel();
   }
 
 }
@@ -105,9 +108,10 @@ class DialogflowGrpc {
 // For passing in audio input config
 class InputConfig {
   InputConfig({
-    @required this.encoding,
-    @required this.languageCode,
-    this.sampleRateHertz});
+    this.audioEncoding = AudioEncoding.AUDIO_ENCODING_LINEAR_16,
+    this.encoding = "AUDIO_ENCODING_LINEAR_16",
+    this.languageCode = "en-US",
+    this.sampleRateHertz = 8000});
 
   String encoding;
 
@@ -137,28 +141,20 @@ class InputConfig {
     switch (encoding) {
       case 'UNSPECIFIED':
         return AudioEncoding.AUDIO_ENCODING_UNSPECIFIED;
-        break;
       case 'AUDIO_ENCODING_LINEAR_16':
         return AudioEncoding.AUDIO_ENCODING_LINEAR_16;
-        break;
       case 'AUDIO_ENCODING_FLAC':
         return AudioEncoding.AUDIO_ENCODING_FLAC;
-        break;
       case 'AUDIO_ENCODING_MULAW':
         return AudioEncoding.AUDIO_ENCODING_MULAW;
-        break;
       case 'AUDIO_ENCODING_AMR':
         return AudioEncoding.AUDIO_ENCODING_AMR;
-        break;
       case 'AUDIO_ENCODING_AMR_WB':
         return AudioEncoding.AUDIO_ENCODING_AMR_WB;
-        break;
       case 'AUDIO_ENCODING_OGG_OPUS':
         return AudioEncoding.AUDIO_ENCODING_OGG_OPUS;
-        break;
       case 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE':
         return AudioEncoding.AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE;
-        break;
       default:
         return AudioEncoding.AUDIO_ENCODING_UNSPECIFIED;
     }

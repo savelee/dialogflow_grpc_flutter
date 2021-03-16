@@ -56,7 +56,7 @@ packages:
       name: dialogflow_grpc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.3"
+    version: "0.2.5"
   fixnum:
     dependency: transitive
     description:

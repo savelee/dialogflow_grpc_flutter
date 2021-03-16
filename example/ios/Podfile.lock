@@ -1,19 +1,25 @@
 PODS:
+  - dialogflow_grpc (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - sound_stream (0.0.1):
     - Flutter
 
 DEPENDENCIES:
+  - dialogflow_grpc (from `.symlinks/plugins/dialogflow_grpc/ios`)
   - Flutter (from `Flutter`)
   - sound_stream (from `.symlinks/plugins/sound_stream/ios`)
 
 EXTERNAL SOURCES:
+  dialogflow_grpc:
+    :path: ".symlinks/plugins/dialogflow_grpc/ios"
   Flutter:
     :path: Flutter
   sound_stream:
     :path: ".symlinks/plugins/sound_stream/ios"
 
 SPEC CHECKSUMS:
+  dialogflow_grpc: 7c77ae9fb6ed233789e188beb695589ce3d993f7
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   sound_stream: eba0f2a5994b91d9e5009a739df6e98515a7b44f
 

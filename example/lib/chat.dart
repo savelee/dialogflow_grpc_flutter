@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -112,6 +113,14 @@ class _ChatState extends State<Chat> {
         languageCode: 'en-US',
         sampleRateHertz: 8000
     );
+
+    if (Platform.isIOS) {
+      config = InputConfig(
+          encoding: 'AUDIO_ENCODING_LINEAR_16',
+          languageCode: 'en-US',
+          sampleRateHertz: 16000
+      );
+    }
 
     // Make the streamingDetectIntent call, with the InputConfig and the audioStream
     final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);

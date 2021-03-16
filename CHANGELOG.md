@@ -1,3 +1,7 @@
+## 0.2.5
+
+* Fix nullable errors
+
 ## 0.2.4
 
 * Generate new Dart files

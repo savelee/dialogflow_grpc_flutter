@@ -14,7 +14,7 @@ abstract class DialogflowAuth {
     'https://www.googleapis.com/auth/dialogflow'
   ];
 
-  static String session;
+  static String session = "";
 
   /// Returns the [CallOptions] of the created service account.
   /// These can then be used to initialize a new [SessionClient].
@@ -30,7 +30,7 @@ class ServiceAccount extends DialogflowAuth {
   CallOptions get callOptions => _authenticator.toCallOptions;
 
   /// Returns the current project id of the service account.
-  String get projectId => _authenticator.projectId;
+  String? get projectId => _authenticator.projectId;
 
   // Private constructor to prevent direct initialization of the class.
   ServiceAccount._(String _serviceAccountJson)
@@ -48,7 +48,7 @@ class ServiceAccount extends DialogflowAuth {
   /// that the passed file is really a Json file.
   factory ServiceAccount.fromFile(File file) {
     // Make sure that the passed file is not null and the file exists.
-    if (file == null || !file.existsSync()) throw FileNotFoundException(file);
+    if (!file.existsSync()) throw FileNotFoundException(file);
     // Make sure that the transferred file is really a Json file.
     if (!file.path.contains('.json')) {
       throw UnsupportedFileExtensionException(file);
@@ -94,10 +94,10 @@ abstract class UnsupportedFileException implements IOException {
     sb.write(runtimeType);
     if (message.isNotEmpty) {
       sb.write(': $message');
-      if (file?.path != null) {
+      //if (file.path != null) {
         sb.write(", path = '${file.path}'");
-      }
-    } else if (file?.path != null) {
+      //}
+    } else {
       sb.write(': ${file.path}');
     }
     return sb.toString();
@@ -110,7 +110,7 @@ class FileNotFoundException extends UnsupportedFileException {
   FileNotFoundException(File file)
       : super(
       'The transferred file could not be found. '
-          'Make sure that the file ${file?.path} exists.',
+          'Make sure that the file ${file.path} exists.',
       file);
 }
 
@@ -118,7 +118,7 @@ class UnsupportedFileExtensionException extends UnsupportedFileException {
   /// Will be thrown, if a [File] is passed, which has no json extension.
   UnsupportedFileExtensionException(File file)
       : super(
-      'The file extension ${file?.path?.split('.')?.last} is not '
+      'The file extension ${file.path.split('.').last} is not '
           'supported. Make sure that the transferred file is a valid Json '
           'file. A Google Service account Json can be created via '
           'https://console.cloud.google.com/apis/credentials.',
