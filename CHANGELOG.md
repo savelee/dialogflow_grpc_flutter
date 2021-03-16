@@ -1,3 +1,7 @@
+## 0.2.6
+
+* Example iOS has sampleRateHertz 16000
+
 ## 0.2.5
 
 * Fix nullable errors
