@@ -19,7 +19,7 @@
 ///
 ///
 /// ```dart
-/// import 'package:dialogflow_grpc/dialogflow_v2.dart';
+/// import 'package:dialogflow_grpc/v2.dart';
 /// import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
 /// import 'package:dialogflow_grpc/dialogflow_auth.dart';
 ///

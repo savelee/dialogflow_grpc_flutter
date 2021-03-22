@@ -54,7 +54,7 @@ Import this package in your code. Load your service account,
 and create a DialogflowGrpc instance:
 
 ```dart
-import 'package:dialogflow_grpc/dialogflow_v2beta1.dart';
+import 'package:dialogflow_grpc/v2beta1.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
 import 'package:dialogflow_grpc/dialogflow_auth.dart';
 

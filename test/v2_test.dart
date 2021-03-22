@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:test/test.dart';
-import 'package:dialogflow_grpc/dialogflow_v2.dart';
+import 'package:dialogflow_grpc/v2.dart';
 import 'package:dialogflow_grpc/dialogflow_auth.dart';
 
 void main()  {
