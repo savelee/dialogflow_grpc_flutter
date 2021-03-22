@@ -57,7 +57,7 @@ class InputConfigV2beta1 {
   /// List of SpeechContext. A means to provide context to assist the
   /// speech recognition. For more information,
   // Hints for the speech recognizer to help with recognition in a specific conversation state.
-  final List <SpeechContextV2Beta1> speechContexts;
+  final List<SpeechContextV2Beta1> speechContexts;
 
   // Take the audio encoding string and return object [AudioEncoding]
   AudioEncoding getAudioEncoding(encoding){
