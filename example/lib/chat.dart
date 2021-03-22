@@ -1,5 +1,6 @@
-import 'dart:io';
 import 'dart:async';
+import 'package:dialogflow_grpc/dialogflow_v2beta1.dart';
+import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rxdart/rxdart.dart';
@@ -26,8 +27,8 @@ class _ChatState extends State<Chat> {
   StreamSubscription<List<int>> _audioStreamSubscription;
   BehaviorSubject<List<int>> _audioStream;
 
-  // DialogflowGrpc class instance
-  DialogflowGrpc dialogflow;
+  // TODO DialogflowGrpc class instance
+  DialogflowGrpcV2Beta1 dialogflow;
 
   @override
   void initState() {
@@ -56,10 +57,12 @@ class _ChatState extends State<Chat> {
     ]);
 
     // TODO Get a Service account
+    // Get a Service account
     final serviceAccount = ServiceAccount.fromString(
         '${(await rootBundle.loadString('assets/credentials.json'))}');
-    // TODO Create a DialogflowGrpc Instance
-    dialogflow = DialogflowGrpc.viaServiceAccount(serviceAccount);
+    // Create a DialogflowGrpc Instance
+    dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
+
   }
 
   void stopStream() async {
@@ -72,7 +75,7 @@ class _ChatState extends State<Chat> {
     print(text);
     _textController.clear();
 
-    // Dialogflow detectIntent call
+    //TODO Dialogflow Code
     ChatMessage message = ChatMessage(
       text: text,
       name: "You",
@@ -83,7 +86,7 @@ class _ChatState extends State<Chat> {
       _messages.insert(0, message);
     });
 
-    var data = await dialogflow.detectIntent(text, 'en-US');
+    DetectIntentResponse data = await dialogflow.detectIntent(text, 'en-US');
     String fulfillmentText = data.queryResult.fulfillmentText;
     if(fulfillmentText.isNotEmpty) {
       ChatMessage botMessage = ChatMessage(
@@ -96,6 +99,8 @@ class _ChatState extends State<Chat> {
         _messages.insert(0, botMessage);
       });
     }
+
+
   }
 
   void handleStream() async {
@@ -103,32 +108,40 @@ class _ChatState extends State<Chat> {
 
     _audioStream = BehaviorSubject<List<int>>();
     _audioStreamSubscription = _recorder.audioStream.listen((data) {
+      //print(data);
       _audioStream.add(data);
     });
 
-    // Create and audio InputConfig
-    //  See: https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.InputAudioConfig
-    var config = InputConfig(
-        encoding: 'AUDIO_ENCODING_LINEAR_16',
-        languageCode: 'en-US',
-        sampleRateHertz: 8000
+
+    // TODO Create SpeechContexts
+    var biasList = SpeechContextV2Beta1(
+        phrases: [
+          'Dialogflow CX',
+          'Dialogflow Essentials',
+          'Action Builder',
+          'HIPAA'
+        ],
+        boost: 20.0
     );
 
-    if (Platform.isIOS) {
-      config = InputConfig(
-          encoding: 'AUDIO_ENCODING_LINEAR_16',
-          languageCode: 'en-US',
-          sampleRateHertz: 16000
-      );
-    }
+    // TODO Create and audio InputConfig
+    //  See: https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.InputAudioConfig
+    var config = InputConfigV2beta1(
+        encoding: 'AUDIO_ENCODING_LINEAR_16',
+        languageCode: 'en-US',
+        sampleRateHertz: 8000,
+        singleUtterance: false,
+        speechContexts: [biasList]
+    );
 
-    // Make the streamingDetectIntent call, with the InputConfig and the audioStream
+    // TODO Make the streamingDetectIntent call, with the InputConfig and the audioStream
     final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
 
-    // Get the transcript and detectedIntent and show on screen
+
+    // TODO Get the transcript and detectedIntent and show on screen
+// Get the transcript and detectedIntent and show on screen
     responseStream.listen((data) {
-      print('----');
-      print(data);
+      //print('----');
       setState(() {
         //print(data);
         String transcript = data.recognitionResult.transcript;
@@ -136,13 +149,14 @@ class _ChatState extends State<Chat> {
         String fulfillmentText = data.queryResult.fulfillmentText;
 
         if(fulfillmentText.isNotEmpty) {
-          ChatMessage message = ChatMessage(
+
+          ChatMessage message = new ChatMessage(
             text: queryText,
             name: "You",
             type: true,
           );
 
-          ChatMessage botMessage = ChatMessage(
+          ChatMessage botMessage = new ChatMessage(
             text: fulfillmentText,
             name: "Bot",
             type: false,
@@ -156,6 +170,7 @@ class _ChatState extends State<Chat> {
         if(transcript.isNotEmpty) {
           _textController.text = transcript;
         }
+
       });
     },onError: (e){
       //print(e);
@@ -180,36 +195,36 @@ class _ChatState extends State<Chat> {
           )),
       Divider(height: 1.0),
       Container(
-        decoration: BoxDecoration(color: Theme.of(context).cardColor),
-        child: IconTheme(
-          data: IconThemeData(color: Theme.of(context).accentColor),
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Row(
-              children: <Widget>[
-                Flexible(
-                  child: TextField(
-                    controller: _textController,
-                    onSubmitted: handleSubmitted,
-                    decoration: InputDecoration.collapsed(hintText: "Send a message"),
+          decoration: BoxDecoration(color: Theme.of(context).cardColor),
+          child: IconTheme(
+            data: IconThemeData(color: Theme.of(context).accentColor),
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                    child: TextField(
+                      controller: _textController,
+                      onSubmitted: handleSubmitted,
+                      decoration: InputDecoration.collapsed(hintText: "Send a message"),
+                    ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 4.0),
-                  child: IconButton(
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 4.0),
+                    child: IconButton(
                       icon: Icon(Icons.send),
                       onPressed: () => handleSubmitted(_textController.text),
+                    ),
                   ),
-                ),
-                IconButton(
-                  iconSize: 30.0,
-                  icon: Icon(_isRecording ? Icons.mic_off : Icons.mic),
-                  onPressed: _isRecording ? stopStream : handleStream,
-                ),
-              ],
+                  IconButton(
+                    iconSize: 30.0,
+                    icon: Icon(_isRecording ? Icons.mic_off : Icons.mic),
+                    onPressed: _isRecording ? stopStream : handleStream,
+                  ),
+                ],
+              ),
             ),
-          ),
-        )
+          )
       ),
     ]);
   }
@@ -229,11 +244,11 @@ class ChatMessage extends StatelessWidget {
 
   List<Widget> otherMessage(context) {
     return <Widget>[
-      Container(
+      new Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: CircleAvatar(child: Text('B')),
+        child: CircleAvatar(child: new Text('B')),
       ),
-      Expanded(
+      new Expanded(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

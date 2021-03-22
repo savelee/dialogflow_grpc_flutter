@@ -1,6 +1,6 @@
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/audio_config.pb.dart';
 
-// For passing in audio input config
+/// Helper Class For passing in audio input config
 class InputConfigV2 {
   InputConfigV2({
     this.audioEncoding = AudioEncoding.AUDIO_ENCODING_LINEAR_16,
@@ -8,14 +8,17 @@ class InputConfigV2 {
     this.languageCode = "en-US",
     this.sampleRateHertz = 8000});
 
+
+  /// Required. String encoding of audio data sent in all RecognitionAudio messages.
+  /// [See AudioEncoding docs](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.AudioEncoding)
   String encoding;
 
-  /// Encoding of audio data sent in all RecognitionAudio messages.
-  /// This field is optional for FLAC and WAV audio files and required for all
-  /// other audio formats. For details, see [AudioEncoding].
+  // Encoding of audio data sent in all RecognitionAudio messages.
+  // This field is optional for FLAC and WAV audio files and required for all
+  // other audio formats. For details, see [AudioEncoding].
   AudioEncoding audioEncoding;
 
-  /// Sample rate in Hertz of the audio data sent in all RecognitionAudio
+  /// Required. Sample rate in Hertz of the audio data sent in all RecognitionAudio
   /// messages. Valid values are: 8000-48000. 16000 is optimal. For best
   /// results, set the sampling rate of the audio source to 16000 Hz.
   /// If that's not possible, use the native sample rate of the audio source
@@ -32,6 +35,7 @@ class InputConfigV2 {
   String languageCode;
 
 
+  // Take the audio encoding string and return object [AudioEncoding]
   AudioEncoding getAudioEncoding(encoding){
     switch (encoding) {
       case 'UNSPECIFIED':
@@ -55,6 +59,7 @@ class InputConfigV2 {
     }
   }
 
+  // Cast to proper InputAudio object
   InputAudioConfig cast(){
     InputAudioConfig c =  InputAudioConfig();
 

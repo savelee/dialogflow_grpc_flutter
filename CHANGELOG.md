@@ -1,3 +1,9 @@
+## 0.2.7
+
+* V2Beta1 support, and thus Knowledge Connector will work in Dialogflow
+* SpeechContexts support
+* Test cases v2 & v2beta1
+
 ## 0.2.6
 
 * Example iOS has sampleRateHertz 16000
