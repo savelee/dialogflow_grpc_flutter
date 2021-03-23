@@ -1,10 +1,14 @@
 import 'dart:async';
+import 'package:dialogflow_grpc/v2beta1.dart';
+import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sound_stream/sound_stream.dart';
+import 'dart:io' show Platform;
 
-//TODO import Dialogflow
+// TODO import Dialogflow
+
 
 class Chat extends StatefulWidget {
   Chat({Key key}) : super(key: key);
@@ -48,11 +52,14 @@ class _ChatState extends State<Chat> {
         });
     });
 
-    await Future.wait([
-      _recorder.initialize()
-    ]);
+    //await Future.wait([
+    //  _recorder.initialize()
+    //]);
+
+
 
     // TODO Get a Service account
+
   }
 
   void stopStream() async {
@@ -66,6 +73,7 @@ class _ChatState extends State<Chat> {
     _textController.clear();
 
     //TODO Dialogflow Code
+
   }
 
   void handleStream() async {
@@ -73,12 +81,14 @@ class _ChatState extends State<Chat> {
 
     _audioStream = BehaviorSubject<List<int>>();
     _audioStreamSubscription = _recorder.audioStream.listen((data) {
-      print(data);
+      //print(data);
       _audioStream.add(data);
     });
 
+
+    // TODO Create SpeechContexts
+
     // TODO Create and audio InputConfig
-    //  See: https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.InputAudioConfig
 
     // TODO Make the streamingDetectIntent call, with the InputConfig and the audioStream
 
@@ -122,7 +132,7 @@ class _ChatState extends State<Chat> {
                       onPressed: () => handleSubmitted(_textController.text),
                     ),
                   ),
-                  IconButton(
+                  if (Platform.isAndroid || Platform.isIOS) IconButton(
                     iconSize: 30.0,
                     icon: Icon(_isRecording ? Icons.mic_off : Icons.mic),
                     onPressed: _isRecording ? stopStream : handleStream,
@@ -152,17 +162,17 @@ class ChatMessage extends StatelessWidget {
     return <Widget>[
       new Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: new CircleAvatar(child: new Text('B')),
+        child: CircleAvatar(child: new Text('B')),
       ),
       new Expanded(
-        child: new Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Text(this.name,
-                style: new TextStyle(fontWeight: FontWeight.bold)),
-            new Container(
+            Text(this.name,
+                style: TextStyle(fontWeight: FontWeight.bold)),
+            Container(
               margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text),
+              child: Text(text),
             ),
           ],
         ),
@@ -172,24 +182,24 @@ class ChatMessage extends StatelessWidget {
 
   List<Widget> myMessage(context) {
     return <Widget>[
-      new Expanded(
-        child: new Column(
+      Expanded(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            new Text(this.name, style: Theme.of(context).textTheme.subtitle1),
-            new Container(
+            Text(this.name, style: Theme.of(context).textTheme.subtitle1),
+            Container(
               margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text),
+              child: Text(text),
             ),
           ],
         ),
       ),
-      new Container(
+      Container(
         margin: const EdgeInsets.only(left: 16.0),
-        child: new CircleAvatar(
-            child: new Text(
+        child: CircleAvatar(
+            child: Text(
               this.name[0],
-              style: new TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold),
             )),
       ),
     ];
@@ -197,9 +207,9 @@ class ChatMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       margin: const EdgeInsets.symmetric(vertical: 10.0),
-      child: new Row(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: this.type ? myMessage(context) : otherMessage(context),
       ),

@@ -7,7 +7,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:sound_stream/sound_stream.dart';
 import 'dart:io' show Platform;
 
-//TODO import Dialogflow
+// TODO import Dialogflow
 import 'package:dialogflow_grpc/dialogflow_grpc.dart';
 
 class Chat extends StatefulWidget {
@@ -65,8 +65,6 @@ class _ChatState extends State<Chat> {
         '${(await rootBundle.loadString('assets/credentials.json'))}');
     // Create a DialogflowGrpc Instance
     dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
-
-    print(dialogflow);
 
   }
 

@@ -133,15 +133,29 @@ Make sure you have a service account: assets/credentials.json
 flutter test test/dialogflow_v2beta1_test.dart
 ```
 
-## MacOS
+## Environments
+
+### MacOS
 
 In order to run dialogflow_grpc in your MacOS app, enable internet:
 ```xml
 <key>com.apple.security.network.client</key>
 <true/>
 ```
+### Android
 
+In order to build the example for Android devices.
+The audio recorder library sound_stream requires a minSdk of at least **21**. So let's change this in **android/app/build.gradle **in the defaultConfig block:
 
+```dart
+defaultConfig {
+   applicationId "com.myname.flutter_dialogflow_agent"
+   minSdkVersion 21
+   targetSdkVersion 30
+   versionCode flutterVersionCode.toInteger()
+   versionName flutterVersionName
+}
+```
 
 Developer Website: https://www.leeboonstra.dev
 
