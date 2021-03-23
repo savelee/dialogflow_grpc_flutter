@@ -22,9 +22,6 @@
     <list default="true" id="3fea284d-026b-4459-a041-b24ee27e7057" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codelab-steps/chat_v1.dart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codelab-steps/chat_v1.dart.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codelab-steps/main.dart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codelab-steps/main.dart.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/chat.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/chat.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

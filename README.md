@@ -142,10 +142,12 @@ In order to run dialogflow_grpc in your MacOS app, enable internet:
 <key>com.apple.security.network.client</key>
 <true/>
 ```
+
 ### Android
 
-In order to build the example for Android devices.
-The audio recorder library sound_stream requires a minSdk of at least **21**. So let's change this in **android/app/build.gradle **in the defaultConfig block:
+In order to build the example for Android devices;
+the audio recorder library sound_stream requires a minSdk of at least **21**. So let's change this in **android/app/build.gradle **in the defaultConfig block.
+Also, don't forget to go into the virtual device settings and enable your microphone.
 
 ```dart
 defaultConfig {
@@ -155,6 +157,15 @@ defaultConfig {
    versionCode flutterVersionCode.toInteger()
    versionName flutterVersionName
 }
+```
+
+### iOS
+
+In order to build the example for iOS devices, you will need to give permissions to the microphone.
+
+```xml
+<key>NSMicrophoneUsageDescription</key>
+<string>Need microphone access for uploading videos</string>
 ```
 
 Developer Website: https://www.leeboonstra.dev
