@@ -127,17 +127,20 @@ Official API documentation: https://cloud.google.com/dialogflow/es/docs/referenc
 
 ## Example: Tests
 
-Make sure you have a service account: assets/credentials.json
+Make sure you have a service account: **assets/credentials.json**
 
 ```dart
-flutter test test/dialogflow_v2beta1_test.dart
+flutter test test/v2_test.dart
+flutter test test/v2beta1_test.dart
 ```
 
 ## Environments
 
 ### MacOS
 
-In order to run dialogflow_grpc in your MacOS app, enable internet:
+In order to run dialogflow_grpc in your MacOS app, enable internet.
+Edit the .entitlements files in your **macos/Runner/** folder.
+
 ```xml
 <key>com.apple.security.network.client</key>
 <true/>
@@ -146,7 +149,7 @@ In order to run dialogflow_grpc in your MacOS app, enable internet:
 ### Android
 
 In order to build the example for Android devices;
-the audio recorder library sound_stream requires a minSdk of at least **21**. So let's change this in **android/app/build.gradle **in the defaultConfig block.
+the audio recorder library sound_stream requires a minSdk of at least **21**. So let's change this in **android/app/build.gradle** in the defaultConfig block.
 Also, don't forget to go into the virtual device settings and enable your microphone.
 
 ```dart
@@ -162,6 +165,7 @@ defaultConfig {
 ### iOS
 
 In order to build the example for iOS devices, you will need to give permissions to the microphone.
+Add this to the **ios/Runner/Info.plist** file.
 
 ```xml
 <key>NSMicrophoneUsageDescription</key>
