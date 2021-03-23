@@ -13,21 +13,6 @@
 // limitations under the License.
 
 
-/// An interface to Google Cloud's Dialogflow V2 gRPC API
-/// Creates a SessionsClient for detecting intents
-/// This class requires a service account.
-///
-///
-/// ```dart
-/// import 'package:dialogflow_grpc/v2beta1.dart';
-/// import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
-/// import 'package:dialogflow_grpc/dialogflow_auth.dart';
-///
-/// final serviceAccount = ServiceAccount.fromString(
-///     '${(await rootBundle.loadString('assets/credentials.json'))}');
-///
-/// DialogflowGrpcV2Beta1 dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
-/// ```
 import 'dart:async';
 import 'package:dialogflow_grpc/dialogflow_grpc.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/audio_config.pb.dart';
@@ -38,7 +23,9 @@ import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:grpc/grpc.dart';
 import 'package:uuid/uuid.dart';
 
-
+/// An interface to Google Cloud's Dialogflow V2 gRPC API
+/// Creates a SessionsClient for detecting intents
+/// This class requires a service account.
 class DialogflowGrpcV2Beta1 {
 
   final CallOptions _options;
@@ -56,6 +43,17 @@ class DialogflowGrpcV2Beta1 {
   /// Creates a SessionsClient using a service account.
   /// From the service account it will get authentication and the Dialogflow project id.
   /// It uses a UUID to create a unique session
+  ///
+  /// ```dart
+  /// import 'package:dialogflow_grpc/v2beta1.dart';
+  /// import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
+  /// import 'package:dialogflow_grpc/dialogflow_auth.dart';
+  ///
+  /// final serviceAccount = ServiceAccount.fromString(
+  ///     '${(await rootBundle.loadString('assets/credentials.json'))}');
+  ///
+  /// DialogflowGrpcV2Beta1 dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
+  /// ```
   factory DialogflowGrpcV2Beta1.viaServiceAccount(ServiceAccount account) {
     var projectId = account.projectId;
     var uuid = Uuid().v4();

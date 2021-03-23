@@ -1,3 +1,8 @@
+## 0.2.8
+
+* Enable Windows & MacOS
+* Fix Docs
+
 ## 0.2.7
 
 * V2Beta1 support, and thus Knowledge Connector will work in Dialogflow

@@ -12,8 +12,8 @@ gRPC protos have been generated from:
 
 ## Docs:
 
-* [Dialogflow V2](https://pub.dev/documentation/dialogflow_grpc/latest/dialogflow_v2/dialogflow_v2-library.html)
-* [Dialogflow V2Beta1](https://pub.dev/documentation/dialogflow_grpc/latest/dialogflow_v2/dialogflow_v2beta1-library.html)
+* [Dialogflow V2](https://pub.dev/documentation/dialogflow_grpc/latest/v2/DialogflowGrpcV2-class.html)
+* [Dialogflow V2Beta1](https://pub.dev/documentation/dialogflow_grpc/latest/v2beta1/DialogflowGrpcV2Beta1-class.html)
 
 
 ## Usage
@@ -95,10 +95,22 @@ Detecting an intent based on an audio stream:
         singleUtterance: false,
         speechContexts: [biasList]
     );
+    
+    // import 'dart:io' show Platform;
+    // On iOS
+    if (Platform.isIOS) {
+      config = InputConfigV2beta1(
+          encoding: 'AUDIO_ENCODING_LINEAR_16',
+          languageCode: 'en-US',
+          sampleRateHertz: 16000,
+          singleUtterance: false,
+          speechContexts: [biasList]
+      );
+    }
 
     // Make the streamingDetectIntent call, with the InputConfig and the audioStream
     final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
-        responseStream.listen((data) {
+    responseStream.listen((data) {
         print(data);
     });
 ```
@@ -121,6 +133,16 @@ Make sure you have a service account: assets/credentials.json
 flutter test test/dialogflow_v2beta1_test.dart
 ```
 
+## MacOS
+
+In order to run dialogflow_grpc in your MacOS app, enable internet:
+```xml
+<key>com.apple.security.network.client</key>
+<true/>
+```
+
+
+
 Developer Website: https://www.leeboonstra.dev
 
 ### TODO
@@ -131,6 +153,7 @@ Developer Website: https://www.leeboonstra.dev
 - [x] Get the session from the service account
 - [x] Support for V2Beta1, (Knowledge Base Connectors, SpeechContext)
 - [x] Test Cases
+- [x] Windows, Linux, MacOS support
 - [ ] Share demo Dialogflow Agent
 - [ ] Codelab working audio streaming app
 - [ ] Support DetectIntent with Events

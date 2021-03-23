@@ -13,21 +13,6 @@
 // limitations under the License.
 
 
-/// An interface to Google Cloud's Dialogflow V2 gRPC API
-/// Creates a SessionsClient for detecting intents
-/// This class requires a service account.
-///
-///
-/// ```dart
-/// import 'package:dialogflow_grpc/v2.dart';
-/// import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
-/// import 'package:dialogflow_grpc/dialogflow_auth.dart';
-///
-/// final serviceAccount = ServiceAccount.fromString(
-///     '${(await rootBundle.loadString('assets/credentials.json'))}');
-///
-/// DialogflowGrpcV2 dialogflow = DialogflowGrpcV2.viaServiceAccount(serviceAccount);
-/// ```
 import 'dart:async';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/audio_config.pb.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
@@ -37,7 +22,9 @@ import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:grpc/grpc.dart';
 import 'package:uuid/uuid.dart';
 
-
+/// An interface to Google Cloud's Dialogflow V2 gRPC API
+/// Creates a SessionsClient for detecting intents
+/// This class requires a service account.
 class DialogflowGrpcV2 {
 
   final CallOptions _options;
@@ -47,7 +34,6 @@ class DialogflowGrpcV2 {
 
   late SessionsClient client;
 
-  // Private constructor to prevent direct initialization of the class.
   DialogflowGrpcV2._(this._options) {
     client = SessionsClient(_channel, options: _options);
   }
@@ -55,6 +41,20 @@ class DialogflowGrpcV2 {
   /// Creates a SessionsClient using a service account.
   /// From the service account it will get authentication and the Dialogflow project id.
   /// It uses a UUID to create a unique session
+  ///
+  ///
+  ///
+  ///
+  /// ```dart
+  /// import 'package:dialogflow_grpc/v2.dart';
+  /// import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2/session.pb.dart';
+  /// import 'package:dialogflow_grpc/dialogflow_auth.dart';
+  ///
+  /// final serviceAccount = ServiceAccount.fromString(
+  ///     '${(await rootBundle.loadString('assets/credentials.json'))}');
+  ///
+  /// DialogflowGrpcV2 dialogflow = DialogflowGrpcV2.viaServiceAccount(serviceAccount);
+  /// ```
   factory DialogflowGrpcV2.viaServiceAccount(ServiceAccount account) {
     var projectId = account.projectId;
     var uuid = Uuid().v4();

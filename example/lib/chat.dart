@@ -1,13 +1,14 @@
 import 'dart:async';
 import 'package:dialogflow_grpc/v2beta1.dart';
 import 'package:dialogflow_grpc/generated/google/cloud/dialogflow/v2beta1/session.pb.dart';
-import 'package:dialogflow_grpc/dialogflow_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sound_stream/sound_stream.dart';
+import 'dart:io' show Platform;
 
 //TODO import Dialogflow
+import 'package:dialogflow_grpc/dialogflow_grpc.dart';
 
 class Chat extends StatefulWidget {
   Chat({Key key}) : super(key: key);
@@ -52,9 +53,11 @@ class _ChatState extends State<Chat> {
         });
     });
 
-    await Future.wait([
-      _recorder.initialize()
-    ]);
+    //await Future.wait([
+    //  _recorder.initialize()
+    //]);
+
+
 
     // TODO Get a Service account
     // Get a Service account
@@ -62,6 +65,8 @@ class _ChatState extends State<Chat> {
         '${(await rootBundle.loadString('assets/credentials.json'))}');
     // Create a DialogflowGrpc Instance
     dialogflow = DialogflowGrpcV2Beta1.viaServiceAccount(serviceAccount);
+
+    print(dialogflow);
 
   }
 
@@ -86,8 +91,16 @@ class _ChatState extends State<Chat> {
       _messages.insert(0, message);
     });
 
-    DetectIntentResponse data = await dialogflow.detectIntent(text, 'en-US');
-    String fulfillmentText = data.queryResult.fulfillmentText;
+    String fulfillmentText = "";
+    try {
+      DetectIntentResponse data = await dialogflow.detectIntent(text, 'en-US');
+      fulfillmentText = data.queryResult.fulfillmentText;
+      print(fulfillmentText);
+    }
+    catch(e) {
+      print(e);
+    }
+
     if(fulfillmentText.isNotEmpty) {
       ChatMessage botMessage = ChatMessage(
         text: fulfillmentText,
@@ -133,6 +146,16 @@ class _ChatState extends State<Chat> {
         singleUtterance: false,
         speechContexts: [biasList]
     );
+
+    if (Platform.isIOS) {
+      config = InputConfigV2beta1(
+          encoding: 'AUDIO_ENCODING_LINEAR_16',
+          languageCode: 'en-US',
+          sampleRateHertz: 16000,
+          singleUtterance: false,
+          speechContexts: [biasList]
+      );
+    }
 
     // TODO Make the streamingDetectIntent call, with the InputConfig and the audioStream
     final responseStream = dialogflow.streamingDetectIntent(config, _audioStream);
@@ -216,7 +239,7 @@ class _ChatState extends State<Chat> {
                       onPressed: () => handleSubmitted(_textController.text),
                     ),
                   ),
-                  IconButton(
+                  if (Platform.isAndroid || Platform.isIOS) IconButton(
                     iconSize: 30.0,
                     icon: Icon(_isRecording ? Icons.mic_off : Icons.mic),
                     onPressed: _isRecording ? stopStream : handleStream,

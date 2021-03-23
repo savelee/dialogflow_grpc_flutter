@@ -21,13 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="3fea284d-026b-4459-a041-b24ee27e7057" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dialogflow_grpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialogflow_grpc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dialogflow_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/chat.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/chat.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/v2beta1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/v2beta1.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/dialogflow_v2_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/v2_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,26 +117,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1752" height="272" key="GridCell.Tab.0.bottom" timestamp="1616424398593">
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom" timestamp="1616503982845">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865651" />
-    <state width="1752" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616424398593" />
-    <state width="1752" height="272" key="GridCell.Tab.0.center" timestamp="1616424398592">
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982845" />
+    <state width="1638" height="272" key="GridCell.Tab.0.center" timestamp="1616503982844">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865650" />
-    <state width="1752" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616424398592" />
-    <state width="1752" height="272" key="GridCell.Tab.0.left" timestamp="1616424398592">
+    <state width="1638" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982844" />
+    <state width="1638" height="272" key="GridCell.Tab.0.left" timestamp="1616503982844">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865649" />
-    <state width="1752" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616424398592" />
-    <state width="1752" height="272" key="GridCell.Tab.0.right" timestamp="1616424398593">
+    <state width="1638" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982844" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right" timestamp="1616503982845">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865650" />
-    <state width="1752" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616424398593" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982845" />
+    <state x="1304" y="401" width="882" height="783" key="find.popup" timestamp="1616504371645">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="1304" y="401" width="882" height="783" key="find.popup/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616504371645" />
     <state x="1001" y="453" width="670" height="676" key="search.everywhere.popup" timestamp="1616419970420">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
