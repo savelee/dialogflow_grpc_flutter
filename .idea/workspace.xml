@@ -20,8 +20,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fea284d-026b-4459-a041-b24ee27e7057" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cx.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cxv3beta1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/types/cx/input_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/types/cx/v3beta1/input_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cx_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cxv3beta1_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/leeboonstra/dialogflow_grpc/DialogflowGrpcPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/leeboonstra/dialogflow_grpc/DialogflowGrpcPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codelab-steps/chat_v1.dart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codelab-steps/chat_v1.dart.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codelab-steps/main.dart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codelab-steps/main.dart.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/chat.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/chat.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/linux/my_application.cc" beforeDir="false" afterPath="$PROJECT_DIR$/example/linux/my_application.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/linux/my_application.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/linux/my_application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/macos/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/macos/Runner/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/macos/Runner/MainFlutterWindow.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/macos/Runner/MainFlutterWindow.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/Runner.rc" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/Runner.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/flutter_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/flutter_window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/flutter_window.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/flutter_window.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/resource.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/run_loop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/run_loop.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/run_loop.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/run_loop.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/win32_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/win32_window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/windows/runner/win32_window.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/windows/runner/win32_window.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/DialogflowGrpcPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/DialogflowGrpcPlugin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/DialogflowGrpcPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/DialogflowGrpcPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftDialogflowGrpcPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftDialogflowGrpcPlugin.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialogflow_auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialogflow_auth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialogflow_grpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialogflow_grpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/linux/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/dialogflow_grpc_plugin.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/dialogflow_grpc_plugin.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/include/dialogflow_grpc/dialogflow_grpc_plugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/linux/include/dialogflow_grpc/dialogflow_grpc_plugin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Classes/DialogflowGrpcPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Classes/DialogflowGrpcPlugin.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/v2_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/v2_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/v2beta1_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/v2beta1_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/windows/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/dialogflow_grpc_plugin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/windows/dialogflow_grpc_plugin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/include/dialogflow_grpc/dialogflow_grpc_plugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/windows/include/dialogflow_grpc/dialogflow_grpc_plugin.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,26 +150,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="272" key="GridCell.Tab.0.bottom" timestamp="1616503982845">
+    <state x="858" y="427" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616522013188">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="858" y="427" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616522013188" />
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom" timestamp="1616699812600">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865651" />
-    <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982845" />
-    <state width="1638" height="272" key="GridCell.Tab.0.center" timestamp="1616503982844">
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616699812600" />
+    <state width="1638" height="272" key="GridCell.Tab.0.center" timestamp="1616699812597">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865650" />
-    <state width="1638" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982844" />
-    <state width="1638" height="272" key="GridCell.Tab.0.left" timestamp="1616503982844">
+    <state width="1638" height="272" key="GridCell.Tab.0.center/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616699812597" />
+    <state width="1638" height="272" key="GridCell.Tab.0.left" timestamp="1616699812595">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865649" />
-    <state width="1638" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982844" />
-    <state width="1638" height="272" key="GridCell.Tab.0.right" timestamp="1616503982845">
+    <state width="1638" height="272" key="GridCell.Tab.0.left/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616699812595" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right" timestamp="1616699812599">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1752" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@-1680.410.1680.1025" timestamp="1616406865650" />
-    <state width="1638" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616503982845" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616699812599" />
     <state x="1304" y="401" width="882" height="783" key="find.popup" timestamp="1616504371645">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -126,5 +182,16 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="1001" y="453" width="670" height="676" key="search.everywhere.popup/0.25.2560.1415/-1680.410.1680.1025@0.25.2560.1415" timestamp="1616419970420" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/linux/include/dialogflow_grpc/dialogflow_grpc_plugin.h</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

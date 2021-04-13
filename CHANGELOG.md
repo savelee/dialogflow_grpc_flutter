@@ -1,3 +1,12 @@
+## 0.3.0
+
+* Support for CX
+
+## 0.2.9
+
+* LICENSES
+* README
+
 ## 0.2.8
 
 * Enable Windows & MacOS

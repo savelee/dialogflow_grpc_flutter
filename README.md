@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Auto-generated Flutter Dialogflow library for detecting intents using gRPC.
 A faster integration with the Dialogflow API and also the possibility to do audio streaming.
 Built by Google Developer Advocate for Dialogflow, Lee Boonstra
@@ -63,6 +65,10 @@ final serviceAccount = ServiceAccount.fromString(
 
 DialogflowGrpc dialogflow = DialogflowGrpc.viaServiceAccount(serviceAccount);
 ```
+
+**CAUTION: When working with production apps** 
+Storing the service account in a client asset folder (or even in a secure key client keychain) can be dangerous if it’s not handled well. First of all, you will need to be very careful with your service accounts. Which read and access rights will you give your components? When you give admin rights to Google Cloud’s compute engine, you can imagine that attackers could hack and decompile your app. When they get access to your compute engine, they could drive you into costs by for example, mining bitcoins for them. Now, even when you don’t give compute access rights to your Google Cloud service accounts, you still won’t expose your keys. Even though for Dialogflow, it only gives you access to your chatbot within your project, it might be possible for attackers to read PII data from the chat history if your end-users were sharing PII data in the chat. That can be a huge problem.
+On top of that, it’s not so easy to change service account keys in applications, as you don’t want the app to stop working for current users. So how can you serve service accounts and keys secure in mobile clients? By, for example, building a mechanism to rotate (a second set of) keys. Like working with JSON Web Tokens (JWT), an Internet proposed standard for creating data with optional signature and optional encryption whose payload holds JSON that asserts some number of claims. The tokens are signed either using a private secret or a public/private key. Or you can run (parts) of your integration on a server.
 
 ## Example: DetectIntent
 
@@ -138,6 +144,7 @@ flutter test test/v2beta1_test.dart
 
 ### MacOS
 
+https://flutter.dev/desktop
 In order to run dialogflow_grpc in your MacOS app, enable internet.
 Edit the .entitlements files in your **macos/Runner/** folder.
 
